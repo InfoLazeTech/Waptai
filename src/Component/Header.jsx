@@ -21,8 +21,8 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
-                    ? "bg-white/80 backdrop-blur-md shadow-none py-1" 
+            className={`fixed top-0 w-full z-50 transition-all duration-500 rounded-br-4xl rounded-bl-4xl shadow-md ${isScrolled
+                    ? "bg-white shadow-md py-3" 
                     : "bg-white py-3" 
                 }`}
         >
@@ -34,7 +34,7 @@ const Header = () => {
                         <img
                             //   src={logo}
                             alt="WAPTAG Logo"
-                            className={`transition-all duration-500 object-contain ${isScrolled ? "h-14 w-auto" : "h-16 lg:h-20 w-auto"
+                            className={`transition-all duration-500 object-contain ${isScrolled ? "h-20 w-auto" : "h-16 lg:h-20 w-auto"
                                 }`}
                         />
                         <div className="ml-5 flex flex-col border-l-2 border-blue-500/30 pl-5 py-1">

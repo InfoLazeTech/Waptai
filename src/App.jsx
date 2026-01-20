@@ -1,24 +1,43 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Header from './Component/Header'
+import Footer from './Pages/Home/Footer'
+
 import HeroSection from './Pages/Home/HeroSection'
 import FeaturesSection from './Pages/Home/FeaturesSection'
 import Programs from './Pages/Home/Programs'
 import About from './Pages/Home/About'
-import Footer from './Pages/Home/Footer'
+import AboutPage from './Pages/About/AboutPage'
+import ContactUs from './Pages/Contact/ContactUs'
 // import Exhibitors from './Pages/Home/Exhibitors'
 
 const App = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+
       <main>
-        <HeroSection />
-        <FeaturesSection />
-        <Programs />
-        <About />
-        {/* <Exhibitors /> */}
-        <Footer />
+        <Routes>
+          {/* Home Page */}
+          <Route
+            path="/"
+            element={
+              <>
+                <HeroSection />
+                <FeaturesSection />
+                <Programs />
+                <About />
+              </>
+            }
+          />
+
+          {/* Individual Pages (optional) */}
+          <Route path="/about-us" element={<AboutPage />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+        </Routes>
       </main>
+
+      <Footer />
     </div>
   )
 }
