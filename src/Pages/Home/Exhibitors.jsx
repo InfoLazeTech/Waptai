@@ -32,7 +32,7 @@ const Exhibitors = () => {
           </h2>
           <p className="text-slate-500 font-medium leading-relaxed">
             We take pride in our long-standing relationships with industry giants. 
-            Join over <span className="text-[#1c87c9] font-bold">500+ leaders</span> who trust WAPTAG 
+            Join over <span className="text-[#1c87c9] font-bold">500+ leaders</span> who trust WAPTAI 
             to showcase their latest water treatment innovations.
           </p>
         </div>

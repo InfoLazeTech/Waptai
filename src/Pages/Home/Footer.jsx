@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-6">
             <h4 className="text-sm font-black uppercase tracking-widest text-[#1c87c9]">Programs</h4>
             <ul className="space-y-4 text-sm font-bold ">
-              <li><NavLink to="/exhibition" className="text-white transition-colors">WAPTAG Expo</NavLink></li>
+              <li><NavLink to="/exhibition" className="text-white transition-colors">WAPTAI Expo</NavLink></li>
               <li><NavLink to="/iapmo" className="text-white transition-colors">IAPMO</NavLink></li>
               <li><NavLink to="/seminar" className="text-white transition-colors">Seminars</NavLink></li>
               <li><NavLink to="/expo-2026" className="text-white transition-colors">Expo 2026</NavLink></li>

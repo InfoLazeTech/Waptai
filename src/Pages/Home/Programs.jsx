@@ -4,7 +4,7 @@ import { FaGlobe, FaMobileAlt, FaUsers, FaBuilding } from 'react-icons/fa';
 const Programs = () => {
   const services = [
     {
-      title: "WAPTAG EXPO",
+      title: "WAPTAI EXPO",
       desc: "India's premier annual exhibition providing a global platform for water industry leaders.",
       icon: <FaGlobe className="text-3xl" />,
       color: "bg-blue-500",
@@ -76,12 +76,12 @@ const Programs = () => {
               </p>
 
               {/* Hover Arrow Link */}
-              <div className="flex items-center gap-2 text-[#1c87c9] font-bold text-xs cursor-pointer overflow-hidden">
+              {/* <div className="flex items-center gap-2 text-[#1c87c9] font-bold text-xs cursor-pointer overflow-hidden">
                 <span className="transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">LEARN MORE</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

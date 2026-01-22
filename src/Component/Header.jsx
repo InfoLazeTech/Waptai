@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaChevronDown, FaBars } from "react-icons/fa";
-// import logo from "../assets/logo.png";
+import logo from "../assets/waptaiLogo.png";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -32,8 +32,8 @@ const Header = () => {
                     {/* LOGO SECTION */}
                     <NavLink to="/" className="flex items-center group">
                         <img
-                            //   src={logo}
-                            alt="WAPTAG Logo"
+                              src={logo}
+                            alt="WAPTAI Logo"
                             className={`transition-all duration-500 object-contain ${isScrolled ? "h-20 w-auto" : "h-16 lg:h-20 w-auto"
                                 }`}
                         />
