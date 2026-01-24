@@ -9,6 +9,7 @@ import Programs from './Pages/Home/Programs'
 import About from './Pages/Home/About'
 import AboutPage from './Pages/About/AboutPage'
 import ContactUs from './Pages/Contact/ContactUs'
+import Commitee from './Pages/Home/Commitee'
 // import Exhibitors from './Pages/Home/Exhibitors'
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
           {/* Individual Pages (optional) */}
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/committee" element={<Commitee />} />
         </Routes>
       </main>
 

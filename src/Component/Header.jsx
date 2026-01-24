@@ -9,8 +9,7 @@ const Header = () => {
     useEffect(() => {
         const onScroll = () => setIsScrolled(window.scrollY > 50);
         window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
+        return () => window.removeEventListener("scroll", onScroll); }, []);
 
     const navStyles = ({ isActive }) =>
         `px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 tracking-wide
