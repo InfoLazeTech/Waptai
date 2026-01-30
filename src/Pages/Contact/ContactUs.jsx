@@ -1,187 +1,161 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ChevronRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, ChevronRight } from 'lucide-react';
 
 const ContactUs = () => {
     const primaryBlue = "text-[#0d47a1]";
     const accentBlue = "text-[#0288d1]";
-    const lightBg = "bg-[#e3f2fd]";
+    const lightBg = "bg-[#f8fbff]"; // Slightly softer blue-white
     const [showMap, setShowMap] = useState(false);
-    const [submitted, setSubmitted] = useState(false);
 
     return (
-        <div className="bg-white min-h-screen font-sans">
-            <section className={`pt-32 pb-20 ${lightBg} relative overflow-hidden`}>
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-0 left-0 w-full h-full" style={{ backgroundImage: 'radial-gradient(#0288d1 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-                </div>
-
+        <div className="bg-white min-h-screen font-sans text-slate-800">
+            {/* --- Hero Section --- */}
+            <section className={`pt-32 pb-16 ${lightBg} border-b border-slate-100 relative overflow-hidden`}>
                 <div className="container mx-auto px-6 relative z-10 text-center">
                     <motion.div
-                        initial={{ opacity: 0, y: -15 }}
+                        initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-blue-100 shadow-lg backdrop-blur-md mb-8"
+                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-blue-50 shadow-sm mb-6"
                     >
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0288d1] opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0288d1]"></span>
                         </span>
-                        <span className={`${primaryBlue} text-[11px] font-black tracking-[0.15em] uppercase`}>
-                            Get In Touch
+                        <span className={`${primaryBlue} text-[10px] font-bold tracking-[0.1em] uppercase`}>
+                            Contact Support
                         </span>
                     </motion.div>
+                    
                     <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className={`text-5xl md:text-6xl font-black ${primaryBlue} mt-4 mb-6`}
+                        className={`text-3xl md:text-5xl font-extrabold ${primaryBlue} tracking-tight leading-tight mb-4`}
                     >
-                        Let's Start a <br /> <span className={accentBlue}>Conversation</span>
+                        How can we <span className={accentBlue}>help you?</span>
                     </motion.h1>
+                    
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
-                        className="text-slate-600 max-w-2xl mx-auto text-lg"
+                        className="text-slate-500 max-w-xl mx-auto text-sm md:text-base leading-relaxed"
                     >
-                        Have questions about WAPTAI membership or water technology? Our experts are here to help you navigate the flow.
+                        Have questions about WAPTAI membership or water technology? 
+                        Our team typically responds within 24 business hours.
                     </motion.p>
                 </div>
             </section>
 
-            <section className="py-24 -mt-10">
+            {/* --- Main Content --- */}
+            <section className="py-16">
                 <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-3 gap-12">
+                    <div className="grid lg:grid-cols-3 gap-8 items-start">
 
-                        <div className="lg:col-span-1 space-y-6">
+                        {/* Info Cards */}
+                        <div className="lg:col-span-1 space-y-4">
                             {[
                                 { icon: <Phone />, title: "Call Us", detail: "+91 98765 43210", sub: "Mon-Sat, 9am - 6pm" },
-                                { icon: <Mail />, title: "Email Us", detail: "info@waptai.com", sub: "24/7 Online Support" },
+                                { icon: <Mail />, title: "Email Us", detail: "info@waptai.com", sub: "Online Support" },
                                 { icon: <MapPin />, title: "Visit Us", detail: "Ahmedabad, Gujarat", sub: "Water Tech Hub, India" }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
-                                    initial={{ opacity: 0, x: -30 }}
+                                    initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="p-8 rounded-3xl bg-white border border-slate-100 shadow-xl hover:shadow-2xl hover:border-blue-100 transition-all group"
+                                    className="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all flex items-start gap-5"
                                 >
-                                    <div className={`w-14 h-14 ${lightBg} rounded-2xl flex items-center justify-center ${accentBlue} mb-6 group-hover:scale-110 transition-transform`}>
-                                        {React.cloneElement(item.icon, { size: 28 })}
+                                    <div className={`w-10 h-10 shrink-0 ${lightBg} rounded-xl flex items-center justify-center ${accentBlue}`}>
+                                        {React.cloneElement(item.icon, { size: 20 })}
                                     </div>
-                                    <h4 className={`text-xl font-black ${primaryBlue} mb-2`}>{item.title}</h4>
-                                    <p className="text-slate-800 font-bold">{item.detail}</p>
-                                    <p className="text-slate-400 text-sm mt-1">{item.sub}</p>
+                                    <div>
+                                        <h4 className={`text-sm font-bold uppercase tracking-wide ${primaryBlue} mb-1`}>{item.title}</h4>
+                                        <p className="text-slate-900 font-semibold text-sm">{item.detail}</p>
+                                        <p className="text-slate-400 text-xs mt-0.5">{item.sub}</p>
+                                    </div>
                                 </motion.div>
                             ))}
                         </div>
 
+                        {/* Form Card */}
                         <motion.div
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            className="lg:col-span-2 bg-white rounded-[3rem] p-8 md:p-12 shadow-2xl border border-slate-50 relative overflow-hidden"
+                            className="lg:col-span-2 bg-white rounded-2xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 relative"
                         >
-                            <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
-                                <MessageSquare size={200} className={primaryBlue} />
+                            <div className="flex items-center gap-3 mb-8 border-b border-slate-50 pb-4">
+                                <MessageSquare className={accentBlue} size={24} />
+                                <h3 className="text-xl font-bold text-slate-800">Send a Message</h3>
                             </div>
 
-                            <form className="relative z-10 grid md:grid-cols-2 gap-8">
-                                <div className="space-y-2">
-                                    <label className="text-sm font-black text-slate-400 uppercase tracking-wider ml-1">Full Name</label>
-                                    <input type="text" placeholder="Enter Full Name" className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-none focus:ring-2 focus:ring-blue-500 transition-all outline-none" />
+                            <form className="grid md:grid-cols-2 gap-5">
+                                <div className="space-y-1.5">
+                                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-wider ml-1">Full Name</label>
+                                    <input type="text" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none text-sm" placeholder="John Doe" />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-black text-slate-400 uppercase tracking-wider ml-1">Email Address</label>
-                                    <input type="email" placeholder="Enter Email Address" className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-none focus:ring-2 focus:ring-blue-500 transition-all outline-none" />
+                                <div className="space-y-1.5">
+                                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-wider ml-1">Email Address</label>
+                                    <input type="email" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none text-sm" placeholder="john@example.com" />
                                 </div>
-                                <div className="md:col-span-2 space-y-2">
-                                    <label className="text-sm font-black text-slate-400 uppercase tracking-wider ml-1">Subject</label>
-                                    <select className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-none focus:ring-2 focus:ring-blue-500 transition-all outline-none appearance-none">
+                                <div className="md:col-span-2 space-y-1.5">
+                                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-wider ml-1">Subject</label>
+                                    <select className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none text-sm appearance-none">
                                         <option>Membership Inquiry</option>
                                         <option>Technical Support</option>
                                         <option>Event Registration</option>
-                                        <option>Other</option>
                                     </select>
                                 </div>
-                                <div className="md:col-span-2 space-y-2">
-                                    <label className="text-sm font-black text-slate-400 uppercase tracking-wider ml-1">Message</label>
-                                    <textarea rows="4" placeholder="Enter Message" className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-none focus:ring-2 focus:ring-blue-500 transition-all outline-none resize-none"></textarea>
+                                <div className="md:col-span-2 space-y-1.5">
+                                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-wider ml-1">Message</label>
+                                    <textarea rows="4" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none resize-none text-sm" placeholder="How can we help you?"></textarea>
                                 </div>
-                                <div className="md:col-span-2">
+                                <div className="md:col-span-2 pt-2">
                                     <motion.button
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
-                                        className="w-full py-5 bg-[#0d47a1] text-white rounded-2xl font-black text-lg shadow-xl shadow-blue-200 flex items-center justify-center gap-3 transition-all hover:bg-[#0288d1]"
+                                        whileHover={{ scale: 1.01 }}
+                                        whileTap={{ scale: 0.99 }}
+                                        className="w-full py-4 bg-[#0d47a1] text-white rounded-xl font-bold text-sm shadow-lg shadow-blue-900/10 flex items-center justify-center gap-2 hover:bg-[#1565c0] transition-all"
                                     >
-                                        Send Message <Send size={20} />
+                                        Send Message <Send size={16} />
                                     </motion.button>
                                 </div>
                             </form>
                         </motion.div>
-
                     </div>
                 </div>
             </section>
 
-            <section className="pb-32 px-6">
+            {/* --- Map Section --- */}
+            <section className="pb-24 px-6">
                 <div className="container mx-auto max-w-5xl">
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        className="relative h-[450px] w-full rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white bg-slate-200"
+                        className="relative h-80 w-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-slate-100"
                     >
                         {!showMap ? (
-                            <div
-                                className="absolute inset-0 cursor-pointer group"
-                                onClick={() => setShowMap(true)}
-                            >
-                                <img
-                                    src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=2000"
-                                    alt="Map Preview"
-                                    className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                                />
-                                <div className="absolute inset-0 bg-[#0d47a1]/40 flex flex-col items-center justify-center text-white p-6 text-center">
-                                    <motion.div
-                                        animate={{ y: [0, -10, 0] }}
-                                        transition={{ repeat: Infinity, duration: 2 }}
-                                        className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-[#0288d1] shadow-2xl mb-6"
-                                    >
-                                        <MapPin size={40} />
-                                    </motion.div>
-                                    <h3 className="text-3xl font-black mb-2 tracking-tight">Visit Our Office</h3>
-                                    <p className="text-white/80 font-medium mb-8">Ahmedabad, Gujarat, India</p>
-                                    <button className="bg-white text-[#0d47a1] px-8 py-3 rounded-full font-black uppercase text-sm tracking-widest shadow-xl hover:bg-blue-50 transition-colors">
-                                        Click to Load Map
-                                    </button>
+                            <div className="absolute inset-0 cursor-pointer group" onClick={() => setShowMap(true)}>
+                                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1200" alt="Map" className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
+                                <div className="absolute inset-0 flex flex-col items-center justify-center bg-blue-900/20 backdrop-blur-[2px]">
+                                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#0d47a1] shadow-lg mb-3">
+                                        <MapPin size={24} />
+                                    </div>
+                                    <p className="text-white font-bold text-sm bg-blue-900/40 px-4 py-1.5 rounded-full">Click to view location</p>
                                 </div>
                             </div>
                         ) : (
-                            <iframe
-                                title="Location Map"
-                                // src={mapEmbedUrl}
-                                className="w-full h-full border-0"
-                                allowFullScreen=""
-                                loading="lazy"
-                            ></iframe>
+                            <div className="w-full h-full bg-slate-200 flex items-center justify-center">
+                                <p className="text-slate-400 text-sm italic italic">Google Maps Embed would load here</p>
+                            </div>
                         )}
                     </motion.div>
 
-                    <div className="flex flex-col md:flex-row justify-between items-center mt-10 px-4 space-y-4 md:space-y-0">
-                        <div className="flex items-center gap-4">
-                            <div className={`w-12 h-12 ${lightBg} rounded-full flex items-center justify-center ${accentBlue}`}>
-                                <MapPin size={24} />
-                            </div>
-                            <div>
-                                <p className={`font-black ${primaryBlue} uppercase text-sm`}>Headquarters</p>
-                                <p className="text-slate-500 text-sm">Industrial Hub, Ahmedabad, Gujarat</p>
-                            </div>
+                    <div className="flex justify-between items-center mt-6">
+                        <div className="flex items-center gap-3">
+                            <div className="text-slate-400"><MapPin size={18} /></div>
+                            <p className="text-slate-500 text-xs font-medium uppercase tracking-wider">Industrial Hub, Ahmedabad, Gujarat</p>
                         </div>
-                        <button
-                            onClick={() => window.open("https://maps.google.com", "_blank")}
-                            className="flex items-center gap-2 text-slate-400 font-black uppercase text-xs tracking-[0.2em] hover:text-[#0288d1] transition-colors"
-                        >
-                            Open in Google Maps <ChevronRight size={16} />
+                        <button className="text-[#0288d1] font-bold text-xs uppercase tracking-widest flex items-center gap-1 hover:underline">
+                            Get Directions <ChevronRight size={14} />
                         </button>
                     </div>
                 </div>

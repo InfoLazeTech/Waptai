@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[#e3f2fd]/50">
-      
+
       {/* BACKGROUND GRAPHIC ELEMENTS */}
       <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#0288d1]/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
       <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-[#03a9f4]/15 rounded-full blur-[100px] -z-10"></div>
@@ -16,7 +19,7 @@ const HeroSection = () => {
 
       <div className="max-w-[1536px] mx-auto px-6 lg:px-12 w-full relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 items-center">
-          
+
           {/* LEFT CONTENT */}
           <div className="lg:col-span-7 space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 border border-[#b3e5fc] shadow-sm backdrop-blur-sm">
@@ -30,12 +33,12 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-black text-[#0d47a1] leading-[1.15]">
-              A Decade of <span className="text-[#0288d1]">Water Wisdom</span> <br /> 
+              A Decade of <span className="text-[#0288d1]">Water Wisdom</span> <br />
               & Global Wellbeing.
             </h1>
 
             <p className="text-base text-[#37474f] max-w-xl leading-relaxed font-medium">
-              WAPTAI is the most trusted association in the Water Purification and Treatment industry. 
+              WAPTAI is the most trusted association in the Water Purification and Treatment industry.
               We bridge professionals, experts, and innovators to shape the future of water management.
             </p>
 
@@ -108,7 +111,9 @@ const HeroSection = () => {
                     </div>
                   </div>
 
-                  <button className="w-full bg-[#0d47a1] text-white py-4 rounded-2xl font-black text-xs tracking-widest uppercase hover:bg-[#0288d1] shadow-lg transition-all duration-300">
+                  <button
+                    onClick={() => navigate("/contact-us")}
+                    className="w-full bg-[#0d47a1] text-white py-4 rounded-2xl font-black text-xs tracking-widest uppercase hover:bg-[#0288d1] shadow-lg transition-all duration-300">
                     Register As Visitor
                   </button>
                 </div>
