@@ -40,11 +40,6 @@ import Ankit from "../../assets/Ankit.jpeg"
 import Hiren from "../../assets/Hiren.jpeg"
 import Kaushal from "../../assets/Kaushal.jpeg"
 
-
-
-
-
-
 const TABS = [
   "Steering Committee",
   "Governing Body",
@@ -141,20 +136,23 @@ const Committee = () => {
       </header>
 
       <div className="max-w-7xl mx-auto px-6 py-12 lg:flex gap-16">
-        <aside className="lg:w-1/4 mb-12 lg:mb-0">
-          <nav className="flex lg:flex-col overflow-x-auto no-scrollbar gap-2 sticky top-24">
+         <aside className="lg:w-1/4 mb-10 lg:mb-0">
+          <nav className="flex lg:flex-col gap-2 sticky top-24 overflow-x-auto">
             {TABS.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActive(tab)}
-                className={`flex items-center justify-between px-5 py-4 text-left text-sm font-medium transition-all duration-300 rounded-lg group
-                  ${active === tab
-                    ? "bg-slate-50 text-[#0d5c7f] shadow-sm ring-1 ring-slate-200"
-                    : "text-slate-500 hover:text-slate-800"
+                className={`flex items-center justify-between px-5 py-4 text-sm font-medium rounded-lg transition-all
+                  ${
+                    active === tab
+                      ? "bg-slate-50 border-l-4 border-[#0d5c7f] text-[#0d5c7f]"
+                      : "text-slate-500 hover:text-slate-800"
                   }`}
               >
-                <span className="whitespace-nowrap lg:whitespace-normal">{tab}</span>
-                <ChevronRight size={16} className={`hidden lg:block transition-transform ${active === tab ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0"}`} />
+                <span>{tab}</span>
+                <span className="text-xs text-slate-400">
+                  {DATA[tab]?.length || 0}
+                </span>
               </button>
             ))}
           </nav>
@@ -178,7 +176,6 @@ const Committee = () => {
                   />
                 </div>
 
-                {/* Details */}
                 <div className="space-y-1">
                   <h3 className="text-xl font-bold tracking-tight text-slate-900 decoration-1">
                     {member.name}
@@ -191,7 +188,6 @@ const Committee = () => {
                   </div>
                 </div>
 
-                {/* Bottom Line Decoration */}
                 <div className="mt-3 w-full h-[1px] bg-slate-100 group-hover:bg-[#0d5c7f] transition-colors duration-500"></div>
               </div>
             ))}
@@ -207,9 +203,10 @@ const Committee = () => {
         </main>
       </div>
 
-      {/* Footer Branding */}
-      <footer className="mt-20 py-10 bg-slate-50 text-center">
-        <p className="text-xs tracking-[0.5em] text-slate-400 uppercase">Commitment • Innovation • Sustainability</p>
+       <footer className="py-10 bg-slate-50 text-center">
+        <p className="text-xs tracking-widest text-slate-400 uppercase">
+          Commitment • Innovation • Sustainability
+        </p>
       </footer>
     </div>
   );

@@ -43,10 +43,13 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
-              <button className="bg-[#0288d1] text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-[#0277bd] shadow-lg shadow-[#0288d1]/30 hover:-translate-y-1 transition-all duration-300">
+              {/* <button className="bg-[#0288d1] text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-[#0277bd] shadow-lg shadow-[#0288d1]/30 hover:-translate-y-1 transition-all duration-300">
                 BOOK YOUR STALL
               </button>
-              <button className="bg-white/70 backdrop-blur-md border-2 border-[#b3e5fc] text-[#37474f] px-8 py-3.5 rounded-xl font-bold text-sm hover:border-[#0288d1] hover:text-[#0288d1] transition-all duration-300">
+                 <button className="bg-white/70 backdrop-blur-md border-2 border-[#b3e5fc] text-[#37474f] px-8 py-3.5 rounded-xl font-bold text-sm hover:border-[#0288d1] hover:text-[#0288d1] transition-all duration-300">
+                BOOK YOUR STALL
+              </button> */}
+              <button className="bg-[#0288d1] text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-[#0277bd] shadow-lg shadow-[#0288d1]/30 hover:-translate-y-1 transition-all duration-300">
                 EXPLORE EXPO 2026
               </button>
             </div>
