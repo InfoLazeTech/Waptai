@@ -12,6 +12,7 @@ import ContactUs from './Pages/Contact/ContactUs'
 import Commitee from './Pages/Home/Commitee'
 import Clients from './Pages/Home/Clients'
 import YouTubeVideo from './Pages/Home/YoutubeVideo'
+import Facility from './Pages/Facilities/Facility'
 // import Exhibitors from './Pages/Home/Exhibitors'
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/committee" element={<Commitee />} />
+          <Route path="/facilities" element={<Facility />} />
         </Routes>
       </main>
 

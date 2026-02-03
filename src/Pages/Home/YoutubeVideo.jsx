@@ -4,35 +4,29 @@ import { useNavigate } from "react-router-dom";
 const YouTubeSection = () => {
   const navigate = useNavigate();
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50">
+    <section className="py-16 sm:py-20 lg:py-20 bg-white">
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
 
-        {/* GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1.7fr] gap-12 lg:gap-16 items-center">
 
-          {/* ===== LEFT CONTENT ===== */}
           <div className="text-center lg:text-left w-full max-w-none lg:max-w-xl space-y-5 sm:space-y-6">
 
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-100 text-sky-500 text-xs sm:text-sm font-semibold tracking-wide mx-auto lg:mx-0">
               <FaPlayCircle className="text-sky-500" />
               Live Event Experience
             </div>
 
-            {/* Heading */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
               Experience Events{" "}
               <span className="text-[#1c87c9]">Without Limits</span>
             </h2>
 
-            {/* Description */}
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
               Our exhibitions connect brands, innovators, and decision-makers
               through carefully curated experiences that drive engagement,
               visibility, and long-term growth.
             </p>
 
-            {/* Features */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-4">
               {[
                 { title: "Trusted Exhibitors", desc: "Partnered with top, industry-leading brands nationwide." },
@@ -59,7 +53,6 @@ const YouTubeSection = () => {
               ))}
             </div>
 
-            {/* CTA */}
             <div className="flex justify-center lg:justify-start pt-6">
               <button
                 onClick={() => navigate("/contact-us")}
@@ -70,7 +63,6 @@ const YouTubeSection = () => {
             </div>
           </div>
 
-          {/* ===== RIGHT VIDEO ===== */}
           <div className="w-full rounded-2xl overflow-hidden shadow-2xl aspect-video transition-transform duration-300 lg:hover:scale-105">
             <iframe
               src="https://www.youtube.com/embed/ukBT4wr9CiI"
