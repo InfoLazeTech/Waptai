@@ -1,7 +1,8 @@
 import React from "react";
 import { FaAward, FaHandshake, FaLightbulb, FaUsers } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
 const About = () => {
+   const navigate = useNavigate();
   return (
     <section className="relative py-24 bg-white overflow-hidden">
       
@@ -26,7 +27,7 @@ const About = () => {
             <p className="text-gray-700 font-medium leading-relaxed text-lg">
               WAPTAI is India’s most trusted platform in Water Purification & Treatment, connecting professionals, innovators, and businesses to shape the future of water solutions.
             </p>
-            <button className="mt-4 px-10 py-4 bg-[#0288d1] text-white font-bold rounded-2xl shadow-lg hover:bg-[#0277bd] hover:-translate-y-1 transition-all duration-300">
+            <button className="mt-4 px-10 py-4 bg-[#0288d1] text-white font-bold rounded-2xl shadow-lg hover:bg-[#0277bd] hover:-translate-y-1 transition-all duration-300"    onClick={() => navigate("/about-us")}>
               Learn More
             </button>
           </div>
