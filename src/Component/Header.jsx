@@ -27,6 +27,7 @@ const Header = () => {
     { name: "COMMITTEE", path: "/committee" },
     // { name: "E-MAGAZINE", path: "/e-magazine" },
     { name: "FACILITIES", path: "/facilities" },
+  
   ];
 
   const activityItems = [

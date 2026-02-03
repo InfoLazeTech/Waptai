@@ -13,6 +13,14 @@ import Commitee from './Pages/Home/Commitee'
 import Clients from './Pages/Home/Clients'
 import YouTubeVideo from './Pages/Home/YoutubeVideo'
 import Facility from './Pages/Facilities/Facility'
+import Exhibition from './Pages/Activities/Exhibition'
+import IapmoSection from './Pages/Activities/IapmoSection'
+import Seminar from './Pages/Activities/Seminar'
+import Convention from './Pages/Activities/Convention'
+import LegalAssistance from './Pages/Activities/LegalAssistance'
+import Celebration from './Pages/Activities/Celebration'
+import Expo from './Pages/Activities/Expo'
+
 // import Exhibitors from './Pages/Home/Exhibitors'
 
 const App = () => {
@@ -28,11 +36,11 @@ const App = () => {
             element={
               <>
                 <HeroSection />
-                <YouTubeVideo/> 
+                <YouTubeVideo />
                 <Programs />
                 <About />
-                <Clients/>
-                 <FeaturesSection />
+                <Clients />
+                <FeaturesSection />
               </>
             }
           />
@@ -42,6 +50,15 @@ const App = () => {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/committee" element={<Commitee />} />
           <Route path="/facilities" element={<Facility />} />
+          <Route path="/exhibition" element={<Exhibition />} />
+          <Route path="/IAPMO" element={<IapmoSection />} />
+          <Route path="/Seminar" element={<Seminar />} />
+          <Route path="/Convention" element={<Convention />} />
+          <Route path="/Legal-Assistance" element={<LegalAssistance />} />
+          <Route path="/Celebration" element={<Celebration />} />
+          <Route path="/expo-2026" element={<Expo />} />
+
+
         </Routes>
       </main>
 
