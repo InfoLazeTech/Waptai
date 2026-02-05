@@ -1,102 +1,182 @@
 import React from "react";
-import iapmoImg from "../../assets/iapmo.jpg";
+import { motion } from 'framer-motion';
+
+/* ================= SVGs ================= */
+
+const CertificationFlowSVG = () => (
+  <svg viewBox="0 0 900 140" className="w-full max-w-4xl mx-auto">
+    <defs>
+      <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stopColor="#0284c7" />
+        <stop offset="100%" stopColor="#38bdf8" />
+      </linearGradient>
+    </defs>
+
+    {/* Line */}
+    <line
+      x1="80"
+      y1="70"
+      x2="820"
+      y2="70"
+      stroke="url(#lineGrad)"
+      strokeWidth="3"
+      strokeDasharray="6 6"
+    >
+      <animate
+        attributeName="stroke-dashoffset"
+        from="60"
+        to="0"
+        dur="4s"
+        repeatCount="indefinite"
+      />
+    </line>
+
+    {/* Nodes */}
+    {[
+      { x: 80, label: "Global\nStandards" },
+      { x: 320, label: "Technical\nTraining" },
+      { x: 580, label: "Certification\n(CST)" },
+      { x: 820, label: "Industry\nRecognition" },
+    ].map((item, i) => (
+      <g key={i}>
+        <circle cx={item.x} cy="70" r="18" fill="#0ea5e9" />
+        <circle cx={item.x} cy="70" r="30" fill="#0ea5e9" opacity="0.15" />
+        <text
+          x={item.x}
+          y="115"
+          textAnchor="middle"
+          fontSize="13"
+          fill="#0f172a"
+          fontWeight="600"
+          style={{ whiteSpace: "pre-line" }}
+        >
+          {item.label}
+        </text>
+      </g>
+    ))}
+  </svg>
+);
+
+const BenefitIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-7 h-7 text-sky-600">
+    <path
+      d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z"
+      fill="currentColor"
+      opacity="0.15"
+    />
+    <path
+      d="M8.5 12l2.5 2.5L15.5 10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+/* ================= COMPONENT ================= */
 
 const IapmoSection = () => {
   const benefits = [
-    "Enhances customer trust and professional image",
-    "Improves technician credibility and competence",
-    "Industry-recognized technical training standards",
-    "Market differentiation for companies and professionals",
-    "Visibility through IAPMO India certification listings",
-    "Boosts employee confidence and performance",
-    "Training on water treatment technologies & troubleshooting",
-    "Pathway to entrepreneurship opportunities",
-    "Authorized use of IAPMO India certificate and badge",
-    "Continuous learning through recertification",
-    "Improved long-term career growth prospects",
+    "Internationally trusted professional certification",
+    "Higher technician credibility and customer confidence",
+    "Standardized skill development aligned with global codes",
+    "Clear differentiation in competitive water industry",
+    "Official recognition through IAPMO India listings",
+    "Improved workforce performance and accountability",
+    "Hands-on training in water treatment & diagnostics",
+    "Career mobility and entrepreneurship opportunities",
+    "Authorized CST certificate and certification badge",
+    "Ongoing learning via structured recertification",
+    "Long-term professional and income growth",
   ];
 
   return (
-    <section className="w-full bg-gray-50">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50  py-32">
 
-      {/* ================= HERO IMAGE ================= */}
-      <div className="w-full overflow-hidden rounded-b-3xl shadow-lg mt-20">
-        <img
-          src={iapmoImg}
-          alt="IAPMO India"
-          className="w-full h-auto object-cover"
-        />
-      </div>
+      {/* ================= HERO ================= */}
+      <div className="max-w-6xl mx-auto px-6 py-15 text-center space-y-6">
+          <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-blue-50 shadow-sm mb-6"
+                    >
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0288d1] opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0288d1]"></span>
+                        </span>
+                        <span className={`text-[12px] font-bold tracking-[0.1em] uppercase text-sky-700`}>
+                           Global Certification Authority
+                        </span>
+                    </motion.div>
+       
 
-      {/* ================= HERO TEXT ================= */}
-      <div className="max-w-5xl mx-auto text-center mt-24 px-6">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4">
-          IAPMO India <span className="text-sky-500">Private Limited</span>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900">
+          IAPMO India <span className="text-sky-600">Private Limited</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-700">
-          International Association of Plumbing and Mechanical Officials – India
+
+        <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+          Advancing public health, water quality, and professional excellence
+          through internationally recognized plumbing and mechanical standards.
         </p>
       </div>
 
-      {/* ================= CONTENT ================= */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 space-y-32">
+      {/* ================= FLOW SVG ================= */}
+      <div className="">
+        <CertificationFlowSVG />
+      </div>
 
-        {/* ABOUT */}
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            <strong className="text-gray-900">IAPMO India Private Limited (IAPMO-I)</strong>{" "}
-            is devoted to safeguarding the health, safety, and welfare of the
-            people of India through internationally recognized standards and practices.
-          </p>
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            Established as an Indian corporation, IAPMO-I develops and promotes
-            uniform codes and best practices in Health, Hygiene, Water Quality, Plumbing, and Mechanical Systems.
-          </p>
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            The organization advances modern, water-efficient and energy-efficient systems while supporting India’s plumbing,
-            mechanical and water purifier industries through research, certification, and education.
+      {/* ================= ABOUT ================= */}
+      <div className="max-w-4xl mx-auto px-6 text-center mt-18 space-y-8">
+        <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
+          <strong className="text-slate-900">IAPMO India (IAPMO-I)</strong> is an
+          Indian subsidiary of IAPMO USA, committed to safeguarding health and
+          safety through globally harmonized codes and certification systems.
+        </p>
+
+        <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
+          The organization promotes water efficiency, hygiene, and technical
+          competence across plumbing, mechanical, and water treatment sectors.
+        </p>
+      </div>
+
+      {/* ================= CST ================= */}
+      <div className="max-w-6xl mx-auto px-6 mt-28">
+        <div className="bg-white border border-slate-200 rounded-3xl p-12 md:p-16 shadow-lg">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 text-center">
+            Certified Service Technician (CST) Programme
+          </h2>
+
+          <p className="text-slate-700 text-lg md:text-xl leading-relaxed max-w-4xl mx-auto text-center">
+            Developed jointly by <strong>WAPTAI & IAPMO India</strong>, the CST
+            programme establishes a nationally scalable, technically competent
+            workforce for residential water treatment systems.
           </p>
         </div>
+      </div>
 
-        {/* WAPTAG COLLAB */}
-        <div className="bg-gradient-to-br from-sky-50 to-white rounded-3xl p-10 md:p-16 border border-sky-100 shadow-lg hover:shadow-2xl transition duration-500">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center md:text-left">
-            WAPTAG –<span className="text-[#1c87c9]">IAPMO India Collaboration</span> 
-          </h2>
-          <p className="text-gray-700 text-lg md:text-xl leading-relaxed max-w-4xl mx-auto md:mx-0">
-            WAPTAG – IAPMO India has launched the <strong>Certified Service Technician (CST)</strong> programme for
-            Residential Water Treatment Systems. This programme is designed for
-            installers and service technicians operating in the residential water segment.
-            <br /><br />
-            The CST programme aims to build a skilled workforce readily
-            available to manufacturers, distributors, and dealers, ensuring
-            industry-ready professionals supported by structured technical
-            training and certification.
-          </p>
-        </div>
+      {/* ================= BENEFITS ================= */}
+      <div className="max-w-7xl mx-auto px-6 mt-28">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-16 text-center">
+          Why <span className="text-sky-600">CST Certification</span> Matters
+        </h2>
 
-        {/* BENEFITS GRID */}
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-16 text-center">
-            Benefits of <span className="text-[#1c87c9]">CST</span> Programme
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="group p-8 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
-              >
-                <div className="w-12 h-12 mb-6 rounded-xl bg-sky-100 flex items-center justify-center group-hover:bg-sky-600 transition duration-300">
-                  <span className="w-3 h-3 rounded-full bg-sky-600 group-hover:bg-white transition duration-300"></span>
-                </div>
-                <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                  {benefit}
-                </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {benefits.map((benefit, i) => (
+            <div
+              key={i}
+              className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500"
+            >
+              <div className="mb-5">
+                <BenefitIcon />
               </div>
-            ))}
-          </div>
+              <p className="text-slate-700 text-base md:text-lg leading-relaxed">
+                {benefit}
+              </p>
+            </div>
+          ))}
         </div>
-
       </div>
     </section>
   );

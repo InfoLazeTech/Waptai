@@ -81,7 +81,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-4">
                 <FaEnvelope className="text-[#1c87c9]" />
-                <p className="text-sm  font-bold">waptaiindia@gmail.com</p>
+                <p className="text-sm  font-bold">waptaiassociation@gmail.com</p>
               </div>
             </div>
           </div>

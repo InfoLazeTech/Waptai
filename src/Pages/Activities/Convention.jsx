@@ -27,34 +27,35 @@ import fourth4 from "../../assets/fourth4.jpg";
 
 const conventionData = [
   {
-    title: "WAPTAG 1st Annual Meet",
+    title: "WAPTAI 1st Annual Meet",
     images: [first1, first2, first3, first4, first5],
   },
   {
-    title: "WAPTAG 2nd Annual Meet",
+    title: "WAPTAI 2nd Annual Meet",
     images: [second1, second2, second3, second4, second5, second6],
   },
   {
-    title: "WAPTAG 3rd Annual Meet",
+    title: "WAPTAI 3rd Annual Meet",
     images: [third1, third2, third3, third4, third5],
   },
   {
-    title: "WAPTAG Convention – 2019",
+    title: "WAPTAI Convention – 2019",
     images: [fourth1, fourth2, fourth3, fourth4],
   },
 ];
 
 const Convention = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [selectedImg, setSelectedImg] = useState(null);
 
   return (
-    <section className="w-full bg-white py-24 px-4">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 py-24 px-4">
       <div className="max-w-7xl mx-auto space-y-12">
 
         {/* ===== HEADING ===== */}
         <div className="text-center mt-20">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#1c87c9] mb-3">
-            WAPTAG Convention
+            WAPTAI Convention
           </h2>
           <p className="text-gray-600 text-lg">
             Showcasing our annual meets and events
@@ -86,14 +87,39 @@ const Convention = () => {
               key={i}
               className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition"
             >
-              <img
+             <img
                 src={img}
-                alt={conventionData[activeIndex].title}
-                className="w-full h-[220px] md:h-[260px] object-cover"
+                alt="Convention"
+                onClick={() => setSelectedImg(img)}
+                className="w-full h-[220px] object-cover cursor-pointer
+             hover:scale-105 transition-transform duration-500"
               />
             </div>
           ))}
         </div>
+          {selectedImg && (
+          <div
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4"
+            onClick={() => setSelectedImg(null)}
+          >
+            {/* Close Button */}
+            <button
+              className="absolute top-6 right-6 text-white text-4xl"
+              onClick={() => setSelectedImg(null)}
+            >
+              ×
+            </button>
+
+            {/* Full Image */}
+            <img
+              src={selectedImg}
+              alt="Convention Full View"
+              className="max-w-[95%] max-h-[90%] rounded-xl shadow-2xl animate-zoomIn"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
+
 
       </div>
     </section>

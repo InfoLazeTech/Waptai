@@ -6,7 +6,7 @@ import facility2 from "../../assets/facilities2.jpg";
 
 const Facilities = () => {
   return (
-    <section className="py-5 px-6 bg-gradient-to-b from-[#F0F7FF] to-[#E6F1FF] max-w-full h-auto">
+    <section className="py-5 px-6 bg-gradient-to-br from-sky-100 via-white to-sky-50 max-w-full h-auto">
       
       {/* Heading */}
      

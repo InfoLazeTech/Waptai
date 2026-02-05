@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import legal1 from "../../assets/legal1.jpg";
 import legal2 from "../../assets/legal2.jpg";
 import legal3 from "../../assets/legal3.jpg";
 
 const LegalAssistance = () => {
+   const [selectedImg, setSelectedImg] = useState(null);
   return (
-    <section className="w-full bg-white py-24 px-4">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 py-24 px-4">
       <div className="max-w-7xl mx-auto space-y-12">
 
         {/* ===== HEADING ===== */}
@@ -28,11 +29,38 @@ const LegalAssistance = () => {
               <img
                 src={img}
                 alt={`Legal Assistance ${index + 1}`}
-                className="w-full h-[220px] md:h-[260px] object-cover"
+                className="w-full h-[220px] md:h-[260px] object-cover cursor-pointer 
+                           hover:scale-105 transition-transform duration-500"
+                onClick={() => setSelectedImg(img)}
               />
             </div>
           ))}
         </div>
+
+        {/* ===== FULL IMAGE MODAL ===== */}
+        {selectedImg && (
+          <div
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4"
+            onClick={() => setSelectedImg(null)}
+          >
+            {/* Close Button */}
+            <button
+              className="absolute top-6 right-6 text-white text-4xl font-light"
+              onClick={() => setSelectedImg(null)}
+            >
+              ×
+            </button>
+
+            {/* Image */}
+            <img
+              src={selectedImg}
+              alt="Full View"
+            className="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl animate-zoomIn"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
+      
 
         {/* ===== CONTENT ===== */}
         <div className="max-w-4xl mx-auto text-center mt-8 space-y-4">

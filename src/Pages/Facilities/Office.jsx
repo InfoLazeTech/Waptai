@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Office images
 import office1 from "../../assets/office1.jpg";
@@ -18,6 +18,8 @@ import laboratory4 from "../../assets/laboratory4.jpg";
 import laboratory5 from "../../assets/laboratory5.jpg";
 
 const Office = () => {
+      const [selectedImg, setSelectedImg] = useState(null);
+  
   const officeImages = [
     office1, office2, office3, office4,
     office5, office6, office7, office8,
@@ -42,11 +44,12 @@ const Office = () => {
               key={i}
               className="group overflow-hidden rounded-xl shadow-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl"
             >
-              <img
+               <img
                 src={img}
-                alt={`Office ${i + 1}`}
-                className="w-full h-56 object-cover"
-               
+                alt="Office"
+                onClick={() => setSelectedImg(img)}
+                className="w-full h-[220px] object-cover cursor-pointer
+             hover:scale-105 transition-transform duration-500"
               />
               {/* <div className="p-4 bg-white text-center">
                 <p className="font-medium text-gray-700">Office {i + 1}</p>
@@ -68,9 +71,10 @@ const Office = () => {
             >
               <img
                 src={img}
-                alt={`Laboratory ${i + 1}`}
-                className="w-full h-56 object-cover"
-              
+                alt="Laboratory"
+                onClick={() => setSelectedImg(img)}
+                className="w-full h-[220px] object-cover cursor-pointer
+             hover:scale-105 transition-transform duration-500"
               />
               {/* <div className="p-4 bg-white text-center">
                 <p className="font-medium text-gray-700">Lab {i + 1}</p>
@@ -78,7 +82,28 @@ const Office = () => {
             </div>
           ))}
         </div>
+            {selectedImg && (
+          <div
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4"
+            onClick={() => setSelectedImg(null)}
+          >
+            {/* Close Button */}
+            <button
+              className="absolute top-6 right-6 text-white text-4xl"
+              onClick={() => setSelectedImg(null)}
+            >
+              ×
+            </button>
 
+            {/* Full Image */}
+            <img
+              src={selectedImg}
+              alt="Celebration Full View"
+              className="max-w-[95%] max-h-[90%] rounded-xl shadow-2xl animate-zoomIn"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

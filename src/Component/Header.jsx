@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
-import logo from "../assets/waptaiLogo.png";
+import logo from "../assets/waptailogo.jpg";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -11,7 +11,7 @@ const ContactUs = () => {
     return (
         <div className="bg-white min-h-screen font-sans text-slate-800">
             {/* --- Hero Section --- */}
-            <section className={`pt-32 pb-16 ${lightBg} border-b border-slate-100 relative overflow-hidden`}>
+            <section className={`pt-32 pb-16 ${lightBg} border-b border-slate-100  bg-gradient-to-br from-sky-100 via-white to-sky-50 relative overflow-hidden`}>
                 <div className="container mx-auto px-6 relative z-10 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: -10 }}
@@ -54,9 +54,9 @@ const ContactUs = () => {
                         {/* Info Cards */}
                         <div className="lg:col-span-1 space-y-4">
                             {[
-                                { icon: <Phone />, title: "Call Us", detail: "+91 98765 43210", sub: "Mon-Sat, 9am - 6pm" },
-                                { icon: <Mail />, title: "Email Us", detail: "info@waptai.com", sub: "Online Support" },
-                                { icon: <MapPin />, title: "Visit Us", detail: "Ahmedabad, Gujarat", sub: "Water Tech Hub, India" }
+                                { icon: <Phone />, title: "Call Us", detail: "+91 99741 52935 / 99741 52936", sub: "Mon-Sat, 9am - 6pm" },
+                                { icon: <Mail />, title: "Email Us", detail: "waptaiassociation@gmail.com", sub: "Online Support" },
+                                { icon: <MapPin />, title: "Visit Us", detail: "Office No. 808, 8th Floor, Time Square Arcade, Opp- Rambaug, Nr. Ravija Plaza, Thaltej-Shilaj Road, Thaltej, Ahmedabad - 380059", sub: "Water Tech Hub, India" }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
@@ -132,21 +132,37 @@ const ContactUs = () => {
                         whileInView={{ opacity: 1 }}
                         className="relative h-80 w-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-slate-100"
                     >
-                        {!showMap ? (
-                            <div className="absolute inset-0 cursor-pointer group" onClick={() => setShowMap(true)}>
-                                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1200" alt="Map" className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
-                                <div className="absolute inset-0 flex flex-col items-center justify-center bg-blue-900/20 backdrop-blur-[2px]">
-                                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#0d47a1] shadow-lg mb-3">
-                                        <MapPin size={24} />
-                                    </div>
-                                    <p className="text-white font-bold text-sm bg-blue-900/40 px-4 py-1.5 rounded-full">Click to view location</p>
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="w-full h-full bg-slate-200 flex items-center justify-center">
-                                <p className="text-slate-400 text-sm italic italic">Google Maps Embed would load here</p>
-                            </div>
-                        )}
+                      {!showMap ? (
+  <div
+    className="absolute inset-0 cursor-pointer group"
+    onClick={() => setShowMap(true)}
+  >
+    <img
+      src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1200"
+      alt="Map"
+      className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+    />
+
+    <div className="absolute inset-0 flex flex-col items-center justify-center bg-blue-900/20 backdrop-blur-[2px]">
+      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#0d47a1] shadow-lg mb-3">
+        <MapPin size={24} />
+      </div>
+      <p className="text-white font-bold text-sm bg-blue-900/40 px-4 py-1.5 rounded-full">
+        Click to view location
+      </p>
+    </div>
+  </div>
+) : (
+ <iframe
+  title="Google Map Location"
+  src="https://www.google.com/maps?q=23.049816569744454, 72.50134077041604&z=17&output=embed"
+  className="w-full h-full border-0"
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+
+)}
+
                     </motion.div>
 
                     <div className="flex justify-between items-center mt-6">

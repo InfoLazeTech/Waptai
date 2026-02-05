@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import expo2015 from "../../assets/exibiton.jpg";
 import expo2016 from "../../assets/exibition2016.jpg";
 
@@ -14,6 +14,7 @@ const expoContent = {
 };
 
 function Exhibition() {
+  const [selectedImg, setSelectedImg] = useState(null);
   return (
     <div className="bg-gray-50">
       {/* ===== TOP HEADING ===== */}
@@ -42,7 +43,7 @@ function Exhibition() {
           >
             {/* YEAR TITLE */}
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1c87c9] mb-10">
-              WAPTAG WATER EXPO – {year}
+              WAPTAI WATER EXPO – {year}
             </h2>
 
             {/* MEDIA */}
@@ -51,8 +52,11 @@ function Exhibition() {
                 <img
                   src={data.src}
                   alt={`Expo ${year}`}
-                  className="rounded-2xl shadow-xl max-h-[500px] object-cover w-full md:w-auto"
+                  onClick={() => setSelectedImg(data.src)}
+                  className="rounded-2xl shadow-xl  max-h-[500px] object-cover w-full md:w-auto
+             cursor-pointer hover:scale-105 transition-transform duration-500"
                 />
+
               ) : (
                 <div className="w-full md:w-[800px] aspect-video rounded-2xl shadow-xl overflow-hidden">
                   <iframe
@@ -69,6 +73,28 @@ function Exhibition() {
           </div>
         ))}
       </section>
+      {/* ===== IMAGE MODAL ===== */}
+      {selectedImg && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4"
+          onClick={() => setSelectedImg(null)}
+        >
+          <button
+            className="absolute top-6 right-6 text-white text-4xl"
+            onClick={() => setSelectedImg(null)}
+          >
+            ×
+          </button>
+
+          <img
+            src={selectedImg}
+            alt="Exhibition Full View"
+            className="max-w-[95%] animate-zoomIn max-h-[90%] rounded-xl shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+
     </div>
   );
 }

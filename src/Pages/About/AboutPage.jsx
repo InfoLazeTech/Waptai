@@ -4,7 +4,7 @@ import {
     Target, Eye, Globe, Shield, Award, CheckCircle2,
     Waves, Microscope, Factory, PhoneCall, Handshake, Zap
 } from 'lucide-react';
-import img from '../../assets/Water.jpg'
+import img from '../../assets/aboutwater.png'
 
 const AboutPage = () => {
     const primaryBlue = "text-[#0d47a1]";
@@ -35,7 +35,8 @@ const AboutPage = () => {
     return (
         <div className="bg-white font-sans antialiased overflow-x-hidden">
 
-            <section className={`relative pt-32 pb-24 md:pt-40 md:pb-28 ${lightBg} overflow-hidden`}>
+            <section className={`relative h-screen ${lightBg} overflow-hidden`}>
+                {/* Background images */}
                 <div
                     className="absolute inset-0 z-0 opacity-30 mix-blend-multiply"
                     style={{
@@ -44,16 +45,17 @@ const AboutPage = () => {
                         backgroundPosition: 'center',
                     }}
                 />
-
                 <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#e3f2fd]/60 via-transparent to-white" />
 
+                {/* Floating motion element */}
                 <motion.div
                     animate={{ x: [0, 30, 0], y: [0, 15, 0], scale: [1, 1.05, 1] }}
                     transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
                     className="absolute -top-12 -right-12 w-[350px] h-[350px] bg-blue-400 rounded-full blur-[100px] opacity-20 z-0"
                 />
 
-                <div className="container mx-auto px-6 relative z-20 text-center">
+                {/* Centered content */}
+                <div className="container mx-auto px-6 relative z-20 h-full flex flex-col items-center justify-center text-center">
                     <motion.div
                         initial={{ opacity: 0, y: -15 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -81,12 +83,6 @@ const AboutPage = () => {
                             transition={{ duration: 5, repeat: Infinity }}
                         >
                             of Water Innovation
-                            {/* <motion.div
-                                className="absolute -bottom-1 left-0 h-1.5 bg-blue-400/30 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: '100%' }}
-                                transition={{ delay: 0.5, duration: 1.2 }}
-                            /> */}
                         </motion.span>
                     </motion.h1>
 
@@ -101,6 +97,7 @@ const AboutPage = () => {
                     </motion.p>
                 </div>
             </section>
+
 
             <section className="py-28 bg-white">
                 <div className="container mx-auto px-6">
@@ -132,24 +129,35 @@ const AboutPage = () => {
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }}
-                            className="lg:w-1/2 relative"
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1 }}
+                            className="w-full md:w-3/4 lg:w-1/2 relative"
                         >
-                            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-white">
-                                <img src={img} alt="Plant" className="w-full h-[500px] object-cover" />
+                            <div className="w-full max-w-[90rem] mx-auto rounded-[2.5rem] overflow-hidden shadow-2xl border-8 md:border-12 border-white">
+                                <img
+                                    src={img}
+                                    alt="Plant"
+                                    className="w-full h-[15rem] lg:h-[25rem] object-cover"
+                                />
                             </div>
+
+
                             <motion.div
-                                animate={{ y: [0, -15, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute -bottom-10 -left-10 bg-white p-10 rounded-3xl shadow-2xl border border-slate-50 hidden md:block"
+                                animate={{ y: [0, -15, 0] }}
+                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                className="absolute -bottom-10 -left-10 bg-white p-8 md:p-10 rounded-3xl shadow-2xl border border-slate-50 hidden md:block"
                             >
-                                <p className={`text-6xl font-black ${accentBlue}`}>500+</p>
+                                <p className={`text-4xl md:text-6xl font-black ${accentBlue}`}>500+</p>
                                 <p className="text-slate-400 font-black uppercase text-xs mt-2">Active Members</p>
                             </motion.div>
                         </motion.div>
+
                     </div>
                 </div>
             </section>
-            
+
             <section className={`py-28 ${lightBg}`}>
                 <div className="container mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-10">

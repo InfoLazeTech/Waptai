@@ -20,13 +20,19 @@ import Convention from './Pages/Activities/Convention'
 import LegalAssistance from './Pages/Activities/LegalAssistance'
 import Celebration from './Pages/Activities/Celebration'
 import Expo from './Pages/Activities/Expo'
+import Seo from './Component/Seo'
+import ScrollToTop from './Component/ScrollToTop'
+import Articals from './Pages/Home/Articals'
 
 // import Exhibitors from './Pages/Home/Exhibitors'
 
 const App = () => {
   return (
     <div className="min-h-screen bg-white">
+
+      <Seo />
       <Header />
+      <ScrollToTop />
 
       <main>
         <Routes>
@@ -37,10 +43,11 @@ const App = () => {
               <>
                 <HeroSection />
                 <YouTubeVideo />
-                <Programs />
+                <Articals />
                 <About />
-                <Clients />
+                <Programs />
                 <FeaturesSection />
+                 <Clients />
               </>
             }
           />

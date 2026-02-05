@@ -31,7 +31,7 @@ import body4 from "../../assets/body4.jpg";
 const seminarData = [
   {
     title: "Seminar on GST – Ahmedabad Chapter",
-    images: [seminargst1, seminargst2, seminargst3,seminargst4],
+    images: [seminargst1, seminargst2, seminargst3, seminargst4],
   },
   {
     title: "Seminar on Body Language – Surat",
@@ -53,9 +53,10 @@ const seminarData = [
 
 const SeminarSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [selectedImg, setSelectedImg] = useState(null);
 
   return (
-    <section className="w-full bg-white py-24 px-4">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 py-24 px-4">
       <div className="max-w-7xl mx-auto space-y-16">
 
         {/* ===== HEADING ===== */}
@@ -75,10 +76,9 @@ const SeminarSection = () => {
               key={index}
               onClick={() => setActiveIndex(index)}
               className={`px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all
-                ${
-                  activeIndex === index
-                    ? "bg-sky-600 text-white shadow-lg"
-                    : "bg-slate-100 text-gray-700 hover:bg-sky-100"
+                ${activeIndex === index
+                  ? "bg-sky-600 text-white shadow-lg"
+                  : "bg-slate-100 text-gray-700 hover:bg-sky-100"
                 }`}
             >
               {seminar.title}
@@ -96,11 +96,38 @@ const SeminarSection = () => {
               <img
                 src={img}
                 alt="Seminar"
-                className="w-full h-[220px] object-cover"
+                onClick={() => setSelectedImg(img)}
+                className="w-full h-[220px] object-cover cursor-pointer
+             hover:scale-105 transition-transform duration-500"
               />
+
             </div>
           ))}
         </div>
+        {/* ===== IMAGE MODAL ===== */}
+        {selectedImg && (
+          <div
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4"
+            onClick={() => setSelectedImg(null)}
+          >
+            {/* Close Button */}
+            <button
+              className="absolute top-6 right-6 text-white text-4xl"
+              onClick={() => setSelectedImg(null)}
+            >
+              ×
+            </button>
+
+            {/* Full Image */}
+            <img
+              src={selectedImg}
+              alt="Seminar Full View"
+              className="max-w-[95%] max-h-[90%] rounded-xl shadow-2xl animate-zoomIn"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
+
 
       </div>
     </section>

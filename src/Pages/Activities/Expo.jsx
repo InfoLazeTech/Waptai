@@ -4,7 +4,7 @@ import expoImg from "../../assets/expo2026.jpg";
 // Example unique YouTube URLs for each tab
 const videoData = [
   {
-    title: "WAPTAG 2022 Sponsors Testimonial",
+    title: "WAPTAI 2022 Sponsors Testimonial",
     videos: [
       "https://www.youtube.com/watch?v=gm8g6ojiW4k&t=45s",
       "https://www.youtube.com/watch?v=z8VDt7SP8RE",
@@ -17,7 +17,7 @@ const videoData = [
     ],
   },
   {
-    title: "WAPTAG 2022 Visitors Testimonial",
+    title: "WAPTAI 2022 Visitors Testimonial",
     videos: [
       "https://www.youtube.com/watch?v=zDVB7pmH-Ak",
       "https://www.youtube.com/watch?v=XS49DNq5shw",
@@ -40,7 +40,7 @@ const videoData = [
     ],
   },
   {
-    title: "WAPTAG 2023 Sponsors Testimonial",
+    title: "WAPTAI 2023 Sponsors Testimonial",
     videos: [
       "https://www.youtube.com/watch?v=gRV2C9Ilvf8",
       "https://www.youtube.com/watch?v=N9-SiRQUX30",
@@ -50,7 +50,7 @@ const videoData = [
     ],
   },
   {
-    title: "WAPTAG 2023 Visitors Testimonial",
+    title: "WAPTAI 2023 Visitors Testimonial",
     videos: [
       "https://www.youtube.com/watch?v=9dL0YH9HOwo",
       "https://www.youtube.com/watch?v=fnMujLYWgFc",
@@ -73,7 +73,7 @@ const videoData = [
     ],
   },
   {
-    title: "WAPTAG 2024 Sponsors Testimonial",
+    title: "WAPTAI 2024 Sponsors Testimonial",
     videos: [
       "https://www.youtube.com/watch?v=oJ-xwVAdj-k",
       "https://www.youtube.com/watch?v=12xw_4-ysXo",
@@ -88,7 +88,7 @@ const videoData = [
     ],
   },
   {
-    title: "WAPTAG 2024 Visitors Testimonial",
+    title: "WAPTAI 2024 Visitors Testimonial",
     videos: [
       "https://www.youtube.com/watch?v=7q6o3H7aaMU",
       "https://www.youtube.com/watch?v=GfI1toohXSg",
@@ -111,57 +111,99 @@ const Expo = () => {
       const urlObj = new URL(url);
       const videoId = urlObj.searchParams.get("v");
       const startTime = urlObj.searchParams.get("t");
-      let embedUrl = `https://www.youtube.com/embed/${videoId}`;
-      if (startTime) embedUrl += `?start=${startTime.replace("s", "")}`;
-      return embedUrl;
+      return `https://www.youtube.com/embed/${videoId}${
+        startTime ? `?start=${startTime.replace("s", "")}` : ""
+      }`;
     }
     return url;
   };
 
   return (
-    <section className="w-full bg-gray-50 py-24 px-4">
-      <div className="max-w-7xl mx-auto space-y-16">
+    <section className="w-full bg-[#f8fafc] py-28 px-4">
+      <div className="max-w-7xl mx-auto space-y-20">
 
-        {/* ===== HEADING + IMAGE + DESCRIPTION ===== */}
-        <div className="text-center space-y-8 mt-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-sky-700 leading-tight">
-            10th Edition of WAPTAG Water Expo 2026
-          </h2>
+        {/* ================= HERO / INTRO ================= */}
+        <div className="text-center space-y-6 mt-10">
+          <span className="inline-block text-sm tracking-widest font-semibold text-sky-600 uppercase">
+            Water • Sustainability • Innovation
+          </span>
 
-          <div className="flex justify-center mt-6">
-            <div className="rounded-3xl overflow-hidden shadow-2xl max-w-6xl w-full transform transition-transform duration-500 hover:scale-105">
-              <img
-                src={expoImg}
-                alt="WAPTAG Water Expo 2026"
-                className="w-full h-auto object-cover"
-              />
+          <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight">
+            10th Edition <br className="hidden sm:block" />
+            <span className="text-sky-700">WAPTAI Water Expo 2026</span>
+          </h1>
+
+          <p className="max-w-4xl mx-auto text-gray-600 text-lg md:text-xl leading-relaxed">
+            India’s premier water industry exhibition bringing together manufacturers,
+            policymakers, innovators, consultants, and global stakeholders to
+            drive sustainable water and wastewater solutions.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-6 pt-6 text-base font-medium text-gray-700">
+            <div className="px-6 py-3 bg-white rounded-xl shadow">
+               26–28 February 2026
+            </div>
+            <div className="px-6 py-3 bg-white rounded-xl shadow">
+               Mahatma Mandir, Gandhinagar
+            </div>
+            <div className="px-6 py-3 bg-white rounded-xl shadow">
+              🇮🇳 Gujarat, India
             </div>
           </div>
-
-          <p className="max-w-3xl mx-auto text-gray-700 text-lg md:text-xl leading-relaxed mt-6">
-            The 10th Edition of WAPTAG Water Expo brings together professionals, experts, policymakers,
-            and enthusiasts from the water industry to foster collaboration, innovation, and sustainable solutions.
-            <br /><br />
-            With a focus on sustainability and innovation, this prestigious event promises to be
-            a transformative experience for all attendees.
-            <br /><br />
-            <strong>Event Dates:</strong> 26-27-28th February 2026
-            <br />
-            <strong>Location:</strong> Mahatma Mandir, Gandhinagar, Gujarat, India
-          </p>
         </div>
+          <div className="relative w-full overflow-hidden mt-20">
+      <svg
+        viewBox="0 0 1440 120"
+        className="w-full h-24"
+        preserveAspectRatio="none"
+      >
+        {/* Wave Path */}
+        <path
+          d="M0,60 C120,20 240,100 360,80 480,60 600,20 720,40 840,60 960,100 1080,80 1200,60 1320,40 1440,50 L1440,120 L0,120 Z"
+          fill="#e0f2fe"
+        >
+          <animate
+            attributeName="d"
+            dur="8s"
+            repeatCount="indefinite"
+            values="
+              M0,60 C120,20 240,100 360,80 480,60 600,20 720,40 840,60 960,100 1080,80 1200,60 1320,40 1440,50 L1440,120 L0,120 Z;
+              M0,70 C120,40 240,80 360,60 480,40 600,60 720,50 840,40 960,80 1080,60 1200,40 1320,60 1440,70 L1440,120 L0,120 Z;
+              M0,60 C120,20 240,100 360,80 480,60 600,20 720,40 840,60 960,100 1080,80 1200,60 1320,40 1440,50 L1440,120 L0,120 Z
+            "
+          />
+        </path>
 
-        {/* ===== TABS ===== */}
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
+        {/* Floating Dots */}
+        {[200, 500, 900, 1200].map((x, i) => (
+          <circle key={i} cx={x} cy="30" r="4" fill="#38bdf8">
+            <animate
+              attributeName="cy"
+              values="20;40;20"
+              dur={`${4 + i}s`}
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="opacity"
+              values="0.3;1;0.3"
+              dur={`${3 + i}s`}
+              repeatCount="indefinite"
+            />
+          </circle>
+        ))}
+      </svg>
+    </div>
+        {/* ================= TABS ================= */}
+        <div className="flex flex-wrap justify-center gap-4">
           {videoData.map((tab, index) => (
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`px-6 py-3 rounded-full font-semibold text-base transition-all duration-300
+              className={`px-6 py-3 rounded-lg text-sm md:text-base font-semibold transition-all duration-300
                 ${
                   activeTab === index
-                    ? "bg-sky-600 text-white shadow-lg"
-                    : "bg-white text-gray-700 border border-gray-200 hover:bg-sky-50"
+                    ? "bg-sky-700 text-white shadow-lg"
+                    : "bg-white text-gray-700 border border-gray-200 hover:border-sky-500 hover:text-sky-700"
                 }`}
             >
               {tab.title}
@@ -169,22 +211,22 @@ const Expo = () => {
           ))}
         </div>
 
-        {/* ===== VIDEO GRID ===== */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12">
+        {/* ================= VIDEO GRID ================= */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {videoData[activeTab].videos.map((videoUrl, idx) => (
             <div
               key={idx}
-              className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500 group"
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
             >
               <div className="relative" style={{ paddingTop: "56.25%" }}>
                 <iframe
                   src={getEmbedUrl(videoUrl)}
-                  title={`Video ${idx + 1}`}
-                  className="absolute top-0 left-0 w-full h-full rounded-xl"
+                  title={`WAPTAI Video ${idx + 1}`}
+                  className="absolute inset-0 w-full h-full"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                />
               </div>
             </div>
           ))}
@@ -194,5 +236,4 @@ const Expo = () => {
     </section>
   );
 };
-
 export default Expo;
