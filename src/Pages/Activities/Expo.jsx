@@ -119,7 +119,7 @@ const Expo = () => {
   };
 
   return (
-    <section className="w-full bg-[#f8fafc] py-28 px-4">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-white py-28 px-4">
       <div className="max-w-7xl mx-auto space-y-20">
 
         {/* ================= HERO / INTRO ================= */}

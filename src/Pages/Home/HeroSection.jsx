@@ -5,7 +5,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[#e3f2fd]/50">
+    <section className="relative min-h-[90vh] flex items-center pt-28 py-10 overflow-hidden bg-[#e3f2fd]/50">
 
       {/* BACKGROUND GRAPHIC ELEMENTS */}
       <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#0288d1]/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
@@ -32,7 +32,7 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-black text-[#0d47a1] leading-[1.15]">
+            <h1 className="text-4xl md:text-5xl md:font-extrabold font-bold text-[#0d47a1] leading-[1.15]">
               A Decade of <span className="text-[#0288d1]">Water Wisdom</span> <br />
               & Global Wellbeing.
             </h1>
@@ -85,7 +85,7 @@ const HeroSection = () => {
                 <div className="p-8 space-y-6 bg-white/40">
                   <div className="flex justify-between border-b border-[#b0bec5]/50 pb-6">
                     <div className="text-center">
-                      <span className="block text-3xl font-black text-[#0d47a1]">26-28</span>
+                      <span className="block text-3xl font-black md:font-black text-[#0d47a1]">26-28</span>
                       <span className="text-[11px] font-bold text-[#607d8b] uppercase tracking-widest">Feb 2026</span>
                     </div>
                     <div className="text-right">

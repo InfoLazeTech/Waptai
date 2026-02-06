@@ -61,7 +61,7 @@ const Articals = () => {
     const [featured, ...others] = newsData;
 
     return (
-        <section className="w-full bg-[#e3f2fd]/50 py-28">
+        <section className="w-full bg-[#e3f2fd]/50 py-10">
             <div className="max-w-7xl mx-auto px-6 space-y-20">
 
                 {/* ===== HEADER ===== */}
@@ -88,33 +88,37 @@ const Articals = () => {
                 </div>
 
                 {/* ===== FEATURED ARTICLE ===== */}
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-                    <img
-                        src={featured.image}
-                        alt={featured.title}
-                        className="w-full h-[400px] object-cover group-hover:scale-105 transition duration-700"
-                    />
+             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group">
+  <img
+    src={featured.image}
+    alt={featured.title}
+    className="w-full h-[240px] sm:h-[320px] md:h-[360px] object-cover group-hover:scale-105 transition duration-700"
+  />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+  {/* gradient overlay */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
-                    <div className="absolute bottom-0 p-10">
-                        <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-                            {featured.title}
-                        </h3>
-                        <p className="text-white/90 mt-3 line-clamp-3 text-lg">
-                            {featured.description}
-                        </p>
+  {/* content */}
+  <div className="absolute bottom-0 top-3 p-4 sm:p-6 md:p-10">
+    <h3 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug">
+      {featured.title}
+    </h3>
 
-                        <a
-                            href={featured.link}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center mt-5 text-white font-semibold underline"
-                        >
-                            Read full article →
-                        </a>
-                    </div>
-                </div>
+    <p className="text-white/90 mt-2 sm:mt-3 text-sm sm:text-base md:text-lg line-clamp-3">
+      {featured.description}
+    </p>
+
+    <a
+      href={featured.link}
+      target="_blank"
+      rel="noreferrer"
+      className="inline-flex items-center mt-3 sm:mt-4 md:mt-5 text-sm sm:text-base text-white font-semibold underline"
+    >
+      Read full article →
+    </a>
+  </div>
+</div>
+
 
                 {/* ===== GRID ARTICLES ===== */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
