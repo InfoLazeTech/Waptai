@@ -6,6 +6,7 @@ import logo from "../assets/waptailogo.jpg";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activitiesOpen, setActivitiesOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
@@ -27,7 +28,7 @@ const Header = () => {
     { name: "COMMITTEE", path: "/committee" },
     // { name: "E-MAGAZINE", path: "/e-magazine" },
     { name: "FACILITIES", path: "/facilities" },
-  
+
   ];
 
   const activityItems = [
@@ -73,11 +74,24 @@ const Header = () => {
 
             {/* DROP-DOWN ACTIVITIES */}
             <div className="relative group py-2">
-              <button className="px-4 py-2 flex items-center gap-2 text-slate-700 group-hover:text-[#1c87c9] transition-colors">
+              <button
+                onClick={() => setActivitiesOpen(!activitiesOpen)}
+                onMouseLeave={() => setActivitiesOpen(false)}
+                className="px-4 py-2 flex items-center gap-2 text-slate-700 hover:text-[#1c87c9] transition-colors"
+
+              >
+
                 ACTIVITIES
                 <FaChevronDown className="text-[10px] transition-transform duration-300 group-hover:rotate-180" />
               </button>
-              <div className="absolute top-[calc(100%+10px)] left-0 w-64 bg-white border border-slate-100 rounded-2xl shadow-2xl opacity-0 translate-y-4 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 overflow-hidden">
+              <div
+                className={`absolute top-[calc(100%+10px)] left-0 w-64 bg-white border border-slate-100
+  rounded-2xl shadow-2xl overflow-hidden transition-all duration-300
+  ${activitiesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-4"}
+  md:group-hover:opacity-100 md:group-hover:visible md:group-hover:translate-y-0
+lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
+`}
+              >
                 <div className="p-2 grid gap-1">
                   {activityItems.map((item) => (
                     <NavLink

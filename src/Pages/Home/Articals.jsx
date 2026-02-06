@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 // Images (apne actual image paths use karna)
 import news1 from "../../assets/ptinews.jpg";
 import news2 from "../../assets/pti.png";
-import news3 from "../../assets/water.jpg";
+import news3 from "../../assets/Water.jpg";
 import news4 from "../../assets/newdrum.jpg";
 
 const newsData = [

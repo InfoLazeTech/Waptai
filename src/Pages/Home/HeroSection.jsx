@@ -5,7 +5,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-28 py-10 overflow-hidden bg-[#e3f2fd]/50">
+    <section className="relative flex items-center pt-28 py-10 overflow-hidden bg-[#e3f2fd]/50">
 
       {/* BACKGROUND GRAPHIC ELEMENTS */}
       <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#0288d1]/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
@@ -17,7 +17,7 @@ const HeroSection = () => {
         }}
       ></div>
 
-      <div className="max-w-[1536px] mx-auto px-6 lg:px-12 w-full relative z-10">
+      <div className="max-w-[1536px] mx-auto px-6 lg:px-12 w-full md:py-8 relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 items-center">
 
           {/* LEFT CONTENT */}

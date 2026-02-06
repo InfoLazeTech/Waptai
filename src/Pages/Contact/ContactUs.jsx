@@ -12,7 +12,7 @@ const ContactUs = () => {
         <div className="bg-white min-h-screen font-sans text-slate-800">
             {/* --- Hero Section --- */}
             <section className={`pt-32 pb-16 ${lightBg} border-b border-slate-100  bg-gradient-to-br from-sky-100 via-white to-sky-50 relative overflow-hidden`}>
-                <div className="container mx-auto px-6 relative z-10 text-center">
+                <div className="container mx-auto px-6 py-5 relative z-10 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}

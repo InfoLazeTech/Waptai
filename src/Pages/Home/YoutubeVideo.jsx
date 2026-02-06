@@ -7,10 +7,8 @@ const YouTubeSection = () => {
     <section className="py-16 sm:py-20 lg:py-20 bg-white">
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1.7fr] gap-12 lg:gap-16 items-center">
-
-          <div className="text-center lg:text-left w-full max-w-none lg:max-w-xl space-y-5 sm:space-y-6">
-
+        <div className="grid grid-cols-1 xl:grid-cols-[1.3fr_1.7fr] gap-12 xl:gap-16 items-center">
+          <div className="order-1 xl:order-none text-center xl:text-left w-full max-w-none xl:max-w-xl space-y-5 sm:space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-100 text-sky-500 text-xs sm:text-sm font-semibold tracking-wide mx-auto lg:mx-0">
               <FaPlayCircle className="text-sky-500" />
               Live Event Experience
@@ -63,7 +61,7 @@ const YouTubeSection = () => {
             </div>
           </div>
 
-          <div className="w-full rounded-2xl overflow-hidden shadow-2xl aspect-video transition-transform duration-300 lg:hover:scale-105">
+          <div className="order-2 xl:order-none w-full rounded-2xl overflow-hidden shadow-2xl aspect-video transition-transform duration-300 xl:hover:scale-105">
             <iframe
               src="https://www.youtube.com/embed/ukBT4wr9CiI"
               title="YouTube video"
