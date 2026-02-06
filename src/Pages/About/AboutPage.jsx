@@ -34,7 +34,6 @@ const AboutPage = () => {
 
     return (
         <div className="bg-white font-sans antialiased overflow-x-hidden">
-
             <section className={`relative h-screen ${lightBg} overflow-hidden`}>
                 {/* Background images */}
                 <div
@@ -197,7 +196,7 @@ const AboutPage = () => {
             </section>
 
             <section className="py-28 bg-white overflow-hidden">
-                <div className="container mx-auto px-6">
+                <div className="container mx-auto px-6 max-w-[85rem]">
                     <div className="text-center mb-20">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}

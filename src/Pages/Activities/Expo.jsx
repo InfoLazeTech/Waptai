@@ -147,7 +147,7 @@ const Expo = () => {
                Mahatma Mandir, Gandhinagar
             </div>
             <div className="px-6 py-3 bg-white rounded-xl shadow">
-              🇮🇳 Gujarat, India
+               Gujarat, India
             </div>
           </div>
         </div>

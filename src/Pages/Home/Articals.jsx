@@ -37,7 +37,7 @@ link:"https://www.ptinews.com/story/national/water-purification-systems-be-class
     {
         image: news3,
         title:
-            "WAPTAI seeks GST reduction on water purification systems to improve public health access",
+            "Water purification systems must be treated as essential public health goods: WAPTAIs",
         description: `
 The Water Purification and Treatment Association of India (WAPTAI) has urged the Government of India to reclassify water purification systems and their essential components as essential public health goods under the GST regime, to make them more affordable and widely accessible.
 
@@ -80,7 +80,7 @@ const Articals = () => {
                         </span>
                     </motion.div>
                     <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-slate-900">
-                      Water Systems Declared Essential: <span className="text-[#1c87c9]">WAPTAI</span>
+                     <span className="text-[#1c87c9]">WAPTAI</span> in National Media
                     </h2>
                     <p className="text-lg text-slate-600 max-w-3xl mx-auto">
                        Highlights from national publications covering public health and water policy initiatives by WAPTAI.
