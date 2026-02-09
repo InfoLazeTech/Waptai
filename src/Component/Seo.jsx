@@ -5,11 +5,16 @@ import { useEffect } from "react";
 const SeoManager = () => {
   const { pathname } = useLocation();
 
-  let title = "Home | WAPTAI";
-  let description =
-    "WAPTAI is India’s leading association for water purification, wastewater treatment, sustainability and innovation.";
+   var title;
+   var description;
 
   switch (pathname) {
+     case "/":          
+    title = "Home | WAPTAI";
+    description =
+      "WAPTAI is India’s leading association for water purification, wastewater treatment, sustainability and innovation.";
+    break;
+
     case "/about-us":
       title = "About Us | WAPTAI";
       description =
@@ -38,6 +43,35 @@ const SeoManager = () => {
       title = "Facilities | WAPTAI";
       description =
         "Explore WAPTAI’s facilities including water testing labs, training infrastructure, certification support and industry-grade resources.";
+      break;
+ case "/exhibition":
+      title = "Exhibition | WAPTAI";
+      description = "Join WAPTAI exhibitions showcasing cutting-edge water and wastewater technologies.";
+      break;
+
+    case "/iapmo":
+      title = "IAPMO | WAPTAI";
+      description = "Learn about WAPTAI's collaboration with IAPMO for water safety and plumbing standards.";
+      break;
+
+    case "/seminar":
+      title = "Seminar | WAPTAI";
+      description = "Attend WAPTAI seminars on water purification, sustainability, and innovation.";
+      break;
+
+    case "/convention":
+      title = "Convention | WAPTAI";
+      description = "Participate in WAPTAI conventions with industry leaders and experts.";
+      break;
+
+    case "/legal-assistance":
+      title = "Legal Assistance | WAPTAI";
+      description = "Access WAPTAI’s legal support and guidance on water management regulations.";
+      break;
+
+    case "/celebration":
+      title = "Celebration | WAPTAI";
+      description = "Celebrate WAPTAI events, milestones, and achievements in water sustainability.";
       break;
 
     default:
