@@ -118,6 +118,7 @@ const DATA = {
 
 const Committee = () => {
   const [active, setActive] = useState("Steering Committee");
+  const [selectedImg, setSelectedImg] = useState(null);
 
   return (
     <div className="bg-white min-h-screen font-sans antialiased text-slate-900 mt-20 ">
@@ -171,7 +172,9 @@ const Committee = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onClick={() => setSelectedImg(member.image)}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer
+             hover:scale-105"
                     onError={(e) => (e.target.src = "https://via.placeholder.com/600x800?text=Corporate+Portrait")}
                   />
                 </div>
@@ -192,6 +195,30 @@ const Committee = () => {
               </div>
             ))}
           </div>
+
+               {/* ===== IMAGE MODAL ===== */}
+        {selectedImg && (
+          <div
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4"
+            onClick={() => setSelectedImg(null)}
+          >
+            {/* Close Button */}
+            <button
+              className="absolute top-6 right-6 text-white text-4xl"
+              onClick={() => setSelectedImg(null)}
+            >
+              ×
+            </button>
+
+            {/* Full Image */}
+            <img
+              src={selectedImg}
+              alt="Seminar Full View"
+              className="max-w-[95%] max-h-[90%] rounded-xl shadow-2xl animate-zoomIn"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
 
           {(!DATA[active] || DATA[active].length === 0) && (
             <div className="py-20 text-center border border-dashed border-slate-200 rounded-xl">

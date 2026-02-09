@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const SeoManager = () => {
   const { pathname } = useLocation();
 
-  let title = "HOME | Water Purification & Wastewater Treatment Association of India";
+  let title = "Home | WAPTAI";
   let description =
     "WAPTAI is India’s leading association for water purification, wastewater treatment, sustainability and innovation.";
 
