@@ -23,6 +23,7 @@ import Expo from './Pages/Activities/Expo'
 import Seo from './Component/Seo'
 import ScrollToTop from './Component/ScrollToTop'
 import Articals from './Pages/Home/Articals'
+import Event from './Pages/Event/Event'
 
 // import Exhibitors from './Pages/Home/Exhibitors'
 
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/committee" element={<Commitee />} />
+          <Route path="/event" element={<Event />} />
           <Route path="/facilities" element={<Facility />} />
           <Route path="/exhibition" element={<Exhibition />} />
           <Route path="/IAPMO" element={<IapmoSection />} />

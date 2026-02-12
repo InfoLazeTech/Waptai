@@ -26,6 +26,8 @@ const Header = () => {
     { name: "HOME", path: "/" },
     { name: "ABOUT US", path: "/about-us" },
     { name: "COMMITTEE", path: "/committee" },
+    { name: "EVENT", path: "/event" },
+
     // { name: "E-MAGAZINE", path: "/e-magazine" },
     { name: "FACILITIES", path: "/facilities" },
 
@@ -59,13 +61,13 @@ const Header = () => {
                 WAPTAI
               </span>
               <span className="text-slate-500 font-bold text-[10px] lg:text-[11px] leading-tight tracking-[0.15em] mt-1 uppercase">
-                Water Purification & Treatment <br /> Association of India
+                Water Purification & Treatment <br /> Association (of India)
               </span>
             </div>
           </NavLink>
 
           {/* DESKTOP NAVIGATION */}
-          <nav className="hidden lg:flex items-center gap-2 text-[13px] font-bold">
+          <nav className="hidden lg:flex md:whitespace-nowrap items-center gap-2 text-[13px] font-bold">
             {menuItems.map((item) => (
               <NavLink key={item.name} to={item.path} className={navStyles}>
                 {item.name}
@@ -109,7 +111,7 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
             <NavLink to="/expo-2026" className={navStyles}>EXPO 2026</NavLink>
             <NavLink
               to="/contact-us"
-              className="ml-6 bg-[#1c87c9] text-white px-8 py-3 rounded-full hover:bg-blue-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-95 shadow-md"
+              className="ml-6 bg-[#1c87c9] text-white md:px-8 md:py-3 md:whitespace-nowrap  rounded-full hover:bg-blue-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-95 shadow-md"
             >
               CONTACT US
             </NavLink>

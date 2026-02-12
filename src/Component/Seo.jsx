@@ -27,6 +27,12 @@ const SeoManager = () => {
         "Meet the governing body and expert committee members driving WAPTAI initiatives.";
       break;
 
+      case "/event":
+      title = "Events | WAPTAI";
+      description =
+        "Explore WAPTAI events including conferences, exhibitions, training sessions and member meetups.";
+      break;
+
     case "/contact-us":
       title = "Contact Us | WAPTAI";
       description =
@@ -121,11 +127,11 @@ const SeoManager = () => {
         property="og:url"
         content={`https://www.waptaiassociation.org/${pathname}`}
       />
-      <meta
+      {/* <meta
         key="og:image"
         property="og:image"
         content="https://i.postimg.cc/DZyL5yhv/waptai-logo.png"
-      />
+      /> */}
 
       {/* ================= GEO / BUSINESS ================= */}
       <meta key="geo.region" name="geo.region" content="IN" />
