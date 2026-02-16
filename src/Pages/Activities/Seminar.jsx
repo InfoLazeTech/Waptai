@@ -25,6 +25,7 @@ import body1 from "../../assets/body1.jpg";
 import body2 from "../../assets/body2.jpg";
 import body3 from "../../assets/body3.jpg";
 import body4 from "../../assets/body4.jpg";
+import ImageSlider from "../../Component/ImageSlider";
 
 
 
@@ -53,7 +54,6 @@ const seminarData = [
 
 const SeminarSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [selectedImg, setSelectedImg] = useState(null);
 
   return (
     <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 py-24 px-4">
@@ -87,46 +87,9 @@ const SeminarSection = () => {
         </div>
 
         {/* ===== IMAGES GRID ===== */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {seminarData[activeIndex].images.map((img, i) => (
-            <div
-              key={i}
-              className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition"
-            >
-              <img
-                src={img}
-                alt="Seminar"
-                onClick={() => setSelectedImg(img)}
-                className="w-full h-[220px] object-cover cursor-pointer
-             hover:scale-105 transition-transform duration-500"
-              />
+        <ImageSlider images={seminarData[activeIndex].images} />
 
-            </div>
-          ))}
-        </div>
-        {/* ===== IMAGE MODAL ===== */}
-        {selectedImg && (
-          <div
-            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4"
-            onClick={() => setSelectedImg(null)}
-          >
-            {/* Close Button */}
-            <button
-              className="absolute top-6 right-6 text-white text-4xl"
-              onClick={() => setSelectedImg(null)}
-            >
-              ×
-            </button>
 
-            {/* Full Image */}
-            <img
-              src={selectedImg}
-              alt="Seminar Full View"
-              className="max-w-[95%] max-h-[90%] rounded-xl shadow-2xl animate-zoomIn"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
-        )}
 
 
       </div>

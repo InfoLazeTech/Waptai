@@ -11,6 +11,7 @@ import event4 from "../../assets/event4.jpg";
 import tree1 from "../../assets/tree1.jpg";
 import tree2 from "../../assets/tree2.jpg";
 import tree3 from "../../assets/tree3.jpg";
+import ImageSlider from "../../Component/ImageSlider";
 
 
 const celebrationData = [
@@ -30,7 +31,6 @@ const celebrationData = [
 
 const Celebration = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-    const [selectedImg, setSelectedImg] = useState(null);
   
 
   return (
@@ -65,45 +65,13 @@ const Celebration = () => {
           ))}
         </div>
 
-        {/* ===== IMAGE GRID ===== */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-8">
-          {celebrationData[activeIndex].images.map((img, i) => (
-            <div
-              key={i}
-              className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition"
-            >
-              <img
-                src={img}
-                alt="Celebration"
-                onClick={() => setSelectedImg(img)}
-                className="w-full h-[220px] object-cover cursor-pointer
-             hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          ))}
-        </div>
-          {selectedImg && (
-          <div
-            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4"
-            onClick={() => setSelectedImg(null)}
-          >
-            {/* Close Button */}
-            <button
-              className="absolute top-6 right-6 text-white text-4xl"
-              onClick={() => setSelectedImg(null)}
-            >
-              ×
-            </button>
+       <div className="flex justify-center mt-8">
+  <div className="w-full max-w-max">
+    <ImageSlider images={celebrationData[activeIndex].images} />
+  </div>
+</div>
 
-            {/* Full Image */}
-            <img
-              src={selectedImg}
-              alt="Celebration Full View"
-              className="max-w-[95%] max-h-[90%] rounded-xl shadow-2xl animate-zoomIn"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
-        )}
+        
 
 
       </div>

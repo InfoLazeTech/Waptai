@@ -133,6 +133,7 @@ import officee26 from "../../assets/officee26.jpg";
 
 import podcaste1 from "../../assets/podcaste1.jpg";
 import podcaste2 from "../../assets/podcaste2.jpg";
+import ImageSlider from "../../Component/ImageSlider";
 
 const tabs = [
   {
@@ -228,13 +229,16 @@ const tabs = [
 
 ];
 
-export default function EventTabs() {
+function EventTabs() {
   const [activeTab, setActiveTab] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
 
   const openModal = (img) => {
     setModalImage(img);
+     setCurrentIndex(index);
     setModalOpen(true);
   };
 
@@ -378,24 +382,8 @@ export default function EventTabs() {
             )}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {tabs[activeTab].images.map((img, idx) => (
-              <div
-                key={idx}
-                className="relative overflow-hidden rounded-xl cursor-pointer group"
-                onClick={() => openModal(img)}
-              >
-                <img
-                  src={img}
-                  alt=""
-                  className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-300"
-                />
-                {/* <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white font-semibold transition">
-                  View Image
-                </div> */}
-              </div>
-            ))}
-          </div>
+        <ImageSlider images={tabs[activeTab].images} />
+
         </div>
 
         {/* ================= VIDEOS ================= */}
@@ -489,3 +477,4 @@ export default function EventTabs() {
     </div>
   );
 }
+export default EventTabs;
