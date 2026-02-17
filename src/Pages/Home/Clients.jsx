@@ -81,7 +81,7 @@ const Clients = () => {
   );
 
   return (
-    <section className="flex items-center bg-[#e3f2fd]/50 justify-center px-6 py-20">
+    <section className="flex items-center justify-center px-6 py-20">
       <div className="max-w-7xl w-full">
 
         {/* ===== CENTER TEXT ===== */}

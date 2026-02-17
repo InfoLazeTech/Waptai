@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { FaTimes } from "react-icons/fa";
 
 export default function ImageSlider({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -72,10 +73,14 @@ export default function ImageSlider({ images }) {
 
           {/* Close */}
           <button
-            onClick={() => setOpen(false)}
-            className="absolute top-6 right-6 text-white text-4xl"
+          
+             className="absolute top-6 right-6 text-white text-2xl 
+             bg-black/40 p-3 rounded-full 
+             hover:bg-black/70 hover:scale-110 
+             transition duration-300"
+               onClick={() => setOpen(false)}
           >
-            ×
+             <FaTimes />
           </button>
 
           {/* Left Arrow (Desktop Only) */}

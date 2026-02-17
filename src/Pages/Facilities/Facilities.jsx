@@ -7,18 +7,18 @@ import facility2 from "../../assets/facilities2.jpg";
 const Facilities = () => {
   return (
     <section className="py-5 px-6 bg-gradient-to-br from-sky-100 via-white to-sky-50 max-w-full h-auto">
-      
+
       {/* Heading */}
-     
-    <div className="text-center py-24 md:py-32">
-  <h2 className="text-5xl md:text-6xl font-bold mt-5 text-[#1c87c9] mb-6 tracking-wide">
-    Facilities
-  </h2>
-  <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-    Explore our world-class facilities designed to support business development 
-    and water testing services for our members.
-  </p>
-</div>
+
+      <div className="text-center py-24 md:py-32">
+        <h2 className="text-5xl md:text-6xl font-bold mt-5 text-[#1c87c9] mb-6 tracking-wide">
+          Facilities
+        </h2>
+        <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+          Explore our world-class facilities designed to support business development
+          and water testing services for our members.
+        </p>
+      </div>
 
 
       {/* Section 1 */}
@@ -34,9 +34,9 @@ const Facilities = () => {
             Members Conference & Training Facilities
           </h3>
           <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
-            Members of WAPTAG can use the conference room, training room, and meeting room 
-            with enthusiasm for their business. WAPTAG provides a modern air-conditioned facility 
-            with all amenities, well-equipped for presentations, fully furnished, and ideal for 
+            Members of WAPTAG can use the conference room, training room, and meeting room
+            with enthusiasm for their business. WAPTAG provides a modern air-conditioned facility
+            with all amenities, well-equipped for presentations, fully furnished, and ideal for
             business development.
           </p>
 
@@ -74,9 +74,9 @@ const Facilities = () => {
             Get Water Testing Done As per Bureau of Indian Standards (BIS)
           </h3>
           <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
-            At our water testing facility, we strictly follow BIS guidelines, ensuring the highest 
-            quality and accurate results. Equipped with state-of-the-art lab instruments, our experts 
-            meticulously analyze samples for reliable results. WAPTAG members enjoy special rates for 
+            At our water testing facility, we strictly follow BIS guidelines, ensuring the highest
+            quality and accurate results. Equipped with state-of-the-art lab instruments, our experts
+            meticulously analyze samples for reliable results. WAPTAG members enjoy special rates for
             these premium services.
           </p>
 

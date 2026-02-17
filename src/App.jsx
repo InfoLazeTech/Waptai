@@ -23,7 +23,9 @@ import Expo from './Pages/Activities/Expo'
 import Seo from './Component/Seo'
 import ScrollToTop from './Component/ScrollToTop'
 import Articals from './Pages/Home/Articals'
-import Event from './Pages/Event/Event'
+// import Event from './Pages/Event/Event'
+import Membership from './Pages/Home/Membership'
+import EventDetails from './Pages/Event/EventDetails'
 
 // import Exhibitors from './Pages/Home/Exhibitors'
 
@@ -42,13 +44,17 @@ const App = () => {
             path="/"
             element={
               <>
-                <HeroSection />
-                <YouTubeVideo />
-                <Articals />
-                <About />
-                <Programs />
-                <FeaturesSection />
-                 <Clients />
+           <HeroSection />
+      <YouTubeVideo />
+      <Membership />
+      <About />
+        <Articals />   
+      <Programs />
+      <FeaturesSection />
+      <Clients />
+              
+
+
               </>
             }
           />
@@ -57,7 +63,8 @@ const App = () => {
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/committee" element={<Commitee />} />
-          <Route path="/event" element={<Event />} />
+          {/* <Route path="/event" element={<Event />} /> */}
+          <Route path="/event/:id" element={<EventDetails />} />
           <Route path="/facilities" element={<Facility />} />
           <Route path="/exhibition" element={<Exhibition />} />
           <Route path="/IAPMO" element={<IapmoSection />} />
@@ -66,7 +73,7 @@ const App = () => {
           <Route path="/Legal-Assistance" element={<LegalAssistance />} />
           <Route path="/Celebration" element={<Celebration />} />
           <Route path="/expo-2026" element={<Expo />} />
-          
+
 
         </Routes>
       </main>

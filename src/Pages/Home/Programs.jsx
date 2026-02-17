@@ -30,7 +30,7 @@ const Programs = () => {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-[#e3f2fd]/50">
+    <section className="relative py-24 overflow-hidden">
       {/* Background Subtle Pattern */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
            style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='3' cy='3' r='1' fill='%231c87c9' fill-opacity='1'/%3E%3C/svg%3E")` }}>

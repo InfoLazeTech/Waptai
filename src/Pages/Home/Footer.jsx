@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <div>
                 <h3 className="text-2xl font-black tracking-tight leading-none">WAPTAI</h3>
-                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em] mt-1">Water Association of India</p>
+                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em] mt-1">Water Purification & Treatment Association (india)</p>
               </div>
             </div>
             

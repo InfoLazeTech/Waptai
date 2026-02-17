@@ -10,7 +10,7 @@ const About = () => {
       <div className="absolute -top-20 left-[-10%] w-[400px] h-[400px] bg-[#0288d1]/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
       <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#03a9f4]/10 rounded-full blur-[150px] -z-10 animate-pulse"></div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-[1536px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-16 items-center">
 
           {/* LEFT SIDE: Heading & Intro */}
