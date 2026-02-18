@@ -19,8 +19,7 @@ const EventDetails = () => {
 
   return (
     <div className="bg-gray-50">
-<div className="px-4 sm:px-6 md:px-12 pt-25 md:pt-32 pb-8 sm:pb-12 md:pb-16 max-w-full mx-auto">
-
+<div className="px-4 sm:px-6 md:px-12 py-10 pt-28 md:py-15 max-w-full h-auto mx-auto">
         {/* ===== HERO GRID ===== */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center md:h-screen">
           {/* LEFT TEXT */}

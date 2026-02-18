@@ -247,7 +247,7 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
             <div className="flex flex-col">
               <button
                 onClick={() => setShowEventsDropdown(!showEventsDropdown)}
-                className="flex items-center justify-between text-slate-700 rounded-lg hover:bg-blue-50 transition-all"
+                className="flex items-center justify-between text-slate-700 rounded-lg transition-all"
               >
                 EVENTS
                 <FaChevronDown className={`text-[10px] transition-transform duration-300 ${showEventsDropdown ? "rotate-180" : ""}`} />
