@@ -1,6 +1,6 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
-import membershipImg from "../../assets/waptaimeMbership.jpg";
+import membershipImg from "../../assets/waptaiMembership.jpg";
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 
