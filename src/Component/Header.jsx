@@ -8,7 +8,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activitiesOpen, setActivitiesOpen] = useState(false);
-  const [showEventsDropdown, setShowEventsDropdown] = useState(false); 
+  const [showEventsDropdown, setShowEventsDropdown] = useState(false);
+  const [clickedIndex, setClickedIndex] = useState(null);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
@@ -76,17 +77,17 @@ const Header = () => {
             ))}
 
             {/* EVENTS DROPDOWN */}
-<div className="relative group">
-  <button
-    className="px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 tracking-wide
+            <div className="relative group">
+              <button
+                className="px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 tracking-wide
       text-slate-700 hover:bg-blue-50 hover:text-[#1c87c9]"
-  >
-    EVENTS
-    <FaChevronDown className="text-[10px] transition-transform duration-300 group-hover:rotate-180" />
-  </button>
-  {/* Dropdown */}
-  <div
-    className="
+              >
+                EVENTS
+                <FaChevronDown className="text-[10px] transition-transform duration-300 group-hover:rotate-180" />
+              </button>
+              {/* Dropdown */}
+              <div
+                className="
     absolute left-1/2 -translate-x-1/2
     top-full mt-3
     w-[910px]
@@ -101,20 +102,22 @@ const Header = () => {
     transition-all duration-200
     z-[999]
   "
-  >
+              >
 
-    <div className="grid grid-cols-3 gap-x-10 gap-y-5">
+                <div className="grid grid-cols-3 gap-x-10 gap-y-5">
 
-      {tabs.map((event, index) => (
-        <NavLink
-          key={event.name}
-          to={`/event/${index + 1}`}
-          className="block group/item"
-        >
-          <div className="flex items-center justify-between pb-1">
+                  {tabs.map((event, index) => (
+                    <NavLink
+                      key={event.name}
+                      to={`/event/${index + 1}`}
+                      onClick={() => setClickedIndex(index)}
 
-            {/* Text */}
-            <p className="
+                      className="block group/item"
+                    >
+                      <div className="flex items-center justify-between pb-1">
+
+                        {/* Text */}
+                        <p className="
               text-xs
               text-gray-700
               font-medium
@@ -124,12 +127,12 @@ const Header = () => {
               transition
               group-hover/item:text-sky-600
             ">
-              {event.name}
-            </p>
+                          {event.name}
+                        </p>
 
-            {/* Arrow */}
-            <svg
-              className="
+                        {/* Arrow */}
+                        <svg
+                          className="
               w-3 h-3
               text-gray-400
               ml-2
@@ -138,39 +141,31 @@ const Header = () => {
               group-hover/item:translate-x-1
               group-hover/item:text-sky-600
               "
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
 
-          </div>
+                      </div>
 
-          {/* Hover Line */}
-          <span
-            className="
-            block
-            h-[1px]
-            w-0
-            bg-sky-600
-            transition-all
-            duration-300
-            group-hover/item:w-full
-          "
-          ></span>
+                      {/* Hover Line */}
+                      <span
+                        className={`
+                  block h-[1px] bg-sky-600 transition-all duration-300
+                  ${clickedIndex === index ? "w-full" : "group-hover/item:w-full w-0"}
+                `}
+                      ></span>
 
-        </NavLink>
-      ))}
+                    </NavLink>
+                  ))}
 
-    </div>
+                </div>
 
-  </div>
-</div>
-
-
-
+              </div>
+            </div>
 
             {/* DROP-DOWN ACTIVITIES */}
             <div className="relative group py-2">
@@ -229,13 +224,13 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
       <div className={`lg:hidden fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
         onClick={() => setIsMenuOpen(false)}
       >
-     <div
-  onClick={(e) => e.stopPropagation()}
-  className={`absolute top-0 right-0 h-full w-72 bg-white shadow-2xl p-6 transition-transform duration-300
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className={`absolute top-0 right-0 h-full w-72 bg-white shadow-2xl p-6 transition-transform duration-300
     ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
     overflow-y-auto max-h-screen
   `}
->
+        >
 
           <nav className="flex flex-col gap-4 font-semibold text-slate-700 text-sm">
             {menuItems.map((item) => (
@@ -243,23 +238,36 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
                 {item.name}
               </NavLink>
             ))}
-        {/* MOBILE EVENTS DROPDOWN */}
+            {/* MOBILE EVENTS DROPDOWN */}
             <div className="flex flex-col">
               <button
                 onClick={() => setShowEventsDropdown(!showEventsDropdown)}
                 className="flex items-center justify-between text-slate-700 rounded-lg transition-all"
               >
                 EVENTS
-                <FaChevronDown className={`text-[10px] transition-transform duration-300 ${showEventsDropdown ? "rotate-180" : ""}`} />
+                <FaChevronDown
+                  className={`text-[10px] transition-transform duration-300 ${showEventsDropdown ? "rotate-180" : ""}`}
+                />
               </button>
+
               {showEventsDropdown && (
                 <div className="flex flex-col gap-1 mt-2 pl-4">
                   {tabs.map((event, index) => (
                     <NavLink
                       key={event.name}
                       to={`/event/${index + 1}`}
-                      onClick={() => setIsMenuOpen(false)}
-                      className="px-3 py-2 rounded-lg text-slate-700 hover:bg-blue-50 hover:text-[#1c87c9] transition-all"
+                      onClick={() => {
+                        setClickedIndex(index);       // freeze hover effect
+                        setIsMenuOpen(false);         // close mobile menu
+                        setShowEventsDropdown(false); // close dropdown
+                      }}
+                      className={`
+            px-3 py-2 rounded-lg transition-all
+            ${clickedIndex === index
+                          ? "bg-blue-50 text-[#1c87c9]" // clicked option highlight
+                          : "text-slate-700 hover:bg-blue-50 hover:text-[#1c87c9]"
+                        }
+          `}
                     >
                       {event.name}
                     </NavLink>
@@ -267,6 +275,7 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
                 </div>
               )}
             </div>
+
 
 
             <div className="border-t pt-4">

@@ -60,7 +60,7 @@ const EventDetails = () => {
                 <img
                   src={event.hero}
                   alt={event.name}
-                  className="w-[500px] h-auto sm:h-80 md:h-96 lg:h-[38rem] object-fill rounded-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+                  className="w-[500px] h-auto sm:h-80 md:h-96 lg:h-[36rem] object-fill rounded-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
                   onClick={() => setHeroOpen(true)}
                 />
               )}

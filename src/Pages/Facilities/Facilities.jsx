@@ -34,8 +34,8 @@ const Facilities = () => {
             Members Conference & Training Facilities
           </h3>
           <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
-            Members of WAPTAG can use the conference room, training room, and meeting room
-            with enthusiasm for their business. WAPTAG provides a modern air-conditioned facility
+            Members of WAPTAI can use the conference room, training room, and meeting room
+            with enthusiasm for their business. WAPTAI provides a modern air-conditioned facility
             with all amenities, well-equipped for presentations, fully furnished, and ideal for
             business development.
           </p>
@@ -76,7 +76,7 @@ const Facilities = () => {
           <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
             At our water testing facility, we strictly follow BIS guidelines, ensuring the highest
             quality and accurate results. Equipped with state-of-the-art lab instruments, our experts
-            meticulously analyze samples for reliable results. WAPTAG members enjoy special rates for
+            meticulously analyze samples for reliable results. WAPTAI members enjoy special rates for
             these premium services.
           </p>
 
@@ -86,7 +86,7 @@ const Facilities = () => {
               "Advanced Laboratory Instruments",
               "Testing Water by Expert",
               "Most Reliable Water Testing",
-              "Concessional Rate for WAPTAG Members",
+              "Concessional Rate for WAPTAI Members",
             ].map((item) => (
               <li
                 key={item}
