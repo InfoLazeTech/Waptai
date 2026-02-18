@@ -62,7 +62,7 @@ const Facilities = () => {
       </div>
 
       {/* Section 2 (Reverse Layout) */}
-      <div className="flex flex-col md:flex-row-reverse gap-12 mb-32 items-center justify-center">
+      <div className="flex flex-col md:flex-row-reverse gap-12 md:mb-10 items-center justify-center">
         <img
           src={facility2}
           alt="Laboratory Facility"

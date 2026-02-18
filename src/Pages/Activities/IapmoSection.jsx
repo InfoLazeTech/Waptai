@@ -96,7 +96,7 @@ const IapmoSection = () => {
     <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50  py-32">
 
       {/* ================= HERO ================= */}
-      <div className="max-w-6xl mx-auto px-6 py-10 text-center space-y-6">
+      <div className="max-w-6xl mx-auto px-6 md:py-10 text-center space-y-6">
           <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}

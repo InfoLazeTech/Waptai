@@ -10,7 +10,7 @@ const LegalAssistance = () => {
       <div className="max-w-7xl mx-auto space-y-12">
 
         {/* ===== HEADING ===== */}
-        <div className="text-center mt-20">
+        <div className="text-center md:mt-20 mt-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#1c87c9] mb-4">
             Legal Assistance
           </h2>

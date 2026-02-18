@@ -63,7 +63,7 @@ const Header = () => {
                 WAPTAI
               </span>
               <span className="text-slate-500 font-bold text-[10px] lg:text-[11px] leading-tight tracking-[0.15em] mt-1 uppercase">
-                Water Purification & Treatment <br /> Association <span className="font-extrabold">(India)</span>
+                Water Purification & Treatment <br /> Association <span className="md:font-extrabold font-extrabold">(India)</span>
               </span>
             </div>
           </NavLink>
@@ -79,8 +79,7 @@ const Header = () => {
             {/* EVENTS DROPDOWN */}
             <div className="relative group">
               <button
-                className="px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 tracking-wide
-      text-slate-700 hover:bg-blue-50 hover:text-[#1c87c9]"
+                className="px-4 py-2 flex items-center gap-2 text-slate-700 hover:text-[#1c87c9] transition-colors"
               >
                 EVENTS
                 <FaChevronDown className="text-[10px] transition-transform duration-300 group-hover:rotate-180" />

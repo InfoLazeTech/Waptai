@@ -60,7 +60,7 @@ const DATA = {
     { id: 3, name: "Bhupesh Patel", role: "Secretary", company: "ORG EngiTech Ltd. Secretary", image: Bhupesh },
     { id: 4, name: "Gautam Shah", role: "Joint Secretary", company: "Lexcru Water Tech Pvt. Ltd Treasurer", image: Gautam },
     { id: 7, name: "Kailash Shah", role: "Executive Member", company: "MaxPure Water System Pvt. Ltd. Joint Treasurer", image: Kailash },
-    { id: 5, name: "SACHIN RINGWALA", role: "Treasurer", company: "Aishwaryam Filters Dy. Secretary", image: Sachin },
+    { id: 5, name: "Sachin Ringwala", role: "Treasurer", company: "Aishwaryam Filters Dy. Secretary", image: Sachin },
     // { id: 6, name: "Sunil Raval", role: "Executive Member", company: "Unicare Water Technology Pvt Ltd. Joint Secretary", image: Sunil },
   ],
   "Steering Committee": [
@@ -87,7 +87,7 @@ const DATA = {
     { id: 3, name: "Chetan Mehta", role: "Secretary", company: "P Tech Aqua Committee Member", image: Mehta },
     { id: 4, name: "Ashok savaliya", role: "Joint Secretary", company: "Bhojal Filter House & Gas Gyser Committee Member", image: Savliya },
     { id: 5, name: "Rahul Jhabak", role: "Treasurer", company: "Maxpure Water System Pvt. Ltd. Committee Member", image: Rahul },
-    { id: 6, name: "Vikram savani", role: "Executive Member", company: "Vilient India Pvt. Ltd. Committee Member", image: Vikram },
+    { id: 6, name: "Vikram savani", role: "Executive Member", company: "Velient Pec India Pvt. Ltd. Committee Member", image: Vikram },
   ],
   "Saurashtra & Kutch Chapter": [
     { id: 1, name: "Vishal Sharma", role: "Chairman", company: "Flowlance International LLP. Committee Member", image: Vishal },
@@ -101,7 +101,7 @@ const DATA = {
   "Central Gujarat Chapter": [
     { id: 1, name: "Deepak Chhatriwala", role: "Chairman", company: "Krishna Marketing Committee Member", image: Dipak },
     // { id: 2, name: "Sanjay Khatri", role: "Vice Chairman", company: "Shreeji Home Care Dy. Chapter Head", image: Sanjay },
-    { id: 3, name: "Ankit Patel", role: "Secretary", company: "Distributor of Gujarat, Nexus Committee Member", image: Ankit },
+    { id: 3, name: "Ankit Patel", role: "Secretary", company: "Nexus Committee Member", image: Ankit },
     // { id: 4, name: "Hiren Shah", role: "Joint Secretary", company: "Real Marketing Committee Member", image: Hiren },
     // { id: 5, name: "Kaushal patel", role: "Treasurer", company: "KK Impex Committee Member", image: Kaushal },
   ], 

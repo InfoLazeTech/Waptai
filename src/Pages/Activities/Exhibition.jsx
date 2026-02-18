@@ -19,7 +19,7 @@ function Exhibition() {
     <div className="bg-gray-50">
       {/* ===== TOP HEADING ===== */}
       <section
-        className="w-full h-auto flex flex-col justify-center items-center bg-gradient-to-br from-sky-100 via-white to-sky-50 px-6 py-28 text-center mt-[72px]"
+        className="w-full h-auto flex flex-col justify-center items-center bg-gradient-to-br from-sky-100 via-white to-sky-50 px-6 md:py-25 py-20 text-center mt-[72px]"
       >
         {/* Heading */}
         <h1 className="text-5xl md:text-6xl font-extrabold text-[#1c87c9] mb-6">
@@ -28,14 +28,11 @@ function Exhibition() {
 
         {/* Description */}
         <p className="max-w-2xl text-lg md:text-xl text-gray-700 leading-relaxed">
-          Explore our curated collection of exhibitions over the years, showcasing
-          creativity, innovation, and collaboration. Each year brings a unique
-          story and experience to inspire art enthusiasts and professionals alike.
-        </p>
+Explore our exhibitions highlighting creativity, innovation, and inspiring stories each year.        </p>
       </section>
 
       {/* ===== YEAR-WISE EXPO ===== */}
-      <section className="max-w-6xl mx-auto py-16 px-4 space-y-24">
+      <section className="max-w-6xl mx-auto md:py-10 px-4 space-y-24">
         {Object.entries(expoContent).map(([year, data]) => (
           <div
             key={year}

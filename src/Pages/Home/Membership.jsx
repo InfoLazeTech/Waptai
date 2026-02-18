@@ -13,7 +13,7 @@ const Membership = () => {
       <div className="max-w-[1536px] px-6 md:px-12 mx-auto">
 
         {/* Heading */}
-        <div className="mb-22 text-center lg:text-left">
+        <div className="md:mb-22 mb-10 text-center lg:text-left">
           <h2 className="text-4xl md:text-5xl text-center font-extrabold text-[#0d5c7f]">
             WAPTAI Membership
           </h2>
