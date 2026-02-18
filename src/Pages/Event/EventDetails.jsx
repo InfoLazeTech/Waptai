@@ -18,8 +18,8 @@ const EventDetails = () => {
   }
 
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <div className="px-4 sm:px-6 md:px-12 py-28 md:py-15 max-w-full mx-auto">
+    <div className="bg-gray-50">
+      <div className="px-4 sm:px-6 md:px-12 py-28 md:py-15 max-w-full h-auto mx-auto">
 
         {/* ===== HERO GRID ===== */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center md:h-screen">
@@ -49,7 +49,7 @@ const EventDetails = () => {
 
           {/* RIGHT IMAGE / VIDEO */}
           <div className="md:col-span-5 flex justify-center">
-            <div className="w-full rounded-2xl overflow-hidden">
+            <div className="w-[500px] rounded-2xl overflow-hidden">
               {event.youtubeId ? (
                 <iframe
                   className="w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] rounded-2xl"
@@ -61,7 +61,7 @@ const EventDetails = () => {
                 <img
                   src={event.hero}
                   alt={event.name}
-                  className="w-full h-auto sm:h-80 md:h-96 lg:h-[36rem] object-fill rounded-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+                  className="w-[500px] h-auto sm:h-80 md:h-96 lg:h-[38rem] object-fill rounded-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
                   onClick={() => setHeroOpen(true)}
                 />
               )}
@@ -91,7 +91,7 @@ const EventDetails = () => {
 
         {/* ===== IMAGE GALLERY ===== */}
         {event.images?.length > 0 && (
-          <section className="mb-16 mt-12">
+          <section className="mt-12">
             <div className="flex items-center gap-3 mb-6">
               <svg className="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" strokeWidth="2"
                 viewBox="0 0 24 24">
@@ -106,54 +106,71 @@ const EventDetails = () => {
         )}
 
         {/* ===== EVENT VIDEOS ===== */}
-        {event.videos?.length > 0 && (
-          <section className="mb-16">
-            <div className="flex items-center gap-3 mb-6">
-              <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" strokeWidth="2"
-                viewBox="0 0 24 24">
-                <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z" />
-              </svg>
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 flex items-center gap-3">
-                Event Videos
-              </h3>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-              {event.videos.map((video, i) => (
-                <div key={i} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
-                  <video src={video} controls className="w-full h-48 sm:h-64 md:h-72 lg:h-80 object-cover" />
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
+    {event.videos?.length > 0 && (
+  <section className="mt-16">
+    
+    {/* ===== Heading ===== */}
+    <div className="flex items-center gap-3 mb-5">
+      <svg
+        className="w-6 h-6 text-red-500"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z" />
+      </svg>
+
+      <h3 className="text-2xl sm:text-3xl font-bold text-gray-800">
+        Event Videos
+      </h3>
+    </div>
+
+    {/* ===== Video Grid ===== */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {event.videos.map((video, i) => (
+        <div
+          key={i}
+          className="bg-white rounded-2xl shadow-md border border-gray-200 
+                     hover:shadow-2xl hover:-translate-y-1 
+                     transition-all duration-300 overflow-hidden"
+        >
+          {/* Medium 16:9 Ratio Container */}
+          <div className="relative w-full aspect-video bg-black">
+            <video
+              src={video}
+              controls
+              className="absolute inset-0 w-full h-full rounded-2xl"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
 
         {/* ===== REELS ===== */}
         {event.reels?.length > 0 && (
-          <section className="mb-16">
-            <div className="flex items-center gap-3 mb-6">
-              <svg className="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" strokeWidth="2"
-                viewBox="0 0 24 24">
-                <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z" />
-              </svg>
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 flex items-center gap-3">
-                Podcast Reels
-              </h3>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-              {event.reels.map((reel, i) => (
-                <div key={i} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
-                  <iframe
-                    src={reel}
-                    width="100%"
-                    height="300"
-                    allowFullScreen
-                    className="object-cover w-full h-48 sm:h-64 md:h-72 lg:h-80"
-                    title={`reel-${i}`}
-                  />
-                </div>
-              ))}
-            </div>
-          </section>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+  {event.reels.map((reel, i) => (
+    <div
+      key={i}
+      className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow duration-300"
+    >
+      {/* 9:16 Aspect Ratio Container */}
+      <div className="relative w-full aspect-[9/16]">
+        <iframe
+          src={reel}
+          allowFullScreen
+          className="absolute top-0 left-0 w-full h-full rounded-2xl"
+          title={`reel-${i}`}
+        />
+      </div>
+    </div>
+  ))}
+</div>
+
         )}
 
       </div>

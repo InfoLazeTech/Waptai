@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronRight, Globe, ArrowRight } from "lucide-react";
+// import { ChevronRight, Globe, ArrowRight } from "lucide-react";
 import sampat from "../../assets/Sampat_Jhabak.jpeg"
 import ashok from "../../assets/Ashok_Patel.jpeg"
 import nishit from "../../assets/Nishit.jpeg"
@@ -36,7 +36,7 @@ import Kamlesh from "../../assets/Kamlesh.jpeg"
 import Dipak from "../../assets/Dipak.jpeg"
 // import Sanjay from "../../assets/Sanjay.jpeg"
 import Ankit from "../../assets/Ankit.jpeg"
-import sunny from "../../assets/sunny.jpeg"
+import sunny from "../../assets/Sunny.jpeg"
 import mayank from "../../assets/mayank.jpeg"
 import ajay from "../../assets/ajay.jpeg"
 // import Hiren from "../../assets/Hiren.jpeg"

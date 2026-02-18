@@ -8,8 +8,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activitiesOpen, setActivitiesOpen] = useState(false);
-  const [showEventsDropdown, setShowEventsDropdown] = useState(false); // Mobile events dropdown
-
+  const [showEventsDropdown, setShowEventsDropdown] = useState(false); 
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
