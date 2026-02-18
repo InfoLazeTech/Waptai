@@ -127,7 +127,7 @@ const DATA = {
 };
 
 const Committee = () => {
-  const [active, setActive] = useState("Steering Committee");
+  const [active, setActive] = useState("Governing Body");
   const [selectedImg, setSelectedImg] = useState(null);
 
   return (
