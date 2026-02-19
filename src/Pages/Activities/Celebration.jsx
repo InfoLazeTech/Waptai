@@ -34,11 +34,11 @@ const Celebration = () => {
   
 
   return (
-    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 py-24 px-4">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 md:py-24 py-10 px-4">
       <div className="max-w-7xl mx-auto space-y-12">
 
         {/* ===== HEADING ===== */}
-        <div className="text-center mt-20">
+        <div className="text-center md:mt-20 mt-22">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#1c87c9] mb-3">
             Celebration
           </h2>

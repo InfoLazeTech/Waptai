@@ -63,7 +63,7 @@ const Header = () => {
                 WAPTAI
               </span>
               <span className="text-slate-500 font-bold text-[10px] lg:text-[11px] leading-tight tracking-[0.15em] mt-1 uppercase">
-                Water Purification & Treatment <br /> Association <span className="md:font-extrabold font-extrabold">(India)</span>
+                Water Purification & Treatment <br /> Association <span className="md:font-extrabold font-bold">(India)</span>
               </span>
             </div>
           </NavLink>
