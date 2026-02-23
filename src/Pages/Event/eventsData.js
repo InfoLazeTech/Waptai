@@ -133,33 +133,46 @@
   import podcaste2 from "../../assets/podcaste2.jpg";
   
 export const tabs = [
-    {
-      name: "WAPTAI GST PODCAST 31st Jan 2026",
-      hero: podcaste1,
-      images: [podcaste1, podcaste2],
-      youtubeId: "ukBT4wr9CiI",
-      videos: [],
-      reels: [
-        "https://www.instagram.com/reel/DUQh3UqjBHo/embed"
-      ],
-    },
+  {
+  name: "WAPTAI GST Podcast - 31 Jan 2026",
+  hero: podcaste1,
+  images: [podcaste1, podcaste2],
+  youtubeId: "ukBT4wr9CiI",
+  videos: [],
+  reels: ["https://www.instagram.com/reel/DUQh3UqjBHo/embed"],
+  content: `WAPTAI has urged the government to reduce GST on water purification systems from 18% to 5% or grant an exemption to improve affordability and adoption. 
+
+Representing manufacturers and service providers, WAPTAI partnered with Jamawat Media for a podcast on 31 Jan 2026. 
+
+Shri Ashit Doshi, President, highlighted that safe drinking water boosts public health and productivity, while Shri Bhupesh Patel, Secretary, noted that GST rationalisation supports inclusive growth and water conservation.`
+},
     {
       name: "29th May 2025 BIS Training Meeting Ahemedabad",
       hero: bisHero,
       images: [bis1, bis2, bis3, bis4, bis5, bis6, bis7, bis8, bis9, bis10, bis11],
       videos: [],
+      content:`WAPTAI in collaboration with BIS Ahmedabad Office, successfully conducted a session on 29th May 2025 and  provided valuable insights into BIS licensing procedures, latest updates, and compliance requirements for RO water purifiers.
+We thank all technicians, dealers, distributors, and manufacturers for their active participation and engagement.
+`
     },
     {
       name: "28th Dec 2024 Industrial Meeting & Motivational Training",
       hero: invitaionMeet,
       images: [indus1, indus2, indus3, indus4, indus5, indus6, indus7, indus8],
       videos: [],
+      content:`WAPTAI Industrial Networking Event 2024 
+WAPTAI First Industrial Networking Event on 28th Dec 2024 (Saturday) at Riviera Restaurant & Banquet, Ahmedabad bringing together 100+ OEMs under one roof.
+It was a great platform to build strong, long-term industry relationships and strengthen the water treatment network.
+`
     },
     {
       name: "24th May Waptai Member Meet Ahmedabad",
       hero: meetHero,
       images: [meet1, meet2, meet3, meet4, meet5],
       videos: [],
+      content:`An exclusive WAPTAI Membership Drive Evening Get-Together on 24th May 2025 at The Mango Stories, Ahmedabad.
+Aimed to Connect, collaborate, and grow with fellow water industry professionals while exploring the benefits of being part of WAPTAI.
+`
     },
 
 
@@ -171,12 +184,18 @@ export const tabs = [
         surat7, surat8, surat9, surat10, surat11, surat12
       ],
       videos: [],
+      content:`The WAPTAI South Gujarat Chapter successfully conducted its Members Meet on 24th July 2025 at Shree Khodiyar Kathiyawadi Dhaba with enthusiastic participation from its members.
+The meeting focused on important updates, future plans, and constructive discussions for the growth of the association.
+`
     },
     {
       name: "19th April 2025 Nadiad Member Meet & Industrial Training",
       hero: nadiadHero,
       images: [nadiad1, nadiad2, nadiad3, nadiad4, nadiad5, nadiad6],
       videos: [],
+      content:`The Industrial Water Treatment Training Program, held on 19th April 2025*at The Mango County, Nadiad, was another remarkable success.
+Once again we extend our sincere appreciation to Mr. Chandan Mantri for delivering an insightful, informative, and highly engaging session that added immense value to all 120 participants at the event
+`
     },
     {
       name: "18th Sep 2025 Motivation & Entertainment Ahmedabad",
@@ -186,6 +205,10 @@ export const tabs = [
         motivation6, motivation7, motivation8, motivation9, motivation10, motivation11
       ],
       videos: [motivationVideo],
+      content:`WAPTAI Organised an inspiring evening session on “Perception to Prosperity” with Dr. Jitesh Gadhia on 18th Sept 2025 at Sarvottam Banquet & Restaurant, Ahmedabad
+
+An engaging session mix of motivation, entertainment, and industry insights attended by over 130 members — followed by dinner.
+`
     },
     {
       name: "18th April 2025 Rajkot Member Meet & Industrial Training",
@@ -200,12 +223,22 @@ export const tabs = [
         rajkot7,
       ],
       videos: [],
+      content:` WAPTAI – Saurashtra & Kutch Chapter 
+A big thank you to everyone for making the Industrial Water Treatment Training Program on 18th April 2025 at The Fern Residency, Rajkot a success. Special thanks to Mr. Chandan Mantri for his engaging session.  
+
+Over 110 members participated actively, making the session interactive. We also appreciate our committee members for their support in smooth execution.
+`
     },
     {
       name: "5th Sep 2025 Motivation Event Baroda",
       hero: barodaHero,
       images: [barodaa1, barodaa2, barodaa3, barodaa4, barodaa5],
       videos: [barodaPromoVideo, barodaVideo],
+      content:`The Ripple Effect – एक शुरुआत, संभावनाओं के साथ 
+WAPTAI Central Gujarat Chapter organised an inspiring evening with Life & Business Coach Bhavin J. Shah on 5th September 2025 at Prakruti Resort, Vadodara.
+
+Participants discovered the power of unity, daily habits, and growth mantras to transform their personal and professional journey.
+`
     },
 
     {
@@ -219,6 +252,18 @@ export const tabs = [
         officee25, officee26,
       ],
       videos: [officeVideo1, officeVideo2],
+      content:`Grand Opening of WAPTAI Surat Office
+Sunday, 5th October 2025 | Surat
+WAPTAI proudly marked a significant milestone with the Grand Opening of their Surat Office on Sunday, 5th October 2025, at WAPTAI–801, Orbit 1, Near RRTM, Surat City.
+The ceremony began with an auspicious Vedic ritual, seeking blessings for growth, unity, and success. Members of the association came together to celebrate this important milestone for the water purification industry in South Gujarat.
+The event was followed by an engaging “Learning with Fun” session by Mr. Dixit Teraiya, encouraging leadership, teamwork, and a strong nationwide vision for WAPTAI.
+The celebration concluded with networking and fellowship over lunch, strengthening bonds within the industry.
+This new office stands as a symbol of:
+Strengthened presence in South Gujarat
+Enhanced member coordination
+Better industry representation
+A collaborative platform for innovation and knowledge sharing
+`
     },
 
 

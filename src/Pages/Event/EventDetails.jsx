@@ -19,54 +19,69 @@ const EventDetails = () => {
 
   return (
     <div className="bg-gray-50">
-<div className="px-4 sm:px-6 md:px-12 py-10 pt-28 md:py-15 max-w-full h-auto mx-auto">
+<div className="px-4 sm:px-6 md:px-12 py-10 pt-20 md:py-15 max-w-full h-auto mx-auto">
         {/* ===== HERO GRID ===== */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center md:h-screen">
-          {/* LEFT TEXT */}
-          <div className="md:col-span-7 flex flex-col space-y-6">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-              {event.name}
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
-              Discover <span className="text-sky-600 font-semibold">strategic highlights</span>, impactful moments, and forward-thinking insights from this distinguished event.
-            </p>
-            <p className="text-sm sm:text-base md:text-lg text-gray-500 leading-snug">
-              Expert-led discussions, specialized training programs, and high-value networking opportunities where ideas translate into action.
-            </p>
+   <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center md:min-h-screen px-6 md:px-16 lg:px-24 py-12 bg-gray-50">
+  {/* LEFT TEXT */}
+  <div className="md:col-span-7 flex flex-col justify-center space-y-6 md:space-y-8">
+    {/* Event Title */}
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-gray-900 leading-tight md:leading-snug drop-shadow-sm">
+      {event.name}
+    </h1>
 
-            {/* Key Highlights */}
-            <div className="space-y-3">
-              <h2 className="text-xl sm:text-2xl md:text-2xl font-semibold text-gray-800">Key Highlights</h2>
-              <ul className="list-disc list-inside text-gray-600 space-y-1 text-sm sm:text-base md:text-base">
-                <li>Interactive workshops with industry leaders</li>
-                <li>Exclusive networking sessions for professionals</li>
-                <li>Hands-on training on emerging technologies</li>
-                <li>Insightful panel discussions and Q&A sessions</li>
-              </ul>
-            </div>
-          </div>
+    {/* Event Description */}
+    <div className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-700 leading-relaxed space-y-4 md:space-y-6">
+      {event.content.split("\n\n").map((para, idx) => (
+        <p key={idx}>{para}</p>
+      ))}
 
-          {/* RIGHT IMAGE / VIDEO */}
-          <div className="md:col-span-5 flex justify-center">
-            <div className="w-[500px] rounded-2xl overflow-hidden">
-              {event.youtubeId ? (
-                <iframe
-                  className="w-full h-64 sm:h-80 md:h-96 lg:h-96 rounded-2xl"
-                  src={`https://www.youtube.com/embed/${event.youtubeId}`}
-                  title="Event Video"
-                  allowFullScreen
-                />
-              ) : (
-                <img
-                  src={event.hero}
-                  alt={event.name}
-                  className="w-[500px] h-auto sm:h-80 md:h-96 lg:h-[36rem] object-fill rounded-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
-                  onClick={() => setHeroOpen(true)}
-                />
-              )}
-            </div>
+      {/* Key Points */}
+      <ul className="list-disc list-inside text-gray-700 space-y-2 md:space-y-3">
+        <li>Work closely with industry partners and government bodies</li>
+        <li>Ensure safe drinking water access across India</li>
+        <li>Promote responsible water management</li>
+        <li>Support growth of certified water purification technologies</li>
+      </ul>
+    </div>
+  </div>
+
+  {/* RIGHT IMAGE / VIDEO */}
+  <div className="md:col-span-5 flex justify-center mt-8 md:mt-0 relative">
+    <div className="w-full max-w-md rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500">
+      {event.youtubeId ? (
+        <iframe
+          className="w-full h-64 sm:h-80 md:h-96 lg:h-[36rem] rounded-3xl"
+          src={`https://www.youtube.com/embed/${event.youtubeId}`}
+          title="Event Video"
+          allowFullScreen
+        />
+      ) : (
+        <img
+          src={event.hero}
+          alt={event.name}
+          className="w-full h-auto sm:h-80  lg:h-[33rem] rounded-3xl transform hover:scale-105 transition-transform duration-500 cursor-pointer"
+          onClick={() => setHeroOpen(true)}
+        />
+      )}
+
+      {/* Optional overlay play button */}
+      {event.youtubeId && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-16 h-16 bg-white/70 rounded-full flex items-center justify-center hover:bg-white/90 transition">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 text-red-600"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4 2v20l20-10L4 2z" />
+            </svg>
           </div>
         </div>
+      )}
+    </div>
+  </div>
+</div>
 
         {/* ===== HERO IMAGE MODAL ===== */}
         {heroOpen && (

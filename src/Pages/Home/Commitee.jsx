@@ -54,64 +54,58 @@ const TABS = [
 ];
 
 const DATA = {
-  "Governing Body": [
-    { id: 1, name: "Ashit Doshi", role: "Chairman", company: "Doshion Polysciences Pvt. Ltd. President", image: Ashit },
-    { id: 2, name: "Rishabh Sanghvi", role: "Vice Chairman", company: "Purosis International LLP. Vice President", image: Rishabh },
-    { id: 3, name: "Bhupesh Patel", role: "Secretary", company: "ORG EngiTech Ltd. Secretary", image: Bhupesh },
-    { id: 4, name: "Gautam Shah", role: "Joint Secretary", company: "Lexcru Water Tech Pvt. Ltd Treasurer", image: Gautam },
-    { id: 7, name: "Kailash Shah", role: "Executive Member", company: "MaxPure Water System Pvt. Ltd. Joint Treasurer", image: Kailash },
-    { id: 5, name: "Sachin Ringwala", role: "Treasurer", company: "Aishwaryam Filters Dy. Secretary", image: Sachin },
-    // { id: 6, name: "Sunil Raval", role: "Executive Member", company: "Unicare Water Technology Pvt Ltd. Joint Secretary", image: Sunil },
-  ],
+ "Governing Body": [
+  { id: 1, name: "Ashit Doshi", role: "President", company: "Doshion Polysciences Pvt. Ltd.", image: Ashit },
+  { id: 2, name: "Rishabh Sanghvi", role: "Vice President", company: "Purosis International LLP", image: Rishabh },
+  { id: 3, name: "Bhupesh Patel", role: "Secretary", company: "ORG EngiTech Ltd.", image: Bhupesh },
+  { id: 4, name: "Gautam Shah", role: "Treasurer", company: "Lexcru Water Tech Pvt. Ltd", image: Gautam },
+  { id: 7, name: "Kailash Shah", role: "Joint Treasurer", company: "MaxPure Water System Pvt. Ltd.", image: Kailash },
+  { id: 5, name: "Sachin Ringwala", role: "Dy. Secretary", company: "Aishwaryam Filters", image: Sachin },
+  // { id: 6, name: "Sunil Raval", role: "Joint Secretary", company: "Unicare Water Technology Pvt Ltd.", image: Sunil },
+],
+
   "Steering Committee": [
-    { id: 1, name: "Sampat Jhabak", role: "Chairman", company: "MaxPure Water System Pvt. Ltd.", image: sampat },
-    { id: 2, name: "Ashok Patel", role: "Vice Chairman", company: "Shreya Water Tech LLP", image: ashok },
-    { id: 3, name: "Nishit Doshi", role: "Secretary", company: "Fivebro Water Services Pvt. Ltd.", image: nishit },
-    { id: 4, name: "Kalpesh Shah", role: "Joint Secretary", company: "Parshwam Filtration LLP", image: kalpesh },
-    { id: 5, name: "Vinod Dudhat", role: "Treasurer", company: "Lexus Water Tech Pvt. Ltd.", image: vinod },
-    { id: 6, name: "Kanu Mehta", role: "Executive Member", company: "Cosmos Water Solution Pvt. Ltd.", image: kanu },
-    { id: 7, name: "Ritesh Desai", role: "Executive Member", company: "Krinovate Systems & Communications", image: ritesh },
+    { id: 1, name: "Sampat Jhabak", role: "Committee Member", company: "MaxPure Water System Pvt. Ltd.", image: sampat },
+    { id: 2, name: "Ashok Patel", role: "Committee Member", company: "Shreya Water Tech LLP", image: ashok },
+    { id: 3, name: "Nishit Doshi", role: "Committee Member", company: "Fivebro Water Services Pvt. Ltd.", image: nishit },
+    { id: 4, name: "Kalpesh Shah", role: "Committee Member", company: "Parshwam Filtration LLP", image: kalpesh },
+    { id: 5, name: "Vinod Dudhat", role: "Committee Member", company: "Lexus Water Tech Pvt. Ltd.", image: vinod },
+    { id: 6, name: "Kanu Mehta", role: "Committee Member", company: "Cosmos Water Solution Pvt. Ltd.", image: kanu },
+    { id: 7, name: "Ritesh Desai", role: "Committee Member", company: "Krinovate Systems & Communications", image: ritesh },
   ],
   "Ahmedabad & North Gujarat Chapter": [
-    { id: 1, name: "Suresh Patel", role: "Chairman", company: "Shreya Water Tech LLP. Committee Member", image: Suresh },
-    { id: 2, name: "Chirag Gajera", role: "Vice Chairman", company: "Orix Aquatech Committee Member", image: Chirag },
-    { id: 3, name: "Chetan Tapadiya", role: "Secretary", company: "Nice Industries Committee Member", image: Chetan },
-    { id: 4, name: "Anil Jain", role: "Joint Secretary", company: "Zedtech Water Solution Pvt Ltd. Committee Member", image: Anil },
-    { id: 5, name: "Ashish Shah", role: "Treasurer", company: "Navakar Water Solution Pvt. Ltd. Committee Member", image: Ashish },
-    { id: 6, name: "Amrut Patel", role: "Executive Member", company: "Newpex Enterprise Committee Member", image: Amrut },
-    { id: 7, name: "Bhagvatilal Jain", role: "Executive Member", company: "New Tech Water Purifier Systems Pvtl. Ltd. Committee Member", image: Jain },
+    { id: 1, name: "Suresh Patel", role: "Committee Member", company: "Shreya Water Tech LLP.", image: Suresh },
+    { id: 2, name: "Chirag Gajera", role: "Committee Member", company: "Orix Aquatech", image: Chirag },
+    { id: 3, name: "Chetan Tapadiya", role: "Committee Member", company: "Nice Industries", image: Chetan },
+    { id: 4, name: "Anil Jain", role: "Committee Member", company: "Zedtech Water Solution Pvt Ltd.", image: Anil },
+    { id: 5, name: "Ashish Shah", role: "Committee Member", company: "Navakar Water Solution Pvt. Ltd.", image: Ashish },
+    { id: 6, name: "Amrut Patel", role: "Committee Member", company: "Newpex Enterprise", image: Amrut },
+    { id: 7, name: "Bhagvatilal Jain", role: "Committee Member", company: "New Tech Water Purifier Systems Pvtl. Ltd.", image: Jain },
   ],
   "South Gujarat Chapter": [
-    { id: 1, name: "Bhavesh Patel", role: "Chairman", company: "Meera Trade-Impex Committee Member", image: Bhavesh },
-    // { id: 2, name: "Jayant Desai", role: "Vice Chairman", company: "Joystick Wellness Products Dy. Chapter Head", image: Jayant },
-    { id: 3, name: "Chetan Mehta", role: "Secretary", company: "P Tech Aqua Committee Member", image: Mehta },
-    { id: 4, name: "Ashok savaliya", role: "Joint Secretary", company: "Bhojal Filter House & Gas Gyser Committee Member", image: Savliya },
-    { id: 5, name: "Rahul Jhabak", role: "Treasurer", company: "Maxpure Water System Pvt. Ltd. Committee Member", image: Rahul },
-    { id: 6, name: "Vikram savani", role: "Executive Member", company: "Velient Pec India Pvt. Ltd. Committee Member", image: Vikram },
+    { id: 1, name: "Bhavesh Patel", role: "Committee Member", company: "Meera Trade-Impex", image: Bhavesh },
+    { id: 3, name: "Chetan Mehta", role: "Committee Member", company: "P Tech Aqua", image: Mehta },
+    { id: 4, name: "Ashok Savaliya", role: "Committee Member", company: "Bhojal Filter House & Gas Gyser", image: Savliya },
+    { id: 5, name: "Rahul Jhabak", role: "Committee Member", company: "Maxpure Water System Pvt. Ltd.", image: Rahul },
+    { id: 6, name: "Vikram Savani", role: "Committee Member", company: "Velient Pec India Pvt. Ltd.", image: Vikram },
   ],
   "Saurashtra & Kutch Chapter": [
-    { id: 1, name: "Vishal Sharma", role: "Chairman", company: "Flowlance International LLP. Committee Member", image: Vishal },
-    // { id: 2, name: "Nirav Dedania", role: "Vice Chairman", company: "H2O Scientific Dy. Chapter Head", image: Nirav },
-    // { id: 3, name: "Ramesh Sathwara", role: "Secretary", company: "Shiv Enterprise Committee Member", image: Ramesh },
-    { id: 4, name: "Sandip mehta", role: "Joint Secretary", company: "Cloud International LLP. Committee Member", image: Sandip },
-    { id: 5, name: "Kamlesh patel", role: "Treasurer", company: "Shakti Aquatech LLP. Committee Member", image: Kamlesh },
-    // { id: 6, name: "Nirmal vyas", role: "Executive Member", company: "Life Guard Water Solution Committee Member", image: Nirmal },
-    // { id: 7, name: "Manish rupapara", role: "Chairman", company: "Pure H2O Committee Member", image: Manish },
+    { id: 1, name: "Vishal Sharma", role: "Committee Member", company: "Flowlance International LLP.", image: Vishal },
+    { id: 4, name: "Sandip Mehta", role: "Committee Member", company: "Cloud International LLP.", image: Sandip },
+    { id: 5, name: "Kamlesh Patel", role: "Committee Member", company: "Shakti Aquatech LLP.", image: Kamlesh },
   ],
   "Central Gujarat Chapter": [
-    { id: 1, name: "Deepak Chhatriwala", role: "Chairman", company: "Krishna Marketing Committee Member", image: Dipak },
-    // { id: 2, name: "Sanjay Khatri", role: "Vice Chairman", company: "Shreeji Home Care Dy. Chapter Head", image: Sanjay },
-    { id: 3, name: "Ankit Patel", role: "Secretary", company: "Nexus Committee Member", image: Ankit },
-    // { id: 4, name: "Hiren Shah", role: "Joint Secretary", company: "Real Marketing Committee Member", image: Hiren },
-    // { id: 5, name: "Kaushal patel", role: "Treasurer", company: "KK Impex Committee Member", image: Kaushal },
+    { id: 1, name: "Deepak Chhatriwala", role: "Committee Member", company: "Krishna Marketing", image: Dipak },
+    { id: 3, name: "Ankit Patel", role: "Committee Member", company: "Nexus", image: Ankit },
   ], 
   "New Dehli Chapter": [
-    { id: 2, name: "Mayank Aggarwal", role: "Vice Chairman", company: "AquaX Series Committee Member", image: mayank },
-    { id: 1, name: "Sunny Gulia", role: "Chairman", company: "Real Ganga Enterprises Committee Member", image: sunny },
+    { id: 2, name: "Mayank Aggarwal", role: "Committee Member", company: "AquaX Series", image: mayank },
+    { id: 1, name: "Sunny Gulia", role: "Committee Member", company: "Real Ganga Enterprises", image: sunny },
   ],
   "Maharashtra Chapter": [
-    { id: 3, name: "Ajay Shroff", role: "Secretary", company: "Pratham Filters Committee Member", image: ajay },
+    { id: 3, name: "Ajay Shroff", role: "Committee Member", company: "Pratham Filters", image: ajay },
   ]
+
   // "Expo Committee": [
   //   { id: 1, name: "Bhupesh Patel", role: "Chairman", company: "ORG EngiTech Ltd.", image: Bhupesh },
   //   { id: 2, name: "Kalpesh Shah", role: "Vice Chairman", company: "Parshwam Filtration LLP", image: kalpesh },
@@ -190,9 +184,14 @@ const Committee = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <h3 className="text-xl font-bold tracking-tight text-slate-900 decoration-1">
-                    {member.name}
-                  </h3>
+        <div className="flex justify-between items-center">
+          <h3 className="text-xl font-bold tracking-tight text-slate-900">
+            {member.name}
+          </h3>
+          <span className="text-xs font-semibold bg-[#0d5c7f] text-white px-2 py-1 rounded-full whitespace-nowrap">
+            {member.role}
+          </span>
+        </div>
 
                     <div className="pt-1">
                       <p className="text-sm text-[#0d5c7f]  font-semibold transform transition-transform duration-300">
