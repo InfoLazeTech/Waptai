@@ -1,8 +1,21 @@
 import React, { useState } from "react";
 import expoImg from "../../assets/expo2026.jpg";
 
+const podcastVideos = [
+  "https://www.youtube.com/watch?v=HFgnMHXtqZo",
+  "https://www.youtube.com/watch?v=6lQn-LOHqPQ",
+  "https://www.youtube.com/watch?v=eGIMDPsH7fI",
+  "https://www.youtube.com/watch?v=vHwb5iUeSQA",
+  "https://www.youtube.com/watch?v=OdRmmtX16gk",
+  "https://www.youtube.com/watch?v=Akq4W0tMXnA",
+  "https://www.youtube.com/watch?v=53hQtk19h5Y",
+  "https://www.youtube.com/watch?v=Y9COZJMp54U",
+  "https://www.youtube.com/watch?v=GCKZIATrexY",
+];
 // Example unique YouTube URLs for each tab
 const videoData = [
+
+
   {
     title: "WAPTAI 2022 Sponsors Testimonial",
     videos: [
@@ -193,6 +206,41 @@ const Expo = () => {
         ))}
       </svg>
     </div>
+
+    {/* ================= PODCAST HIGHLIGHTS ================= */}
+<section className="mt-20">
+ <div className="text-center">
+  <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-10 mb-10">
+   <span className="text-sky-600">WAPTAI </span> Water Expo <span className="text-sky-600">Podcast </span>Highlights
+  </h2>
+</div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:my-15">
+    {podcastVideos.map((videoUrl, idx) => (
+      <div
+        key={idx}
+        className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+      >
+        <div className="relative" style={{ paddingTop: "56.25%" }}>
+          <iframe
+            src={getEmbedUrl(videoUrl)}
+            title={`Podcast Video ${idx + 1}`}
+            className="absolute inset-0 w-full h-full"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+{/* ================= HIGHLIGHTS HEADING ================= */}
+<div className="text-center">
+  <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug mt-5 mb-5">
+    <span className="text-sky-600">WAPTAI </span>Visitors & Testimonial
+  </h2>
+</div>
         {/* ================= TABS ================= */}
         <div className="flex flex-wrap justify-center gap-4">
           {videoData.map((tab, index) => (

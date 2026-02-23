@@ -50,6 +50,8 @@ const Footer = () => {
             <ul className="space-y-4 text-sm font-bold ">
               <li><NavLink to="/about-us" className="text-white transition-colors">About WAPTAI</NavLink></li>
               <li><NavLink to="/committee" className="text-white transition-colors">Our Committee</NavLink></li>
+              <li><NavLink to="/membarship" className="text-white transition-colors">Membership</NavLink></li>
+
               {/* <li><NavLink to="/e-magazine" className="text-white transition-colors">E-Magazine</NavLink></li> */}
               <li><NavLink to="/facilities" className="text-white transition-colors">Facilities</NavLink></li>
             </ul>

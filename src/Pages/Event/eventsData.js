@@ -134,7 +134,7 @@
   
 export const tabs = [
   {
-  name: "WAPTAI GST Podcast - 31 Jan 2026",
+  name: "31 Jan 2026 WAPTAI GST Podcast",
   hero: podcaste1,
   images: [podcaste1, podcaste2],
   youtubeId: "ukBT4wr9CiI",
@@ -199,7 +199,7 @@ Once again we extend our sincere appreciation to Mr. Chandan Mantri for deliveri
     },
     {
       name: "18th Sep 2025 Motivation & Entertainment Ahmedabad",
-      hero: motivationHero1,//  multiple invitations
+      hero: motivationHero1,
       images: [
         motivation1, motivation2, motivation3, motivation4, motivation5,
         motivation6, motivation7, motivation8, motivation9, motivation10, motivation11
@@ -224,9 +224,10 @@ An engaging session mix of motivation, entertainment, and industry insights atte
       ],
       videos: [],
       content:` WAPTAI – Saurashtra & Kutch Chapter 
-A big thank you to everyone for making the Industrial Water Treatment Training Program on 18th April 2025 at The Fern Residency, Rajkot a success. Special thanks to Mr. Chandan Mantri for his engaging session.  
-
-Over 110 members participated actively, making the session interactive. We also appreciate our committee members for their support in smooth execution.
+A heartfelt thank you to everyone for making the Industrial Water Treatment Training Program on 18th April 2025 at The Fern Residency, Rajkot a remarkable success. Special thanks to Mr. Chandan Mantri for his insightful and engaging session!
+We were delighted to witness the participation of over 110 members — your enthusiasm and active involvement made the session truly engaging and insightful.
+A special note of appreciation to our dedicated committee members for their continuous support and efforts in ensuring the smooth execution of the entire program.
+Together, we continue to learn, grow, and strengthen our WAPTAG/WAPTAI community!
 `
     },
     {
@@ -253,8 +254,9 @@ Participants discovered the power of unity, daily habits, and growth mantras to 
       ],
       videos: [officeVideo1, officeVideo2],
       content:`Grand Opening of WAPTAI Surat Office
+Grand Opening of WAPTAI Surat Office
 Sunday, 5th October 2025 | Surat
-WAPTAI proudly marked a significant milestone with the Grand Opening of their Surat Office on Sunday, 5th October 2025, at WAPTAI–801, Orbit 1, Near RRTM, Surat City.
+WAPTAI proudly marked a significant milestone with the Grand Opening of their Surat Office on Sunday, 5th October 2025, at WAPTAG–801, Orbit 1, Near RRTM, Surat City.
 The ceremony began with an auspicious Vedic ritual, seeking blessings for growth, unity, and success. Members of the association came together to celebrate this important milestone for the water purification industry in South Gujarat.
 The event was followed by an engaging “Learning with Fun” session by Mr. Dixit Teraiya, encouraging leadership, teamwork, and a strong nationwide vision for WAPTAI.
 The celebration concluded with networking and fellowship over lunch, strengthening bonds within the industry.
@@ -263,6 +265,7 @@ Strengthened presence in South Gujarat
 Enhanced member coordination
 Better industry representation
 A collaborative platform for innovation and knowledge sharing
+
 `
     },
 

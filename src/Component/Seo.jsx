@@ -28,6 +28,12 @@ const SeoManager = () => {
       "Meet the governing body and expert committee members driving WAPTAI initiatives.";
   }
 
+ else if (pathname === "/membarship") {
+  title = "Membership | WAPTAI";
+  description =
+    "Explore WAPTAI membership benefits, opportunities, and how to join our community.";
+}
+
   else if (pathname === "/contact-us") {
     title = "Contact Us | WAPTAI";
     description =
@@ -47,12 +53,16 @@ const SeoManager = () => {
   }
 
 else if (pathname.startsWith("/event/")) {
-  const id = pathname.split("/")[2]; // get id from URL
-  const event = tabs[Number(id) - 1];
+  const idStr = pathname.split("/")[2];       
+  const id = Number(idStr);                     
+  const event = tabs[id - 1];                  
 
   if (event) {
     title = `${event.name} | WAPTAI`;
     description = `Explore highlights, images and insights from ${event.name}, organized by WAPTAI.`;
+  } else {
+    title = "Event | WAPTAI";                   
+    description = "Explore WAPTAI events and highlights.";
   }
 }
 

@@ -6,7 +6,7 @@ import legal3 from "../../assets/legal3.jpg";
 const LegalAssistance = () => {
    const [selectedImg, setSelectedImg] = useState(null);
   return (
-    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 py-24 px-4">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 md:py-20 py-24 px-4">
       <div className="max-w-7xl mx-auto space-y-12">
 
         {/* ===== HEADING ===== */}

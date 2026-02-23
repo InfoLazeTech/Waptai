@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const About = () => {
    const navigate = useNavigate();
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative md:py-15 py-10 overflow-hidden bg-[#e3f2fd]/50">
       
       {/* Decorative Floating Shapes */}
       <div className="absolute -top-20 left-[-10%] w-[400px] h-[400px] bg-[#0288d1]/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
@@ -27,7 +27,7 @@ const About = () => {
             <p className="text-gray-700 font-medium leading-relaxed text-lg">
               WAPTAI is India’s most trusted platform in Water Purification & Treatment, connecting professionals, innovators, and businesses to shape the future of water solutions.
             </p>
-            <button className="mt-4 px-10 py-4 bg-[#0288d1] text-white font-bold rounded-2xl shadow-lg hover:bg-[#0277bd] hover:-translate-y-1 transition-all duration-300"    onClick={() => navigate("/about-us")}>
+            <button className="mt-4 px-10 py-4 bg-[#0288d1] text-white font-bold rounded-2xl shadow-lg hover:bg-[#0277bd] hover:-translate-y-1 transition-all duration-300" onClick={() => navigate("/about-us")}>
               Learn More
             </button>
           </div>

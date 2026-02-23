@@ -25,7 +25,8 @@ import ScrollToTop from './Component/ScrollToTop'
 import Articals from './Pages/Home/Articals'
 // import Event from './Pages/Event/Event'
 import Membership from './Pages/Home/Membership'
-import EventDetails from './Pages/Event/EventDetails'
+// import EventDetails from './Pages/Event/EventDetails'
+import EventPage from './Pages/Event/EventPage'
 
 // import Exhibitors from './Pages/Home/Exhibitors'
 
@@ -44,15 +45,15 @@ const App = () => {
             path="/"
             element={
               <>
-           <HeroSection />
-      <YouTubeVideo />
-      <Membership />
-      <About />
-        <Articals />   
-      <Programs />
-      <FeaturesSection />
-      <Clients />
-              
+                <HeroSection />
+                <YouTubeVideo />
+                {/* <Membership /> */}
+                <About />
+                <Articals />
+                <Programs />
+                <FeaturesSection />
+                <Clients />
+
 
 
               </>
@@ -61,10 +62,12 @@ const App = () => {
 
           {/* Individual Pages (optional) */}
           <Route path="/about-us" element={<AboutPage />} />
+          <Route path="/event/:slug" element={<EventPage />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/committee" element={<Commitee />} />
+          <Route path="/membarship" element={<Membership />} />
           {/* <Route path="/event" element={<Event />} /> */}
-          <Route path="/event/:id" element={<EventDetails />} />
+          {/* <Route path="/event/:id" element={<EventDetails />} /> */}
           <Route path="/facilities" element={<Facility />} />
           <Route path="/exhibition" element={<Exhibition />} />
           <Route path="/IAPMO" element={<IapmoSection />} />

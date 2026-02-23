@@ -4,7 +4,17 @@ import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/waptailogo.jpg";
 import { tabs } from "../Pages/Event/eventsData.js";
 
+function createSlug(name) {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+
 const Header = () => {
+
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activitiesOpen, setActivitiesOpen] = useState(false);
@@ -29,13 +39,15 @@ const Header = () => {
     { name: "HOME", path: "/" },
     { name: "ABOUT US", path: "/about-us" },
     { name: "COMMITTEE", path: "/committee" },
+    { name: "MEMBERSHIP", path: "/membarship"}
 
     // { name: "E-MAGAZINE", path: "/e-magazine" },
-    { name: "FACILITIES", path: "/facilities" },
+    // { name: "FACILITIES", path: "/facilities" },
 
   ];
 
   const activityItems = [
+    "Facilities",
     "Exhibition",
     "IAPMO",
     "Seminar",
@@ -69,7 +81,7 @@ const Header = () => {
           </NavLink>
 
           {/* DESKTOP NAVIGATION */}
-          <nav className="hidden lg:flex md:whitespace-nowrap items-center gap-2 text-[13px] font-bold">
+          <nav className="hidden lg:flex md:whitespace-nowrap items-center gap-2 text-[12.3px] font-bold">
             {menuItems.map((item) => (
               <NavLink key={item.name} to={item.path} className={navStyles}>
                 {item.name}
@@ -105,14 +117,12 @@ const Header = () => {
 
                 <div className="grid grid-cols-3 gap-x-10 gap-y-5">
 
-                  {tabs.map((event, index) => (
-                    <NavLink
-                      key={event.name}
-                      to={`/event/${index + 1}`}
-                      onClick={() => setClickedIndex(index)}
-
-                      className="block group/item"
-                    >
+                  {tabs.map((event,   index) => (
+                  <NavLink
+  key={event.name}
+to={`/event/${createSlug(event.name)}`}  onClick={() => setClickedIndex(index)}
+  className="block group/item"
+>
                       <div className="flex items-center justify-between pb-1">
 
                         {/* Text */}
@@ -175,7 +185,7 @@ const Header = () => {
 
               >
 
-                ACTIVITIES
+               WAPTAI EXPERIENCE
                 <FaChevronDown className="text-[10px] transition-transform duration-300 group-hover:rotate-180" />
               </button>
               <div
@@ -254,7 +264,10 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
                   {tabs.map((event, index) => (
                     <NavLink
                       key={event.name}
-                      to={`/event/${index + 1}`}
+                      // to={`/event/${index + 1}`}
+                     
+to={`/event/${createSlug(event.name)}`}
+ 
                       onClick={() => {
                         setClickedIndex(index);       // freeze hover effect
                         setIsMenuOpen(false);         // close mobile menu

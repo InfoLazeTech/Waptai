@@ -27,7 +27,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#e3f2fd]/50 relative z-10">
+    <section className="py-20 relative z-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#0d47a1] mb-4">
           Why Attend WAPTAI 2026?

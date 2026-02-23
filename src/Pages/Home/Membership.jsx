@@ -9,11 +9,11 @@ const Membership = () => {
 
   return (
     <>
-    <section className="py-15 bg-[#e3f2fd]/50">
+    <section className="py-15 bg-[#e3f2fd]/50 md:py-28">
       <div className="max-w-[1536px] px-6 md:px-12 mx-auto">
 
         {/* Heading */}
-        <div className="md:mb-22 mb-10 text-center lg:text-left">
+        <div className="md:mb-22 mb-10 text-center lg:text-left my-15">
           <h2 className="text-4xl md:text-5xl text-center font-extrabold text-[#0d5c7f]">
             WAPTAI Membership
           </h2>

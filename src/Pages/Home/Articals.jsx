@@ -61,7 +61,7 @@ const Articals = () => {
     const [featured, ...others] = newsData;
 
     return (
-        <section className="w-full bg-[#e3f2fd]/50 py-10">
+        <section className="w-full md:py-10 py-10">
             <div className="max-w-7xl mx-auto px-6 space-y-20">
 
                 {/* ===== HEADER ===== */}
