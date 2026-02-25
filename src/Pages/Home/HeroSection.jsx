@@ -6,16 +6,43 @@ const HeroSection = () => {
 
   return (
     <section className="relative flex items-center pt-28 py-10 overflow-hidden bg-[#e3f2fd]/50">
+{/* ===== FLOATING WATER BUBBLES BACKGROUND ===== */}
+{/* ===== ANIMATED WATER WAVES BACKGROUND ===== */}
+<div className="absolute inset-0 z-0 hidden md:block overflow-hidden pointer-events-none">
+  <svg
+    className="absolute bottom-0 w-full h-[560px]"
+    viewBox="0 0 1440 560"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <linearGradient id="waveGradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#0288d1" stopOpacity="0.45" />
+        <stop offset="100%" stopColor="#03a9f4" stopOpacity="0.06" />
+      </linearGradient>
+    </defs>
 
+  <path
+  fill="url(#waveGradient)"
+  d="
+    M0,397
+    C270,390 500,380 720,320
+    C950,260 1150,120 1440,180
+    L1440,560
+    L0,560
+    Z
+  "
+/>
+  </svg>
+</div>
       {/* BACKGROUND GRAPHIC ELEMENTS */}
-      <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#0288d1]/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
+      {/* <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#0288d1]/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
       <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-[#03a9f4]/15 rounded-full blur-[100px] -z-10"></div>
       <div
         className="absolute inset-0 opacity-[0.12] mix-blend-overlay pointer-events-none -z-10"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230288d1' fill-opacity='0.3' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
         }}
-      ></div>
+      ></div> */}
 
       <div className="max-w-[1536px] mx-auto px-6 lg:px-12 w-full md:py-8 relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 items-center">
