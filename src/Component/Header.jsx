@@ -81,7 +81,7 @@ const Header = () => {
           </NavLink>
 
           {/* DESKTOP NAVIGATION */}
-          <nav className="hidden lg:flex md:whitespace-nowrap items-center gap-2 text-[12.3px] font-bold">
+          <nav className="hidden lg:flex md:whitespace-nowrap items-center gap-2 text-[12.9px] font-bold">
             {menuItems.map((item) => (
               <NavLink key={item.name} to={item.path} className={navStyles}>
                 {item.name}
