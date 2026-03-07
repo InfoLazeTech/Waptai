@@ -1,6 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+const CLOUDINARY_VIDEO_URL =
+  import.meta.env.VITE_HERO_VIDEO_URL ||
+  "https://res.cloudinary.com/dmppby9vk/video/upload/v1772871410/WhatsApp-Video-2026-03-07-at-105_s1w4wt.mp4";
+
 const HeroSection = () => {
   const navigate = useNavigate();
 
@@ -109,43 +113,17 @@ const HeroSection = () => {
                   <p className="text-sm font-bold opacity-80 tracking-[0.3em] uppercase mt-1">Water Expo 2026</p>
                 </div>
 
-                <div className="p-8 space-y-6 bg-white/40">
-                  <div className="flex justify-between border-b border-[#b0bec5]/50 pb-6">
-                    <div className="text-center">
-                      <span className="block text-3xl font-black md:font-black text-[#0d47a1]">26-28</span>
-                      <span className="text-[11px] font-bold text-[#607d8b] uppercase tracking-widest">Feb 2026</span>
-                    </div>
-                    <div className="text-right">
-                      <span className="block text-sm font-bold text-[#37474f] uppercase tracking-tight">Mahatma Mandir</span>
-                      <span className="text-xs text-[#0288d1] font-bold">Gandhinagar, Gujarat</span>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4 group">
-                      <div className="w-10 h-10 rounded-full bg-[#e1f5fe] flex items-center justify-center text-[#0288d1] group-hover:bg-[#0288d1] group-hover:text-white transition-all">
-                        {/* Icon SVG */}
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-7h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                      </div>
-                      <span className="text-sm font-bold text-[#37474f]">Largest B2B Water Trade Show</span>
-                    </div>
-                    <div className="flex items-center gap-4 group">
-                      <div className="w-10 h-10 rounded-full bg-[#e1f5fe] flex items-center justify-center text-[#0288d1] group-hover:bg-[#0288d1] group-hover:text-white transition-all">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      <span className="text-sm font-bold text-[#37474f]">Business Opportunities</span>
-                    </div>
-                  </div>
-
-                  <button
-                    onClick={() => navigate("/contact-us")}
-                    className="w-full bg-[#0d47a1] text-white py-4 rounded-2xl font-black text-xs tracking-widest uppercase hover:bg-[#0288d1] shadow-lg transition-all duration-300">
-                    Register As Visitor
-                  </button>
+                {/* Cloudinary video - plays in card space */}
+                <div className="relative w-full aspect-video bg-[#0d47a1]/10 overflow-hidden">
+                  <video
+                    src={CLOUDINARY_VIDEO_URL}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    title="WAPTAI Water Expo"
+                  />
                 </div>
               </div>
             </div>

@@ -11,15 +11,15 @@ const SeoManager = () => {
 
   // ================= ROUTE LOGIC =================
   if (pathname === "/") {
-    title = "WAPTAI | Water Purification and Wastewater Management Association of India";
+    title = "WAPTAI | Water Purification and Treatment Association of India";
     description =
-      "WAPTAI is India’s leading association for water purification, wastewater treatment, sustainability and innovation.";
+      "WAPTAI is India’s leading association for water purification, treatment management, sustainability and innovation.";
   }
 
   else if (pathname === "/about-us") {
     title = "About Us | WAPTAI";
     description =
-      "Learn about WAPTAI’s mission, vision and leadership in water purification and wastewater management.";
+      "Learn about WAPTAI’s mission, vision and leadership in water purification and treatment management.";
   }
 
   else if (pathname === "/committee") {
@@ -43,7 +43,7 @@ const SeoManager = () => {
   else if (pathname === "/expo-2026") {
     title = "Expo | WAPTAI";
     description =
-      "WAPTAI Expo 2026 is India’s premier water and wastewater technology exhibition in India.";
+      "WAPTAI Expo 2026 is India’s premier water and treatment technology exhibition in India.";
   }
 
   else if (pathname === "/facilities") {
@@ -69,7 +69,7 @@ else if (pathname.startsWith("/event/")) {
   else if (pathname === "/exhibition") {
     title = "Exhibition | WAPTAI";
     description =
-      "Join WAPTAI exhibitions showcasing cutting-edge water and wastewater technologies.";
+      "Join WAPTAI exhibitions showcasing cutting-edge water and treatment technologies.";
   }
 
   else if (pathname === "/iapmo") {
@@ -115,7 +115,7 @@ else if (pathname.startsWith("/event/")) {
 
       <meta
         name="keywords"
-        content="WAPTAI, WAPTAI Expo, Water Purification India, Wastewater Management, Sustainability Training"
+        content="WAPTAI, WAPTAI Expo, Water Purification India, Treatment Management, Sustainability Training"
       />
 
       <link
