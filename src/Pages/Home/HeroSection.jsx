@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CLOUDINARY_VIDEO_URL =
@@ -120,6 +120,7 @@ const HeroSection = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                     autoPlay
                     muted
+                    controls
                     loop
                     playsInline
                     title="WAPTAI Water Expo"
