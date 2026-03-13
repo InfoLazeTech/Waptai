@@ -39,8 +39,8 @@ const Header = () => {
     { name: "HOME", path: "/" },
     { name: "ABOUT US", path: "/about-us" },
     { name: "COMMITTEE", path: "/committee" },
-    { name: "MEMBERSHIP", path: "/membarship"}
-
+    { name: "MEMBERSHIP", path: "/membarship"},
+    
     // { name: "E-MAGAZINE", path: "/e-magazine" },
     // { name: "FACILITIES", path: "/facilities" },
 
@@ -60,7 +60,7 @@ const Header = () => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 rounded-br-4xl rounded-bl-4xl shadow-md ${isScrolled ? "bg-white shadow-md py-3" : "bg-white py-3"}`}
     >
-      <div className="max-w-[1536px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[1536px] mx-auto px-5">
         <div className="flex items-center justify-between">
 
           {/* LOGO */}
@@ -81,7 +81,7 @@ const Header = () => {
           </NavLink>
 
           {/* DESKTOP NAVIGATION */}
-          <nav className="hidden lg:flex md:whitespace-nowrap items-center gap-2 text-[12.9px] font-bold">
+          <nav className="hidden lg:flex md:whitespace-nowrap items-center text-[13px] gap-2 font-bold">
             {menuItems.map((item) => (
               <NavLink key={item.name} to={item.path} className={navStyles}>
                 {item.name}
@@ -118,11 +118,11 @@ const Header = () => {
                 <div className="grid grid-cols-3 gap-x-10 gap-y-5">
 
                   {tabs.map((event,   index) => (
-                  <NavLink
-  key={event.name}
+                    <NavLink
+                      key={event.name}
 to={`/event/${createSlug(event.name)}`}  onClick={() => setClickedIndex(index)}
-  className="block group/item"
->
+                      className="block group/item"
+                    >
                       <div className="flex items-center justify-between pb-1">
 
                         {/* Text */}
@@ -185,7 +185,7 @@ to={`/event/${createSlug(event.name)}`}  onClick={() => setClickedIndex(index)}
 
               >
 
-               WAPTAI EXPERIENCE
+                WAPTAI OFFERINGS
                 <FaChevronDown className="text-[10px] transition-transform duration-300 group-hover:rotate-180" />
               </button>
               <div
@@ -211,11 +211,12 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
             </div>
 
             <NavLink to="/expo-2026" className={navStyles}>EXPO 2026</NavLink>
-            <NavLink
-              to="/contact-us"
+            <NavLink to="/contact-us" className={navStyles}>CONTACT US</NavLink>
+              <NavLink
+              to="/waptai-member"
               className="ml-6 bg-[#1c87c9] text-white md:px-8 md:py-3 md:whitespace-nowrap  rounded-full hover:bg-blue-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-95 shadow-md"
             >
-              CONTACT US
+               BECOME WAPTAI MEMBER
             </NavLink>
           </nav>
 
@@ -265,9 +266,9 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
                     <NavLink
                       key={event.name}
                       // to={`/event/${index + 1}`}
-                     
-to={`/event/${createSlug(event.name)}`}
- 
+
+                      to={`/event/${createSlug(event.name)}`}
+
                       onClick={() => {
                         setClickedIndex(index);       // freeze hover effect
                         setIsMenuOpen(false);         // close mobile menu

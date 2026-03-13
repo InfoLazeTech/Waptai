@@ -162,34 +162,99 @@ const AboutPage = () => {
                     <div className="grid lg:grid-cols-2 gap-10">
                         <motion.div
                             whileHover={{ scale: 1.02 }}
-                            className="bg-white p-12 rounded-[3rem] shadow-sm border border-white"
+                            transition={{ duration: 0.3 }}
+                            className="bg-white p-8 md:p-12 rounded-[3rem] shadow-sm border border-gray-100"
                         >
-                            <Target size={36} className={`${accentBlue} mb-8`} />
-                            <h3 className={`text-3xl font-black ${primaryBlue} mb-6`}>OUR MISSION</h3>
-                            <p className="text-slate-600 text-lg leading-relaxed">To provide a premium platform where the industry converges to solve complex challenges in purification and industrial sustainability.</p>
+                            {/* Icon */}
+                            <Target size={36} className={`${accentBlue} mb-6`} />
+
+                            {/* Heading */}
+                            <h3 className={`text-2xl md:text-3xl font-black ${primaryBlue} mb-5`}>
+                                OUR MISSION
+                            </h3>
+
+                            {/* Description */}
+                            <p className="text-slate-600 text-sm md:text-lg leading-relaxed mb-8 max-w-xl">
+                                Blessed with WAPTAG, the mission of WAPTAI is to bring together the
+                                dynamic water community from all across India. It strives to create
+                                a platform where the water industry can collaborate and work
+                                together to find solutions to challenges within the water sector.
+                            </p>
+
+                            {/* Mission Points */}
+                            <ul className="space-y-4">
+                                {[
+                                    "Unite the Water Community Across India",
+                                    "Create a Platform for Industry Collaboration",
+                                    "Develop Solutions for Water Sector Challenges",
+                                ].map((text, i) => (
+                                    <motion.li
+                                        key={i}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: i * 0.2 }}
+                                        viewport={{ once: true }}
+                                        className="flex items-center gap-4 text-base md:text-lg font-semibold text-slate-700"
+                                    >
+                                        <CheckCircle2 size={20} className="text-blue-500 shrink-0" />
+                                        {text}
+                                    </motion.li>
+                                ))}
+                            </ul>
                         </motion.div>
 
                         <motion.div
-                            initial={{ x: 50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true }}
-                            className="bg-[#0d47a1] p-12 rounded-[3rem] shadow-2xl text-white overflow-hidden relative"
+                            initial={{ x: 50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                            className="relative overflow-hidden bg-[#0d47a1] p-8 md:p-12 rounded-[3rem] shadow-2xl text-white"
                         >
+                            {/* Content */}
                             <div className="relative z-10">
-                                <h3 className="text-3xl font-black mb-10">OUR VISION</h3>
-                                <ul className="space-y-6">
-                                    {["Global Leadership", "Single-roof Solutions", "Ethical Exchange"].map((text, i) => (
+                                <h3 className="text-2xl md:text-3xl font-black mb-5">
+                                    OUR VISION
+                                </h3>
+
+                                {/* Description */}
+                                <p className="text-white text-sm md:text-lg leading-relaxed mb-8 max-w-xl">
+                                    We aim to build a strong business community and strive to make it easy for
+                                    business owners to connect and communicate effectively. WAPTAI is dedicated
+                                    to sharing quick information and ideas that encourage healthy business
+                                    practices. Our goal is to provide members everything they need under one
+                                    roof for their business success.
+                                </p>
+
+                                {/* Vision Points */}
+                                <ul className="space-y-5">
+                                    {[
+                                        "Global Leadership",
+                                        "Single-roof Solutions",
+                                        "Ethical Exchange",
+                                    ].map((text, i) => (
                                         <motion.li
-                                            key={i} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.2 }}
-                                            className="flex items-center gap-4 text-lg font-bold"
+                                            key={i}
+                                            initial={{ opacity: 0, x: 20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: i * 0.2 }}
+                                            viewport={{ once: true }}
+                                            className="flex items-center gap-4 text-base md:text-lg font-semibold"
                                         >
-                                            <CheckCircle2 size={20} className="text-blue-300" /> {text}
+                                            <CheckCircle2 size={20} className="text-blue-300 shrink-0" />
+                                            {text}
                                         </motion.li>
                                     ))}
                                 </ul>
                             </div>
+
+                            {/* Rotating Background Icon */}
                             <motion.div
-                                animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                                className="absolute -top-10 -right-10 opacity-5"
-                            ><Eye size={250} /></motion.div>
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                                className="absolute -top-16 -right-16 opacity-10 pointer-events-none"
+                            >
+                                <Eye size={260} />
+                            </motion.div>
                         </motion.div>
                     </div>
                 </div>

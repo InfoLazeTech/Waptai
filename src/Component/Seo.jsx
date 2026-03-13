@@ -28,11 +28,11 @@ const SeoManager = () => {
       "Meet the governing body and expert committee members driving WAPTAI initiatives.";
   }
 
- else if (pathname === "/membarship") {
-  title = "Membership | WAPTAI";
-  description =
-    "Explore WAPTAI membership benefits, opportunities, and how to join our community.";
-}
+  else if (pathname === "/membarship") {
+    title = "Membership | WAPTAI";
+    description =
+      "Explore WAPTAI membership benefits, opportunities, and how to join our community.";
+  }
 
   else if (pathname === "/contact-us") {
     title = "Contact Us | WAPTAI";
@@ -52,19 +52,19 @@ const SeoManager = () => {
       "Explore WAPTAI’s facilities including water testing labs, training infrastructure, certification support and industry-grade resources.";
   }
 
-else if (pathname.startsWith("/event/")) {
-  const idStr = pathname.split("/")[2];       
-  const id = Number(idStr);                     
-  const event = tabs[id - 1];                  
+  else if (pathname.startsWith("/event/")) {
+    const idStr = pathname.split("/")[2];
+    const id = Number(idStr);
+    const event = tabs[id - 1];
 
-  if (event) {
-    title = `${event.name} | WAPTAI`;
-    description = `Explore highlights, images and insights from ${event.name}, organized by WAPTAI.`;
-  } else {
-    title = "Event | WAPTAI";                   
-    description = "Explore WAPTAI events and highlights.";
+    if (event) {
+      title = `${event.name} | WAPTAI`;
+      description = `Explore highlights, images and insights from ${event.name}, organized by WAPTAI.`;
+    } else {
+      title = "Event | WAPTAI";
+      description = "Explore WAPTAI events and highlights.";
+    }
   }
-}
 
   else if (pathname === "/exhibition") {
     title = "Exhibition | WAPTAI";
@@ -100,6 +100,12 @@ else if (pathname.startsWith("/event/")) {
     title = "Celebration | WAPTAI";
     description =
       "Celebrate WAPTAI events, milestones, and achievements in water sustainability.";
+  }
+
+  else if (pathname === "/waptai-member") {
+    title = "Waptai Member | WAPTAI";
+    description =
+      "Join WAPTAI members in celebrating milestones, events, and achievements driving water sustainability.";
   }
 
   // ================= INSTANT TITLE UPDATE =================
