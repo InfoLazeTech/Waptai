@@ -309,6 +309,13 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
               EXPO 2026
             </NavLink>
 
+             <NavLink
+              to="/waptai-member"
+               onClick={() => setIsMenuOpen(false)}
+            >
+               BECOME WAPTAI MEMBER
+            </NavLink>
+
             <NavLink
               to="/contact-us"
               onClick={() => setIsMenuOpen(false)}
