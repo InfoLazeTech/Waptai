@@ -2,7 +2,7 @@ import React from "react";
 
 const Formpage = () => {
   return (
-    <div className="w-full min-h-screen bg-gray-50 flex items-center justify-center py-25 pb-0">
+    <div className="w-full md:min-h-screen bg-gray-50 flex items-center justify-center md:py-25 py-25 pb-0">
 
       {/* Iframe Container */}
       <div className="w-full max-w-4xl h-[95vh] md:h-[65vh] overflow-hidden relative md:pt-12">
