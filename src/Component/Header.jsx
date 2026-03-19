@@ -39,21 +39,22 @@ const Header = () => {
     { name: "HOME", path: "/" },
     { name: "ABOUT US", path: "/about-us" },
     { name: "COMMITTEE", path: "/committee" },
-    { name: "MEMBERSHIP", path: "/membarship"},
-    
+    { name: "MEMBERSHIP", path: "/membarship" },
+
+
     // { name: "E-MAGAZINE", path: "/e-magazine" },
     // { name: "FACILITIES", path: "/facilities" },
 
   ];
 
   const activityItems = [
-    "Facilities",
-    "Exhibition",
-    "IAPMO",
-    "Seminar",
-    "Convention",
-    "Legal Assistance",
-    "Celebration",
+    { name: "Facilities", path: "/facilities" },
+    { name: "Exhibition", path: "/exhibition" },
+    { name: "IAPMO", path: "/IAPMO" },
+    { name: "Seminar", path: "/Seminar" },
+    { name: "Convention", path: "/Convention" },
+    { name: "Legal Assistance", path: "/Legal-Assistance" },
+    { name: "Celebration", path: "/Celebration" },
   ];
 
   return (
@@ -81,7 +82,7 @@ const Header = () => {
           </NavLink>
 
           {/* DESKTOP NAVIGATION */}
-          <nav className="hidden lg:flex md:whitespace-nowrap items-center text-[13px] gap-2 font-bold">
+          <nav className="hidden xl:flex xl:whitespace-nowrap items-center text-[13px] gap-2 font-bold">
             {menuItems.map((item) => (
               <NavLink key={item.name} to={item.path} className={navStyles}>
                 {item.name}
@@ -117,10 +118,10 @@ const Header = () => {
 
                 <div className="grid grid-cols-3 gap-x-10 gap-y-5">
 
-                  {tabs.map((event,   index) => (
+                  {tabs.map((event, index) => (
                     <NavLink
                       key={event.name}
-to={`/event/${createSlug(event.name)}`}  onClick={() => setClickedIndex(index)}
+                      to={`/event/${createSlug(event.name)}`} onClick={() => setClickedIndex(index)}
                       className="block group/item"
                     >
                       <div className="flex items-center justify-between pb-1">
@@ -199,11 +200,11 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
                 <div className="p-2 grid gap-1">
                   {activityItems.map((item) => (
                     <NavLink
-                      key={item}
-                      to={`/${item.toLowerCase().replace(" ", "-")}`}
+                      key={item.name}
+                      to={item.path}
                       className="px-4 py-3 rounded-xl text-slate-600 hover:bg-blue-50 hover:text-[#1c87c9] font-medium transition-colors"
                     >
-                      {item}
+                      {item.name}
                     </NavLink>
                   ))}
                 </div>
@@ -212,18 +213,18 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
 
             <NavLink to="/expo-2026" className={navStyles}>EXPO 2026</NavLink>
             <NavLink to="/contact-us" className={navStyles}>CONTACT US</NavLink>
-              <NavLink
+            <NavLink
               to="/waptai-member"
               className="ml-6 bg-[#1c87c9] text-white md:px-8 md:py-3 md:whitespace-nowrap  rounded-full hover:bg-blue-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-95 shadow-md"
             >
-               BECOME WAPTAI MEMBER
+              BECOME WAPTAI MEMBER
             </NavLink>
           </nav>
 
           {/* HAMBURGER BUTTON */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-[#1c87c9] hover:bg-blue-50 rounded-lg transition-colors"
+            className="xl:hidden p-2 text-[#1c87c9] hover:bg-blue-50 rounded-lg transition-colors"
           >
             {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -231,7 +232,7 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
       </div>
 
       {/* MOBILE MENU */}
-      <div className={`lg:hidden fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
+      <div className={`xl:hidden fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
         onClick={() => setIsMenuOpen(false)}
       >
         <div
@@ -292,15 +293,15 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
 
 
             <div className="border-t pt-4">
-              <p className="text-xs font-bold text-slate-400 mb-2">ACTIVITIES</p>
+              <p className="text-xs font-bold text-slate-400 mb-2">WAPTAI OFFERINGS</p>
               {activityItems.map((item) => (
                 <NavLink
-                  key={item}
-                  to={`/${item.toLowerCase().replace(" ", "-")}`}
+                  key={item.name}
+                  to={item.path}
                   onClick={() => setIsMenuOpen(false)}
                   className="block py-1"
                 >
-                  {item}
+                  {item.name}
                 </NavLink>
               ))}
             </div>
@@ -309,11 +310,11 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
               EXPO 2026
             </NavLink>
 
-             <NavLink
+            <NavLink
               to="/waptai-member"
-               onClick={() => setIsMenuOpen(false)}
+              onClick={() => setIsMenuOpen(false)}
             >
-               BECOME WAPTAI MEMBER
+              BECOME WAPTAI MEMBER
             </NavLink>
 
             <NavLink
