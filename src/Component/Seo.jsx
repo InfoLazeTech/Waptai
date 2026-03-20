@@ -72,31 +72,31 @@ const SeoManager = () => {
       "Join WAPTAI exhibitions showcasing cutting-edge water and treatment technologies.";
   }
 
-  else if (pathname === "/iapmo") {
+  else if (pathname === "/IAPMO") {
     title = "IAPMO | WAPTAI";
     description =
       "Learn about WAPTAI's collaboration with IAPMO for water safety and plumbing standards.";
   }
 
-  else if (pathname === "/seminar") {
+  else if (pathname === "/Seminar") {
     title = "Seminar | WAPTAI";
     description =
       "Attend WAPTAI seminars on water purification, sustainability, and innovation.";
   }
 
-  else if (pathname === "/convention") {
+  else if (pathname === "/Convention") {
     title = "Convention | WAPTAI";
     description =
       "Participate in WAPTAI conventions with industry leaders and experts.";
   }
 
-  else if (pathname === "/legal-assistance") {
+  else if (pathname === "/Legal-Assistance") {
     title = "Legal Assistance | WAPTAI";
     description =
       "Access WAPTAI’s legal support and guidance on water management regulations.";
   }
 
-  else if (pathname === "/celebration") {
+  else if (pathname === "/Celebration") {
     title = "Celebration | WAPTAI";
     description =
       "Celebrate WAPTAI events, milestones, and achievements in water sustainability.";
