@@ -2,10 +2,10 @@ import React from "react";
 
 const Formpage = () => {
   return (
-    <div className="w-full md:min-h-screen bg-gray-50 flex items-center justify-center md:py-25 py-25 pb-0">
+    <div className="w-full  bg-gray-50 flex items-center justify-center md:h-screen py-5">
 
       {/* Iframe Container */}
-      <div className="w-full max-w-4xl h-[63vh] md:h-[65vh] moverflow-hidden relative md:pt-20">
+      <div className="w-full max-w-4xl h-[63vh] md:h-[65vh] overflow-hidden relative">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLScw9UcDrxfhIRHVySZd5uxkGZLGEIYz_xFf5si1EyEIjiqJpw/viewform?embedded=true"
           className="w-full h-full border-0"

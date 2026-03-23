@@ -28,6 +28,7 @@ import Membership from './Pages/Home/Membership'
 // import EventDetails from './Pages/Event/EventDetails'
 import EventPage from './Pages/Event/EventPage'
 import Formpage from './Pages/Form/Formpage'
+import Blog from './Pages/Activities/Blog'
 
 // import Exhibitors from './Pages/Home/Exhibitors'
 
@@ -78,6 +79,7 @@ const App = () => {
           <Route path="/Celebration" element={<Celebration />} />
           <Route path="/expo-2026" element={<Expo />} />
           <Route path="/waptai-member" element={<Formpage />} />
+          <Route path="/blog" element={<Blog />} />
 
 
         </Routes>

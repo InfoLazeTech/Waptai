@@ -10,7 +10,7 @@ const Facilities = () => {
 
       {/* Heading */}
 
-      <div className="text-center py-24 md:py-32">
+      <div className="text-center mb-28 my-10">
         <h2 className="text-5xl md:text-6xl font-bold mt-5 text-[#1c87c9] mb-6 tracking-wide">
           Facilities
         </h2>

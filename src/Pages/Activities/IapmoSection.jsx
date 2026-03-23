@@ -93,7 +93,7 @@ const IapmoSection = () => {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50  py-32">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 py-6">
 
       {/* ================= HERO ================= */}
       <div className="max-w-6xl mx-auto px-6 md:py-10 text-center space-y-6">

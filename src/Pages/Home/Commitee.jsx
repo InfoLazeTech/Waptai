@@ -125,8 +125,8 @@ const Committee = () => {
   const [selectedImg, setSelectedImg] = useState(null);
 
   return (
-    <div className="bg-white min-h-screen font-sans antialiased text-slate-900 mt-20 ">
-      <header className="pt-12 pb-8 px-6 border-b border-slate-100 bg-[#0d5c7f]">
+    <div className="bg-white min-h-screen font-sans antialiased text-slate-900">
+      <header className="pt-5 pb-8 px-6 border-b border-slate-100 bg-[#0d5c7f]">
         <div className="max-w-7xl mx-auto">
           <p className="text-white text-xs font-bold tracking-widest uppercase mb-2">
             Organization Leadership

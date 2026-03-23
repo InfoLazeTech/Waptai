@@ -55,11 +55,12 @@ const Header = () => {
     { name: "Convention", path: "/Convention" },
     { name: "Legal Assistance", path: "/Legal-Assistance" },
     { name: "Celebration", path: "/Celebration" },
+    // { name: "Blog", path: "/blog" }
   ];
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-500 rounded-br-4xl rounded-bl-4xl shadow-md ${isScrolled ? "bg-white shadow-md py-3" : "bg-white py-3"}`}
+      className={`sticky top-0 w-full z-50 transition-all duration-500 rounded-br-4xl rounded-bl-4xl shadow-md ${isScrolled ? "bg-white shadow-md py-3" : "bg-white py-3"}`}
     >
       <div className="max-w-[1536px] mx-auto px-5">
         <div className="flex items-center justify-between">

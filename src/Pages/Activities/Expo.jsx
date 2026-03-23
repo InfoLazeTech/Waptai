@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import expoImg from "../../assets/expo2026.jpg";
 
 const podcastVideos = [
   "https://www.youtube.com/watch?v=HFgnMHXtqZo",
@@ -132,11 +131,11 @@ const Expo = () => {
   };
 
   return (
-    <section className="w-full bg-gradient-to-br from-sky-100 via-white py-20 md:py-28 px-4">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-white px-4 py-14">
       <div className="max-w-7xl mx-auto space-y-20">
 
         {/* ================= HERO / INTRO ================= */}
-        <div className="text-center space-y-6 mt-10">
+        <div className="text-center space-y-6">
           <span className="inline-block text-sm tracking-widest font-semibold text-sky-600 uppercase">
             Water • Sustainability • Innovation
           </span>

@@ -23,10 +23,10 @@ const EventPage = () => {
   return (
     <div className="bg-gray-50">
       {/* Container */}
-      <div className="px-4 sm:px-6 md:px-12 py-28 md:py-15 max-w-full mx-auto">
+      <div className="px-4 sm:px-6 md:px-12 py-5 max-w-full mx-auto">
 
         {/* HERO GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center md:min-h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center md:max-h-screen md:py-5">
           
           {/* LEFT TEXT */}
           <div className="md:col-span-7 flex flex-col justify-center space-y-6 md:space-y-8">
@@ -121,7 +121,7 @@ const EventPage = () => {
                 <path d="M3 7h18M3 17h18M5 7v10M19 7v10" />
               </svg>
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">
-                {event.name === "WAPTAI GST PODCAST 31st Jan 2026" ? "Podcast Images" : "Event Moments"}
+                {event.name === "31 Jan 2026 WAPTAI GST Podcast" ? "Podcast Images" : "Event Moments"}
               </h3>
             </div>
             <ImageSlider images={event.images} cardStyle="shadow-lg rounded-xl" />

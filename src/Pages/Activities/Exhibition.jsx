@@ -19,7 +19,7 @@ function Exhibition() {
     <div className="bg-gray-50">
       {/* ===== TOP HEADING ===== */}
       <section
-        className="w-full h-auto flex flex-col justify-center items-center bg-gradient-to-br from-sky-100 via-white to-sky-50 px-6 md:py-25 py-20 text-center mt-[72px]"
+        className="w-full h-auto flex flex-col justify-center items-center bg-gradient-to-br from-sky-100 via-white to-sky-50 px-6 text-center py-20"
       >
         {/* Heading */}
         <h1 className="text-5xl md:text-6xl font-extrabold text-[#1c87c9] mb-6">

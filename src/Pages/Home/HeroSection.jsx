@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CLOUDINARY_VIDEO_URL =
@@ -9,7 +8,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative flex items-center pt-28 py-10 overflow-hidden bg-[#e3f2fd]/50">
+    <section className="relative md:min-h-screen py-10 md:py-10 overflow-hidden bg-[#e3f2fd]/50">
 {/* ===== FLOATING WATER BUBBLES BACKGROUND ===== */}
 {/* ===== ANIMATED WATER WAVES BACKGROUND ===== */}
 <div className="absolute inset-0 z-0 hidden md:block overflow-hidden pointer-events-none">
@@ -48,7 +47,7 @@ const HeroSection = () => {
         }}
       ></div> */}
 
-      <div className="max-w-[1536px] mx-auto px-6 lg:px-12 w-full md:py-8 relative z-10">
+      <div className="max-w-[1536px] mx-auto px-6 lg:px-12 w-full relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 items-center">
 
           {/* LEFT CONTENT */}

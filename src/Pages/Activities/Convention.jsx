@@ -49,11 +49,11 @@ const Convention = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 md:py-20 py-24 px-4">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 px-4 py-14">
       <div className="max-w-7xl mx-auto space-y-12">
 
         {/* ===== HEADING ===== */}
-        <div className="text-center md:mt-20 mt-10">
+        <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#1c87c9] mb-3">
             WAPTAI Convention
           </h2>

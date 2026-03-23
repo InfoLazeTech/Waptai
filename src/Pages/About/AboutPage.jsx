@@ -34,7 +34,7 @@ const AboutPage = () => {
 
     return (
         <div className="bg-white font-sans antialiased overflow-x-hidden">
-            <section className={`relative h-screen ${lightBg} overflow-hidden`}>
+            <section className={`relative py-28 ${lightBg} overflow-hidden`}>
                 {/* Background images */}
                 <div
                     className="absolute inset-0 z-0 opacity-30 mix-blend-multiply"

@@ -7,7 +7,7 @@ const Membership = () => {
 
   return (
     <>
-      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-sky-100">
+      <section className="relative py-14 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-sky-100">
 
         {/* SVG WAVE BACKGROUND */}
         <div className="absolute inset-0 opacity-20">
@@ -30,7 +30,7 @@ const Membership = () => {
         <div className="relative max-w-[1536px] px-6 md:px-12 mx-auto">
 
           {/* Heading */}
-          <div className="text-center mb-16 py-12">
+          <div className="text-center md:mb-24 mb-14">
             <h2 className="text-4xl md:text-5xl font-extrabold text-[#0d5c7f] tracking-tight">
               WAPTAI Membership
             </h2>
