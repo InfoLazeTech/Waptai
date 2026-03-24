@@ -11,10 +11,7 @@ function createSlug(name) {
     .replace(/(^-|-$)/g, "");
 }
 
-
 const Header = () => {
-
-
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activitiesOpen, setActivitiesOpen] = useState(false);
@@ -28,23 +25,18 @@ const Header = () => {
   }, []);
 
   const navStyles = ({ isActive }) =>
-    `px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 tracking-wide
-    ${isActive
-      ? "bg-[#1c87c9] text-white shadow-md scale-105"
-      : "text-slate-700 hover:bg-blue-50 hover:text-[#1c87c9]"
+    `px-3 xl:px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 tracking-wide
+    ${
+      isActive
+        ? "bg-[#1c87c9] text-white shadow-md scale-105"
+        : "text-slate-700 hover:bg-blue-50 hover:text-[#1c87c9]"
     }`;
 
-  // Menu items
   const menuItems = [
     { name: "HOME", path: "/" },
     { name: "ABOUT US", path: "/about-us" },
     { name: "COMMITTEE", path: "/committee" },
     { name: "MEMBERSHIP", path: "/membarship" },
-
-
-    // { name: "E-MAGAZINE", path: "/e-magazine" },
-    // { name: "FACILITIES", path: "/facilities" },
-
   ];
 
   const activityItems = [
@@ -55,14 +47,15 @@ const Header = () => {
     { name: "Convention", path: "/Convention" },
     { name: "Legal Assistance", path: "/Legal-Assistance" },
     { name: "Celebration", path: "/Celebration" },
-    // { name: "Blog", path: "/blog" }
   ];
 
   return (
     <header
-      className={`sticky top-0 w-full z-50 transition-all duration-500 rounded-br-4xl rounded-bl-4xl shadow-md ${isScrolled ? "bg-white shadow-md py-3" : "bg-white py-3"}`}
+      className={`sticky top-0 w-full z-50 transition-all duration-500 shadow-md ${
+        isScrolled ? "bg-white py-3 max-md:py-2" : "bg-white py-4 max-md:py-2"
+      }`}
     >
-      <div className="max-w-[1536px] mx-auto px-5">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-5">
         <div className="flex items-center justify-between">
 
           {/* LOGO */}
@@ -70,169 +63,119 @@ const Header = () => {
             <img
               src={logo}
               alt="WAPTAI Logo"
-              className={`transition-all duration-500 object-contain ${isScrolled ? "h-20 w-auto" : "h-16 lg:h-20 w-auto"}`}
+              className={`transition-all duration-500 object-contain ${
+                isScrolled
+                  ? "h-20 lg:h-20 md:h-16 sm:h-14"
+                  : "h-16 lg:h-20 md:h-16 sm:h-14"
+              }`}
             />
-            <div className="ml-5 flex flex-col border-l-2 border-blue-500/30 pl-5 py-1">
-              <span className="text-[#1c87c9] font-black text-lg lg:text-xl leading-none tracking-tight">
-                WAPTAI
-              </span>
-              <span className="text-slate-500 font-bold text-[10px] lg:text-[11px] leading-tight tracking-[0.15em] mt-1 uppercase">
-                Water Purification & Treatment <br /> Association <span className="md:font-extrabold font-bold">(India)</span>
-              </span>
-            </div>
+<div className="logo-text ml-4 flex flex-col border-l-2 border-blue-500/30 pl-4 py-1">
+  <span className="text-[#1c87c9] font-black text-lg max-sm:text-base leading-none tracking-tight">
+    WAPTAI
+  </span>
+  <span className="text-slate-500 font-bold text-[10px] max-sm:text-[9px] leading-tight tracking-[0.12em] mt-1 uppercase">
+    Water Purification & Treatment <br />
+    Association <span className="font-bold">(India)</span>
+  </span>
+</div>
           </NavLink>
 
-          {/* DESKTOP NAVIGATION */}
-          <nav className="hidden xl:flex xl:whitespace-nowrap items-center text-[13px] gap-2 font-bold">
+          {/* DESKTOP NAV */}
+          <nav className="hidden xl:flex items-center gap-1 2xl:gap-2 text-[12px] 2xl:text-[13px] font-bold whitespace-nowrap">
             {menuItems.map((item) => (
               <NavLink key={item.name} to={item.path} className={navStyles}>
                 {item.name}
               </NavLink>
             ))}
 
-            {/* EVENTS DROPDOWN */}
+            {/* EVENTS */}
             <div className="relative group">
-              <button
-                className="px-4 py-2 flex items-center gap-2 text-slate-700 hover:text-[#1c87c9] transition-colors"
-              >
+              <button className="px-3 xl:px-4 py-2 flex items-center gap-2 text-slate-700 hover:text-[#1c87c9]">
                 EVENTS
-                <FaChevronDown className="text-[10px] transition-transform duration-300 group-hover:rotate-180" />
+                <FaChevronDown className="text-[10px] group-hover:rotate-180 transition" />
               </button>
-              {/* Dropdown */}
-              <div
-                className="
-    absolute left-1/2 -translate-x-1/2
-    top-full mt-3
-    w-[910px]
-    bg-white
-    rounded-xl
-    shadow-lg
-    border border-gray-200
-    px-8 py-8
-    opacity-0 invisible
-    group-hover:opacity-100
-    group-hover:visible
-    transition-all duration-200
-    z-[999]
-  "
-              >
 
-                <div className="grid grid-cols-3 gap-x-10 gap-y-5">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 
+                w-[910px] max-2xl:w-[800px] max-xl:w-[95vw] 
+                bg-white rounded-xl shadow-lg border px-6 py-6 
+                opacity-0 invisible group-hover:opacity-100 group-hover:visible transition z-[999]">
 
+                <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6">
                   {tabs.map((event, index) => (
                     <NavLink
                       key={event.name}
-                      to={`/event/${createSlug(event.name)}`} onClick={() => setClickedIndex(index)}
+                      to={`/event/${createSlug(event.name)}`}
+                      onClick={() => setClickedIndex(index)}
                       className="block group/item"
                     >
-                      <div className="flex items-center justify-between pb-1">
-
-                        {/* Text */}
-                        <p className="
-              text-xs
-              text-gray-700
-              font-medium
-              leading-snug
-              whitespace-normal
-              break-words
-              transition
-              group-hover/item:text-sky-600
-            ">
+                      <div className="flex justify-between items-center pb-1">
+                        <p className="text-xs text-gray-700 group-hover/item:text-sky-600">
                           {event.name}
                         </p>
 
-                        {/* Arrow */}
                         <svg
-                          className="
-              w-3 h-3
-              text-gray-400
-              ml-2
-              transition-all
-              duration-300
-              group-hover/item:translate-x-1
-              group-hover/item:text-sky-600
-              "
+                          className="w-3 h-3 text-gray-400 group-hover/item:translate-x-1 group-hover/item:text-sky-600 transition"
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="2"
                           viewBox="0 0 24 24"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                          <path d="M9 5l7 7-7 7" />
                         </svg>
-
                       </div>
 
-                      {/* Hover Line */}
-                      <span
-                        className={`
-                  block h-[1px] bg-sky-600 transition-all duration-300
-                  ${clickedIndex === index ? "w-full" : "group-hover/item:w-full w-0"}
-                `}
-                      ></span>
-
+                      <span className={`block h-[1px] bg-sky-600 transition-all ${
+                        clickedIndex === index ? "w-full" : "w-0 group-hover/item:w-full"
+                      }`} />
                     </NavLink>
                   ))}
-
                 </div>
-
               </div>
             </div>
 
-            {/* DROP-DOWN ACTIVITIES */}
-            <div className="relative group py-2">
+            {/* OFFERINGS */}
+            <div className="relative group">
               <button
                 onClick={() => setActivitiesOpen(!activitiesOpen)}
-                onMouseLeave={() => setActivitiesOpen(false)}
-                className="px-4 py-2 flex items-center gap-2 text-slate-700 hover:text-[#1c87c9] transition-colors"
-
+                className="px-3 xl:px-4 py-2 flex items-center gap-2 text-slate-700 hover:text-[#1c87c9]"
               >
-
                 WAPTAI OFFERINGS
-                <FaChevronDown className="text-[10px] transition-transform duration-300 group-hover:rotate-180" />
+                <FaChevronDown className="text-[10px] group-hover:rotate-180 transition" />
               </button>
-              <div
-                className={`absolute top-[calc(100%+10px)] left-0 w-64 bg-white border border-slate-100
-  rounded-2xl shadow-2xl overflow-hidden transition-all duration-300
-  ${activitiesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-4"}
-  md:group-hover:opacity-100 md:group-hover:visible md:group-hover:translate-y-0
-lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
-`}
-              >
-                <div className="p-2 grid gap-1">
-                  {activityItems.map((item) => (
-                    <NavLink
-                      key={item.name}
-                      to={item.path}
-                      className="px-4 py-3 rounded-xl text-slate-600 hover:bg-blue-50 hover:text-[#1c87c9] font-medium transition-colors"
-                    >
-                      {item.name}
-                    </NavLink>
-                  ))}
-                </div>
+
+              <div className={`absolute top-full mt-2 left-0 w-64 bg-white rounded-xl shadow-lg border transition-all ${
+                activitiesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}>
+                {activityItems.map((item) => (
+                  <NavLink key={item.name} to={item.path} className="block px-4 py-3 hover:bg-blue-50">
+                    {item.name}
+                  </NavLink>
+                ))}
               </div>
             </div>
 
             <NavLink to="/expo-2026" className={navStyles}>EXPO 2026</NavLink>
             <NavLink to="/contact-us" className={navStyles}>CONTACT US</NavLink>
+
             <NavLink
               to="/waptai-member"
-              className="ml-6 bg-[#1c87c9] text-white md:px-8 md:py-3 md:whitespace-nowrap  rounded-full hover:bg-blue-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-95 shadow-md"
+              className="ml-4 xl:ml-6 bg-[#1c87c9] text-white px-6 py-2 rounded-full hover:bg-blue-600 transition"
             >
               BECOME WAPTAI MEMBER
             </NavLink>
           </nav>
 
-          {/* HAMBURGER BUTTON */}
+          {/* MOBILE BUTTON */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="xl:hidden p-2 text-[#1c87c9] hover:bg-blue-50 rounded-lg transition-colors"
+            className="xl:hidden p-2 text-[#1c87c9]"
           >
-            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            {isMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
           </button>
         </div>
       </div>
 
-      {/* MOBILE MENU */}
+     {/* MOBILE MENU */}
       <div className={`xl:hidden fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
         onClick={() => setIsMenuOpen(false)}
       >

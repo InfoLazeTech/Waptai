@@ -7,3 +7,113 @@
 .animate-zoomIn {
   animation: zoomIn 0.3s ease-out;
 }
+/* =========================
+   DESKTOP FIX (≤1400px)
+========================= */
+@media (max-width: 1400px) {
+  /* Reduce nav spacing */
+  header nav {
+    gap: 6px !important;
+    font-size: 12px !important;
+  }
+
+  /* Reduce button padding */
+  header nav a,
+  header nav button {
+    padding: 6px 10px !important;
+  }
+}
+
+/* =========================
+   LAPTOP (≤1280px)
+========================= */
+@media (max-width: 1280px) {
+
+  /* Hide ONLY desktop nav */
+  header nav.hidden {
+    display: none !important;
+  }
+
+  /* Show hamburger */
+  header button.xl\:hidden {
+    display: block !important;
+  }
+
+  /* Logo size */
+  header img {
+    height: 60px !important;
+  }
+}
+
+/* =========================
+   TABLET (≤1024px)
+========================= */
+@media (max-width: 1024px) {
+
+  /* Prevent hiding */
+  .logo-text {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Prevent collapsing */
+  .logo-text {
+    min-width: 140px;
+  }
+
+  /* Force space for logo */
+  header .flex.items-center {
+    gap: 8px;
+  }
+}
+
+/* =========================
+   SMALL TABLET (≤768px)
+========================= */
+@media (max-width: 768px) {
+
+
+  header img {
+    height: 50px !important;
+  }
+
+  /* Mobile menu width */
+  header .w-72 {
+    width: 280px !important;
+  }
+}
+
+/* =========================
+   MOBILE (≤480px)
+========================= */
+@media (max-width: 480px) {
+
+  header img {
+    height: 45px !important;
+  }
+
+  /* Full width mobile menu */
+  header .w-72 {
+    width: 100% !important;
+  }
+
+  /* Padding fix */
+  header {
+    padding: 8px 0 !important;
+  }
+}
+
+/* =========================
+   EXTRA SMALL (≤360px)
+========================= */
+@media (max-width: 360px) {
+
+  header img {
+    height: 40px !important;
+  }
+
+  header {
+    font-size: 12px !important;
+  }
+}
