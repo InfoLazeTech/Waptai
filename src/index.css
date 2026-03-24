@@ -75,7 +75,7 @@
 
 
   header img {
-    height: 50px !important;
+    height: 70px !important;
   }
 
   /* Mobile menu width */
@@ -90,7 +90,7 @@
 @media (max-width: 480px) {
 
   header img {
-    height: 45px !important;
+    height: 70px !important;
   }
 
   /* Full width mobile menu */
