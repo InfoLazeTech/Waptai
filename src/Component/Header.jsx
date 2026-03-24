@@ -63,12 +63,9 @@ const Header = () => {
             <img
               src={logo}
               alt="WAPTAI Logo"
-              className={`transition-all duration-500 object-contain ${
-                isScrolled
-                  ? "h-20 lg:h-20 md:h-16 sm:h-14"
-                  : "h-16 lg:h-20 md:h-16 sm:h-14"
-              }`}
+              className={`transition-all duration-500 object-contain ${isScrolled ? "h-20 w-auto" : "h-16 lg:h-20 w-auto"}`}
             />
+
 <div className="logo-text ml-4 flex flex-col border-l-2 border-blue-500/30 pl-4 py-1">
   <span className="text-[#1c87c9] font-black text-lg max-sm:text-base leading-none tracking-tight">
     WAPTAI
@@ -214,7 +211,7 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
 
             <NavLink
               to="/waptai-member"
-              className="ml-4 xl:ml-6 bg-[#1c87c9] text-white px-6 py-2 rounded-full hover:bg-blue-600 transition"
+              className="ml-4 xl:ml-6 bg-[#1c87c9] text-white px-6 py-3 rounded-full hover:bg-blue-600 transition"
             >
               BECOME WAPTAI MEMBER
             </NavLink>
@@ -225,14 +222,14 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="xl:hidden p-2 text-[#1c87c9]"
           >
-            {isMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+          <FaBars size={22} />
           </button>
         </div>
       </div>
 
-     {/* MOBILE MENU */}
+   
+  {/* MOBILE MENU */}
       <div className={`xl:hidden fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
-        onClick={() => setIsMenuOpen(false)}
       >
         <div
           onClick={(e) => e.stopPropagation()}
@@ -241,7 +238,36 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
     overflow-y-auto max-h-screen
   `}
         >
+<div className="flex items-center justify-between mb-5">
 
+  {/* LEFT: LOGO + TEXT */}
+  <div className="flex items-center gap-3">
+    <img
+      src={logo}
+      alt="logo"
+      className="h-10 w-auto object-contain"
+    />
+
+    <div className="flex flex-col leading-tight">
+      <span className="text-[#1c87c9] font-extrabold text-sm">
+        WAPTAI
+      </span>
+      <span className="text-[9px] text-slate-500 font-bold uppercase">
+        Water Purification & Treatment
+         Association <span className="font-bold">(India)</span>
+      </span>
+    </div>
+  </div>
+
+  {/* RIGHT: CLOSE BUTTON */}
+  <button
+    onClick={() => setIsMenuOpen(false)}
+    className="p-2 rounded-full hover:bg-gray-100 transition"
+  >
+    <FaTimes className="text-[#1c87c9] text-xl" />
+  </button>
+
+</div>
           <nav className="flex flex-col gap-4 font-semibold text-slate-700 text-sm">
             {menuItems.map((item) => (
               <NavLink key={item.name} to={item.path} onClick={() => setIsMenuOpen(false)}>
@@ -326,6 +352,7 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
           </nav>
         </div>
       </div>
+
     </header>
   );
 };

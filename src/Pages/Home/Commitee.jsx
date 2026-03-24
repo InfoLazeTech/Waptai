@@ -127,7 +127,7 @@ const Committee = () => {
   return (
     <div className="bg-white min-h-screen font-sans antialiased text-slate-900">
       <header className="pt-5 pb-8 px-6 border-b border-slate-100 bg-[#0d5c7f]">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto p-4 md:p-0">
           <p className="text-white text-xs font-bold tracking-widest uppercase mb-2">
             Organization Leadership
           </p>
