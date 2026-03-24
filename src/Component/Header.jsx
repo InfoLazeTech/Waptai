@@ -88,69 +88,124 @@ const Header = () => {
               </NavLink>
             ))}
 
-            {/* EVENTS */}
-            <div className="relative group">
-              <button className="px-3 xl:px-4 py-2 flex items-center gap-2 text-slate-700 hover:text-[#1c87c9]">
+           <div className="relative group">
+              <button
+                className="px-4 py-2 flex items-center gap-2 text-slate-700 hover:text-[#1c87c9] transition-colors"
+              >
                 EVENTS
-                <FaChevronDown className="text-[10px] group-hover:rotate-180 transition" />
+                <FaChevronDown className="text-[10px] transition-transform duration-300 group-hover:rotate-180" />
               </button>
+              {/* Dropdown */}
+              <div
+                className="
+    absolute left-1/2 -translate-x-1/2
+    top-full mt-3
+    w-[910px]
+    bg-white
+    rounded-xl
+    shadow-lg
+    border border-gray-200
+    px-8 py-8
+    opacity-0 invisible
+    group-hover:opacity-100
+    group-hover:visible
+    transition-all duration-200
+    z-[999]
+  "
+              >
 
-              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 
-                w-[910px] max-2xl:w-[800px] max-xl:w-[95vw] 
-                bg-white rounded-xl shadow-lg border px-6 py-6 
-                opacity-0 invisible group-hover:opacity-100 group-hover:visible transition z-[999]">
+                <div className="grid grid-cols-3 gap-x-10 gap-y-5">
 
-                <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6">
                   {tabs.map((event, index) => (
                     <NavLink
                       key={event.name}
-                      to={`/event/${createSlug(event.name)}`}
-                      onClick={() => setClickedIndex(index)}
+                      to={`/event/${createSlug(event.name)}`} onClick={() => setClickedIndex(index)}
                       className="block group/item"
                     >
-                      <div className="flex justify-between items-center pb-1">
-                        <p className="text-xs text-gray-700 group-hover/item:text-sky-600">
+                      <div className="flex items-center justify-between pb-1">
+
+                        {/* Text */}
+                        <p className="
+              text-xs
+              text-gray-700
+              font-medium
+              leading-snug
+              whitespace-normal
+              break-words
+              transition
+              group-hover/item:text-sky-600
+            ">
                           {event.name}
                         </p>
 
+                        {/* Arrow */}
                         <svg
-                          className="w-3 h-3 text-gray-400 group-hover/item:translate-x-1 group-hover/item:text-sky-600 transition"
+                          className="
+              w-3 h-3
+              text-gray-400
+              ml-2
+              transition-all
+              duration-300
+              group-hover/item:translate-x-1
+              group-hover/item:text-sky-600
+              "
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="2"
                           viewBox="0 0 24 24"
                         >
-                          <path d="M9 5l7 7-7 7" />
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
+
                       </div>
 
-                      <span className={`block h-[1px] bg-sky-600 transition-all ${
-                        clickedIndex === index ? "w-full" : "w-0 group-hover/item:w-full"
-                      }`} />
+                      {/* Hover Line */}
+                      <span
+                        className={`
+                  block h-[1px] bg-sky-600 transition-all duration-300
+                  ${clickedIndex === index ? "w-full" : "group-hover/item:w-full w-0"}
+                `}
+                      ></span>
+
                     </NavLink>
                   ))}
+
                 </div>
+
               </div>
             </div>
 
-            {/* OFFERINGS */}
-            <div className="relative group">
+            {/* DROP-DOWN ACTIVITIES */}
+            <div className="relative group py-2">
               <button
                 onClick={() => setActivitiesOpen(!activitiesOpen)}
-                className="px-3 xl:px-4 py-2 flex items-center gap-2 text-slate-700 hover:text-[#1c87c9]"
-              >
-                WAPTAI OFFERINGS
-                <FaChevronDown className="text-[10px] group-hover:rotate-180 transition" />
-              </button>
+                onMouseLeave={() => setActivitiesOpen(false)}
+                className="px-4 py-2 flex items-center gap-2 text-slate-700 hover:text-[#1c87c9] transition-colors"
 
-              <div className={`absolute top-full mt-2 left-0 w-64 bg-white rounded-xl shadow-lg border transition-all ${
-                activitiesOpen ? "opacity-100 visible" : "opacity-0 invisible"
-              }`}>
-                {activityItems.map((item) => (
-                  <NavLink key={item.name} to={item.path} className="block px-4 py-3 hover:bg-blue-50">
-                    {item.name}
-                  </NavLink>
-                ))}
+              >
+
+                WAPTAI OFFERINGS
+                <FaChevronDown className="text-[10px] transition-transform duration-300 group-hover:rotate-180" />
+              </button>
+              <div
+                className={`absolute top-[calc(100%+10px)] left-0 w-64 bg-white border border-slate-100
+  rounded-2xl shadow-2xl overflow-hidden transition-all duration-300
+  ${activitiesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-4"}
+  md:group-hover:opacity-100 md:group-hover:visible md:group-hover:translate-y-0
+lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
+`}
+              >
+                <div className="p-2 grid gap-1">
+                  {activityItems.map((item) => (
+                    <NavLink
+                      key={item.name}
+                      to={item.path}
+                      className="px-4 py-3 rounded-xl text-slate-600 hover:bg-blue-50 hover:text-[#1c87c9] font-medium transition-colors"
+                    >
+                      {item.name}
+                    </NavLink>
+                  ))}
+                </div>
               </div>
             </div>
 
