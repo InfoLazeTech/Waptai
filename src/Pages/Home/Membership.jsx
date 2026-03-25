@@ -7,7 +7,7 @@ const Membership = () => {
 
   return (
     <>
-      <section className="relative py-14 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-sky-100">
+      <section className="relative py-10 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-sky-100">
 
         {/* SVG WAVE BACKGROUND */}
         <div className="absolute inset-0 opacity-20">

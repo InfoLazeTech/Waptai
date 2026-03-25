@@ -34,7 +34,7 @@ const Celebration = () => {
   
 
   return (
-    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 px-4 py-14">
+    <section className="w-full bg-gradient-to-br from-sky-100 via-white to-sky-50 px-4 py-10">
       <div className="max-w-7xl mx-auto space-y-12">
 
         {/* ===== HEADING ===== */}

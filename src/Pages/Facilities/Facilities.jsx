@@ -10,7 +10,7 @@ const Facilities = () => {
 
       {/* Heading */}
 
-      <div className="text-center mb-28 my-10">
+      <div className="text-center mb-10 md:mb-28">
         <h2 className="text-5xl md:text-6xl font-bold mt-5 text-[#1c87c9] mb-6 tracking-wide">
           Facilities
         </h2>
@@ -22,7 +22,7 @@ const Facilities = () => {
 
 
       {/* Section 1 */}
-      <div className="flex flex-col md:flex-row gap-12 mb-32 items-center justify-center">
+      <div className="flex flex-col md:flex-row gap-12 mb-10 md:mb-32 items-center justify-center">
         <img
           src={facility1}
           alt="Office Facility"

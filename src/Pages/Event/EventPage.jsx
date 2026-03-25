@@ -55,7 +55,7 @@ const EventPage = () => {
           </div>
 
           {/* RIGHT IMAGE / VIDEO */}
-          <div className="md:col-span-5 flex justify-center mt-8 md:mt-0 relative">
+          <div className="md:col-span-5 flex justify-center md:mt-0 relative">
             <div className="w-full max-w-md rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500">
               {event.youtubeId ? (
                 <iframe
