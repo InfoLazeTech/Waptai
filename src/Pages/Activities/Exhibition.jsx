@@ -40,7 +40,7 @@ Explore our exhibitions highlighting creativity, innovation, and inspiring stori
           >
             {/* YEAR TITLE */}
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1c87c9] mb-10">
-              WAPTAI WATER EXPO – {year}
+              WAPTAG WATER EXPO – {year}
             </h2>
 
             {/* MEDIA */}
