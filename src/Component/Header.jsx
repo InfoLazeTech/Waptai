@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/waptailogo.jpg";
 import { tabs } from "../Pages/Event/eventsData.js";
+import { useNavigate } from "react-router-dom";
+
+
 
 function createSlug(name) {
   return name
@@ -12,6 +15,8 @@ function createSlug(name) {
 }
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activitiesOpen, setActivitiesOpen] = useState(false);
@@ -26,10 +31,9 @@ const Header = () => {
 
   const navStyles = ({ isActive }) =>
     `px-3 xl:px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 tracking-wide
-    ${
-      isActive
-        ? "bg-[#1c87c9] text-white shadow-md scale-105"
-        : "text-slate-700 hover:bg-blue-50 hover:text-[#1c87c9]"
+    ${isActive
+      ? "bg-[#1c87c9] text-white shadow-md scale-105"
+      : "text-slate-700 hover:bg-blue-50 hover:text-[#1c87c9]"
     }`;
 
   const menuItems = [
@@ -51,9 +55,8 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 w-full z-50 transition-all duration-500 shadow-md ${
-        isScrolled ? "bg-white py-3 max-md:py-2" : "bg-white py-4 max-md:py-2"
-      }`}
+      className={`sticky top-0 w-full z-50 transition-all duration-500 shadow-md ${isScrolled ? "bg-white py-3 max-md:py-2" : "bg-white py-4 max-md:py-2"
+        }`}
     >
       <div className="max-w-[1536px] mx-auto px-4 sm:px-5">
         <div className="flex items-center justify-between">
@@ -66,15 +69,15 @@ const Header = () => {
               className={`transition-all duration-500 object-contain ${isScrolled ? "h-20 w-auto" : "h-16 lg:h-20 w-auto"}`}
             />
 
-<div className="logo-text ml-4 flex flex-col border-l-2 border-blue-500/30 pl-4 py-1">
-  <span className="text-[#1c87c9] font-black text-lg max-sm:text-base leading-none tracking-tight">
-    WAPTAI
-  </span>
-  <span className="text-slate-500 font-bold text-[10px] max-sm:text-[9px] leading-tight tracking-[0.12em] mt-1 uppercase">
-    Water Purification & Treatment <br />
-    Association <span className="font-bold">(India)</span>
-  </span>
-</div>
+            <div className="logo-text ml-4 flex flex-col border-l-2 border-blue-500/30 pl-4 py-1">
+              <span className="text-[#1c87c9] font-black text-lg max-sm:text-base leading-none tracking-tight">
+                WAPTAI
+              </span>
+              <span className="text-slate-500 font-bold text-[10px] max-sm:text-[9px] leading-tight tracking-[0.12em] mt-1 uppercase">
+                Water Purification & Treatment <br />
+                Association <span className="font-bold">(India)</span>
+              </span>
+            </div>
           </NavLink>
 
           {/* DESKTOP NAV */}
@@ -85,7 +88,7 @@ const Header = () => {
               </NavLink>
             ))}
 
-           <div className="relative group">
+            <div className="relative group">
               <button
                 className="px-4 py-2 flex items-center gap-2 text-slate-700 hover:text-[#1c87c9] transition-colors"
               >
@@ -206,15 +209,16 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
               </div>
             </div>
 
-            <NavLink to="/expo-2026" className={navStyles}>EXPO 2026</NavLink>
+            <NavLink to="/blog" className={navStyles}>BLOG</NavLink>
+            {/* <NavLink to="/expo-2026" className={navStyles}>EXPO 2026</NavLink> */}
             <NavLink to="/contact-us" className={navStyles}>CONTACT US</NavLink>
 
-            <NavLink
+            {/* <NavLink
               to="/waptai-member"
               className="ml-4 xl:ml-6 bg-[#1c87c9] text-white px-6 py-3 rounded-full hover:bg-blue-600 transition"
             >
               BECOME WAPTAI MEMBER
-            </NavLink>
+            </NavLink> */}
           </nav>
 
           {/* MOBILE BUTTON */}
@@ -222,13 +226,13 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="xl:hidden p-2 text-[#1c87c9]"
           >
-          <FaBars size={22} />
+            <FaBars size={22} />
           </button>
         </div>
       </div>
 
-   
-  {/* MOBILE MENU */}
+
+      {/* MOBILE MENU */}
       <div className={`xl:hidden fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
       >
         <div
@@ -238,36 +242,36 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
     overflow-y-auto max-h-screen
   `}
         >
-<div className="flex items-center justify-between mb-5">
+          <div className="flex items-center justify-between mb-5">
 
-  {/* LEFT: LOGO + TEXT */}
-  <div className="flex items-center gap-3">
-    <img
-      src={logo}
-      alt="logo"
-      className="h-10 w-auto object-contain"
-    />
+            {/* LEFT: LOGO + TEXT */}
+            <div className="flex items-center gap-3">
+              <img
+                src={logo}
+                alt="logo"
+                className="h-10 w-auto object-contain"
+              />
 
-    <div className="flex flex-col leading-tight">
-      <span className="text-[#1c87c9] font-extrabold text-sm">
-        WAPTAI
-      </span>
-      <span className="text-[9px] text-slate-500 font-bold uppercase">
-        Water Purification & Treatment
-         Association <span className="font-bold">(India)</span>
-      </span>
-    </div>
-  </div>
+              <div className="flex flex-col leading-tight">
+                <span className="text-[#1c87c9] font-extrabold text-sm">
+                  WAPTAI
+                </span>
+                <span className="text-[9px] text-slate-500 font-bold uppercase">
+                  Water Purification & Treatment
+                  Association <span className="font-bold">(India)</span>
+                </span>
+              </div>
+            </div>
 
-  {/* RIGHT: CLOSE BUTTON */}
-  <button
-    onClick={() => setIsMenuOpen(false)}
-    className="p-2 rounded-full hover:bg-gray-100 transition"
-  >
-    <FaTimes className="text-[#1c87c9] text-xl" />
-  </button>
+            {/* RIGHT: CLOSE BUTTON */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="p-2 rounded-full hover:bg-gray-100 transition"
+            >
+              <FaTimes className="text-[#1c87c9] text-xl" />
+            </button>
 
-</div>
+          </div>
           <nav className="flex flex-col gap-4 font-semibold text-slate-700 text-sm">
             {menuItems.map((item) => (
               <NavLink key={item.name} to={item.path} onClick={() => setIsMenuOpen(false)}>
@@ -284,6 +288,15 @@ lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0
                 <FaChevronDown
                   className={`text-[10px] transition-transform duration-300 ${showEventsDropdown ? "rotate-180" : ""}`}
                 />
+              </button>
+              <button
+                onClick={() => {
+                  navigate("/blog");
+                  setIsMenuOpen(false);
+                }}
+                className="flex items-center justify-between text-slate-700 rounded-lg transition-all"
+              >
+                BLOG
               </button>
 
               {showEventsDropdown && (

@@ -9,24 +9,24 @@ const HeroSection = () => {
 
   return (
     <section className="relative md:min-h-screen py-10 md:py-10 overflow-hidden bg-[#e3f2fd]/50">
-{/* ===== FLOATING WATER BUBBLES BACKGROUND ===== */}
-{/* ===== ANIMATED WATER WAVES BACKGROUND ===== */}
-<div className="absolute inset-0 z-0 hidden md:block overflow-hidden pointer-events-none">
-  <svg
-    className="absolute bottom-0 w-full h-[560px]"
-    viewBox="0 0 1440 560"
-    preserveAspectRatio="none"
-  >
-    <defs>
-      <linearGradient id="waveGradient" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#0288d1" stopOpacity="0.45" />
-        <stop offset="100%" stopColor="#03a9f4" stopOpacity="0.06" />
-      </linearGradient>
-    </defs>
+      {/* ===== FLOATING WATER BUBBLES BACKGROUND ===== */}
+      {/* ===== ANIMATED WATER WAVES BACKGROUND ===== */}
+      <div className="absolute inset-0 z-0 hidden md:block overflow-hidden pointer-events-none">
+        <svg
+          className="absolute bottom-0 w-full h-[560px]"
+          viewBox="0 0 1440 560"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="waveGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#0288d1" stopOpacity="0.45" />
+              <stop offset="100%" stopColor="#03a9f4" stopOpacity="0.06" />
+            </linearGradient>
+          </defs>
 
-  <path
-  fill="url(#waveGradient)"
-  d="
+          <path
+            fill="url(#waveGradient)"
+            d="
     M0,397
     C270,390 500,380 720,320
     C950,260 1150,120 1440,180
@@ -34,9 +34,9 @@ const HeroSection = () => {
     L0,560
     Z
   "
-/>
-  </svg>
-</div>
+          />
+        </svg>
+      </div>
       {/* BACKGROUND GRAPHIC ELEMENTS */}
       {/* <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#0288d1]/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
       <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-[#03a9f4]/15 rounded-full blur-[100px] -z-10"></div>
@@ -81,6 +81,12 @@ const HeroSection = () => {
               </button> */}
               <button onClick={() => navigate("/expo-2026")} className="bg-[#0288d1] text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-[#0277bd] shadow-lg shadow-[#0288d1]/30 hover:-translate-y-1 transition-all duration-300">
                 EXPLORE EXPO 2026
+              </button>
+              <button
+                onClick={() => navigate("/waptai-member")}
+                className="bg-[#1c87c9] text-white px-8 py-3.5 rounded-xl font-bold text-sm hover:bg-[#0277bd shadow-lg shadow-[#1c87c9]/30 hover:-translate-y-1 transition-all duration-300"
+              >
+                BECOME WAPTAI MEMBER
               </button>
             </div>
 

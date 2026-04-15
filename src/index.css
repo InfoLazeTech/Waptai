@@ -4,6 +4,11 @@
   from { transform: scale(0.7); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
 .animate-zoomIn {
   animation: zoomIn 0.3s ease-out;
 }

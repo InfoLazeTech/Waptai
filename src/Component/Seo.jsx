@@ -6,7 +6,7 @@ import { tabs } from "../Pages/Event/eventsData.js";
 const SeoManager = () => {
   const { pathname } = useLocation();
 
-  let title ;
+  let title;
   let description;
 
   // ================= ROUTE LOGIC =================
@@ -106,6 +106,11 @@ const SeoManager = () => {
     title = "Waptai Member | WAPTAI";
     description =
       "Join WAPTAI members in celebrating milestones, events, and achievements driving water sustainability.";
+  }
+  else if (pathname === "/blog" || pathname.startsWith("/blog/")) {
+    title = "Blog | WAPTAI";
+    description =
+      "Explore insights, research and policy discussions on water purification and sustainability.";
   }
 
   // ================= INSTANT TITLE UPDATE =================
