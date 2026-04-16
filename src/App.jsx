@@ -40,7 +40,7 @@ const App = () => {
       <Header />
       <ScrollToTop />
 
-      <main className="pt-[90px]">
+      <main>
         <Routes>
           {/* Home Page */}
           <Route

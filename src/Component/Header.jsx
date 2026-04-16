@@ -54,10 +54,7 @@ const Header = () => {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 shadow-md ${isScrolled ? "bg-white py-3 max-md:py-2" : "bg-white py-4 max-md:py-2"
-        }`}
-    >
+   <header className={`sticky top-0 inset-x-0 z-50 w-full overflow-x-clip bg-white shadow-md transition-all duration-500 ${isScrolled ? "py-3" : "py-4"}`}>
       <div className="max-w-[1536px] mx-auto px-4 sm:px-5">
         <div className="flex items-center justify-between ">
 
