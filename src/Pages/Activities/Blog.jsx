@@ -564,7 +564,10 @@ const SidebarCard = ({ blog, isActive, onClick }) => (
         className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-      <span className="absolute top-2 left-2 bg-blue-800 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+      <span className="absolute top-2 left-2 bg-black/40 
+text-white text-[10px] font-semibold 
+px-3 py-1 rounded-full 
+backdrop-blur-sm text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
         {blog.category}
       </span>
     </div>
@@ -586,6 +589,7 @@ export default function Blog() {
 
   const [blogList] = useState(blogs);
   const [progress, setProgress] = useState(0);
+  const [showArticles, setShowArticles] = useState(false);
   const mainRef = useRef(null);
 
   const activeBlog =
@@ -601,8 +605,7 @@ export default function Blog() {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden bg-slate-100 font-sans pb-16 md:pb-0">
-
+<div className="flex flex-col md:flex-row md:h-screen md:overflow-hidden bg-slate-100 font-sans">
       {/* ── PROGRESS BAR ── */}
       <div className="fixed top-0 left-0 right-0 h-0.5 z-50 bg-slate-200">
         <div
@@ -643,19 +646,19 @@ export default function Blog() {
         </div>
 
         {/* Footer */}
-        <div className="px-5 py-3 border-t border-slate-100 text-center text-[10px] text-slate-400">
+        {/* <div className="px-5 py-3 border-t border-slate-100 text-center text-[10px] text-slate-400">
           © 2025 The Water Report · All rights reserved
-        </div>
+        </div> */}
       </aside>
 
       {/* ── MAIN CONTENT ── */}
-      <main
-        ref={mainRef}
-        className="flex-1 h-screen overflow-y-auto bg-slate-100 pb-20 md:pb-0"
-      >
+     <main
+  ref={mainRef}
+  className="flex-1 w-full min-w-0 md:h-screen overflow-y-auto bg-slate-100"
+>
 
         {/* HERO */}
-        <div className="relative md:h-[80vh] overflow-hidden">
+        <div className="relative md:h-[80vh] md:overflow-hidden">
           <img
             src={activeBlog.image}
             alt={activeBlog.title}
@@ -665,11 +668,24 @@ export default function Blog() {
 
           {/* Category badge */}
           <div className="absolute top-5 left-6">
-            <span className="bg-blue-800 text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-widest">
+            <span className="bg-black/40 
+text-white text-[10px] font-semibold 
+px-3 py-1 rounded-full 
+backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-widest">
               {activeBlog.category}
             </span>
           </div>
 
+          {/* Mobile Articles Button */}
+<div className="md:hidden fixed top-4 right-4 z-40">
+  <button
+    onClick={() => setShowArticles(true)}
+    className="flex items-center gap-2 bg-white/90 backdrop-blur px-3 py-2 rounded-full shadow-lg border border-gray-200"
+  >
+    <FaRegFileAlt className="text-gray-600 text-sm" />
+    <span className="text-xs font-medium">Articles</span>
+  </button>
+</div>
           {/* Title + byline */}
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-7 pt-10">
             <h1 className="text-2xl md:text-4xl font-extrabold text-white leading-tight mb-4 font-serif max-w-3xl drop-shadow-md">
@@ -693,16 +709,60 @@ export default function Blog() {
         </div>
       </main>
 
+      {/* MOBILE ARTICLES DRAWER */}
+{showArticles && (
+  <>
+    <div
+      className="fixed inset-0 bg-black/40 z-40"
+      onClick={() => setShowArticles(false)}
+    />
+
+    <div className="fixed right-0 top-0 bottom-0 w-[85%] bg-white z-50 shadow-2xl overflow-y-auto">
+
+      <div className="flex items-center justify-between px-4 py-4 border-b">
+        <h3 className="font-bold text-gray-800">Articles</h3>
+
+        <button
+          onClick={() => setShowArticles(false)}
+          className="text-gray-400 text-xl"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div className="p-3">
+        {blogList.map((blog) => (
+          <div
+            key={blog.id}
+            onClick={() => {
+              handleSelect(blog);
+              setShowArticles(false);
+            }}
+            className={`p-3 rounded-lg mb-2 cursor-pointer ${
+              activeBlog.id === blog.id
+                ? "bg-blue-50 border-l-4 border-[#0d5c7f]"
+                : "bg-gray-50"
+            }`}
+          >
+            <p className="text-sm font-semibold text-gray-800">
+              {blog.title}
+            </p>
+
+            <p className="text-xs text-gray-400 mt-1">
+              {blog.category}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </>
+)}
+
       {/* ── EDIT MODAL ── */}
 
 
       {/* ── MOBILE BOTTOM NAVIGATION ── */}
-      <MobileBottomNav
-        blogs={blogList}
-        activeBlog={activeBlog}
-        onSelect={handleSelect}
-
-      />
     </div>
   );
 }
