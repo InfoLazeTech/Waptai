@@ -6,7 +6,7 @@ import image1 from "../../assets/blog3.png"
 import image2 from "../../assets/blog4.png"
 import image3 from "../../assets/blog5.png"
 import image4 from "../../assets/blog6.png"
-
+  
 const blogs = [
   {
     id: 1,
@@ -271,7 +271,7 @@ export default function Blog() {
         </div>
 
         {/* HERO */}
-        <div className="relative md:h-[80vh] md:overflow-hidden">
+        <div className="relative md:h-[85vh] md:overflow-hidden">
           <img src={activeBlog.image} alt={activeBlog.title} className="w-full h-full md:object-fill object-contain block" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/80" />
           <div className="absolute top-5 left-6">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import img1 from "../../assets/img1.jpg";
 import img2 from "../../assets/img2.jpg";
@@ -53,43 +53,36 @@ import img50 from "../../assets/img50.jpg";
 import img51 from "../../assets/img51.jpg";
 import img52 from "../../assets/img52.jpg";
 import img53 from "../../assets/img53.jpg";
+import img54 from "../../assets/img54.jpg";
+import img55 from "../../assets/img55.jpg";
+import img56 from "../../assets/img56.jpg";
+import img57 from "../../assets/img57.jpg";
+import img58 from "../../assets/img58.jpg";
+import img59 from "../../assets/img59.jpg";
+import img60 from "../../assets/img60.jpg";
+import img61 from "../../assets/img61.jpg";
+import img62 from "../../assets/img62.jpg";
+import img63 from "../../assets/img63.jpg";
+import img64 from "../../assets/img64.jpg";
 
 const Clients = () => {
   const images = [
-    img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
+    img54, img55, img56, img57, img58, img59, img60,
+    img61, img62, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
     img11, img12, img13, img14, img15, img16, img17, img18, img19, img20,
     img21, img22, img23, img24, img25, img26, img27, img28, img29, img30,
     img31, img32, img33, img34, img35, img36, img37, img38, img39, img40,
     img41, img42, img43, img44, img45, img46, img47, img48, img49, img50,
-    img51, img52, img53
+    img51, img52, img53, img63, img64
   ];
 
-  const itemsPerSlide = 6;
-  const totalSlides = Math.ceil(images.length / itemsPerSlide);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [totalSlides]);
-
-  const currentImages = images.slice(
-    currentSlide * itemsPerSlide,
-    currentSlide * itemsPerSlide + itemsPerSlide
-  );
-
   return (
-    <section className="flex items-center justify-center px-6 py-20 bg-[#e3f2fd]/50">
+    <section className="flex items-center justify-center px-6 py-20 bg-[#e3f2fd]/50 overflow-hidden">
       <div className="max-w-7xl w-full">
 
-        {/* ===== CENTER TEXT ===== */}
+        {/* ===== TEXT ===== */}
         <div className="flex flex-col items-center text-center mb-14">
-          <h2
-            className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-widest mb-6"
-           
-          >
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-widest mb-6">
             Our Past <span className="text-[#1c87c9]">EXHIBITORS</span>
           </h2>
 
@@ -99,36 +92,26 @@ const Clients = () => {
           </p>
         </div>
 
-        {/* ===== LOGOS ===== */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {currentImages.map((image, index) => (
-            <div
-              key={index}
-              className="h-28 bg-white rounded-xl flex items-center justify-center p-4 shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              <img
-                src={image}
-                alt={`Exhibitor ${index}`}
-                className="h-full object-contain"
-              />
-            </div>
-          ))}
+        {/* ===== MARQUEE ===== */}
+        <div className="overflow-hidden relative">
+          <div className="flex animate-marquee gap-6 w-max">
+
+            {[...images, ...images].map((image, index) => (
+              <div
+                key={index}
+                className="h-28 min-w-[150px] bg-white rounded-xl flex items-center justify-center p-4 shadow-md hover:shadow-xl transition"
+              >
+                <img
+                  src={image}
+                  alt={`Exhibitor ${index}`}
+                  className="h-full object-contain"
+                />
+              </div>
+            ))}
+
+          </div>
         </div>
 
-        {/* ===== DOTS ===== */}
-        <div className="flex justify-center mt-10 space-x-3">
-          {Array.from({ length: totalSlides }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition ${
-                index === currentSlide
-                  ? "bg-blue-600 scale-110"
-                  : "bg-gray-400"
-              }`}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );
