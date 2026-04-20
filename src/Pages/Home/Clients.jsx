@@ -1,115 +1,187 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-import img1 from "../../assets/img1.jpg";
-import img2 from "../../assets/img2.jpg";
-import img3 from "../../assets/img3.jpg";
-import img4 from "../../assets/img4.jpg";
-import img5 from "../../assets/img5.jpg";
-import img6 from "../../assets/img6.jpg";
-import img7 from "../../assets/img7.jpg";
-import img8 from "../../assets/img8.jpg";
-import img9 from "../../assets/img9.jpg";
-import img10 from "../../assets/img10.jpg";
-import img11 from "../../assets/img11.jpg";
-import img12 from "../../assets/img12.jpg";
-import img13 from "../../assets/img13.jpg";
-import img14 from "../../assets/img14.jpg";
-import img15 from "../../assets/img15.jpg";
-import img16 from "../../assets/img16.jpg";
-import img17 from "../../assets/img17.jpg";
-import img18 from "../../assets/img18.jpg";
-import img19 from "../../assets/img19.jpg";
-import img20 from "../../assets/img20.jpg";
-import img21 from "../../assets/img21.jpg";
-import img22 from "../../assets/img22.jpg";
-import img23 from "../../assets/img23.jpg";
-import img24 from "../../assets/img24.jpg";
-import img25 from "../../assets/img25.jpg";
-import img26 from "../../assets/img26.jpg";
-import img27 from "../../assets/img27.jpg";
-import img28 from "../../assets/img28.jpg";
-import img29 from "../../assets/img29.jpg";
-import img30 from "../../assets/img30.jpg";
-import img31 from "../../assets/img31.jpg";
-import img32 from "../../assets/img32.jpg";
-import img33 from "../../assets/img33.jpg";
-import img34 from "../../assets/img34.jpg";
-import img35 from "../../assets/img35.jpg";
-import img36 from "../../assets/img36.jpg";
-import img37 from "../../assets/img37.jpg";
-import img38 from "../../assets/img38.jpg";
-import img39 from "../../assets/img39.jpg";
-import img40 from "../../assets/img40.jpg";
-import img41 from "../../assets/img41.jpg";
-import img42 from "../../assets/img42.jpg";
-import img43 from "../../assets/img43.jpg";
-import img44 from "../../assets/img44.jpg";
-import img45 from "../../assets/img45.jpg";
-import img46 from "../../assets/img46.jpg";
-import img47 from "../../assets/img47.jpg";
-import img48 from "../../assets/img48.jpg";
-import img49 from "../../assets/img49.jpg";
-import img50 from "../../assets/img50.jpg";
-import img51 from "../../assets/img51.jpg";
-import img52 from "../../assets/img52.jpg";
-import img53 from "../../assets/img53.jpg";
-import img54 from "../../assets/img54.jpg";
-import img55 from "../../assets/img55.jpg";
-import img56 from "../../assets/img56.jpg";
-import img57 from "../../assets/img57.jpg";
-import img58 from "../../assets/img58.jpg";
-import img59 from "../../assets/img59.jpg";
-import img60 from "../../assets/img60.jpg";
-import img61 from "../../assets/img61.jpg";
-import img62 from "../../assets/img62.jpg";
-import img63 from "../../assets/img63.jpg";
-import img64 from "../../assets/img64.jpg";
+import accord from "../../assets/accord.webp";
+import aishfilters from "../../assets/aishfilters.png";
+import bhojal from "../../assets/bhojal.webp";
+import bio from "../../assets/bio.webp";
+import biorich from "../../assets/biorich.webp";
+import bluecreek from "../../assets/bluecreek.webp";
+import blueshell from "../../assets/blueshell.webp";
+import braqqua from "../../assets/braqqua.webp";
+import cenox from "../../assets/cenox.webp";
+import center from "../../assets/center.webp";
+import chasten from "../../assets/chasten.webp";
+import claroa from "../../assets/claroa.webp";
+import cleanwater from "../../assets/cleanwater.png";
+import cloud from "../../assets/cloud.webp";
+import cosmos from "../../assets/cosmos.webp";
+import dax from "../../assets/dax.webp";
+import doshion from "../../assets/doshion.png";
+import duken from "../../assets/duken.webp";
+import enagic from "../../assets/enagic.webp";
+import euroflow from "../../assets/euroflow.webp";
+import flexon from "../../assets/flexon.webp";
+import gayatri from "../../assets/gayatri.webp";
+import hasbromarketing from "../../assets/hasbromarketing.webp";
+import healthy from "../../assets/healthy.webp";
+import hiten from "../../assets/hiten.webp";
+import infinity from "../../assets/infinity.webp";
+import intrad from "../../assets/intrad.webp";
+import ipc from "../../assets/ipc.webp";
+import jalblue from "../../assets/jalblue.webp";
+import joystick from "../../assets/joystick.webp";
+import keep from "../../assets/keep.webp";
+import khushi from "../../assets/khushi.webp";
+import krinovate from "../../assets/krinovate.webp";
+import lexcru from "../../assets/lexcru.png";
+import lfa from "../../assets/lfa.webp";
+import lucent from "../../assets/lucent.webp";
+import maxpure from "../../assets/maxpure.webp";
+import meetec from "../../assets/meetec.webp";
+import newtech from "../../assets/newtech.webp";
+import nile from "../../assets/nile.png";
+import ontoz from "../../assets/ontoz.png";
+import org from "../../assets/org.png";
+import orix from "../../assets/orix.webp";
+import osmotech from "../../assets/osmotech.webp";
+import pratham from "../../assets/pratham.png";
+import ptech from "../../assets/ptech.webp";
+import pureone from "../../assets/pureone.webp";
+import refchill from "../../assets/refchill.webp";
+import seapure from "../../assets/seapure.webp";
+import sheetal from "../../assets/sheetal.webp";
+import shreya from "../../assets/shreya.webp";
+import sur from "../../assets/sur.webp";
+import swastik from "../../assets/swastik.webp";
+import uma from "../../assets/uma.webp";
+import vidi from "../../assets/vidi.png";
+import virat from "../../assets/virat.webp";
+import vraj from "../../assets/vraj.webp";
+import zetta from "../../assets/zetta.webp";
+import pournima from "../../assets/pournima.webp";
+import aquapex from "../../assets/aquapex.jpg";
+import waterkraft from "../../assets/waterkraft.jpg";
+import voneera from "../../assets/voneera.jpg";
+import phoenix from "../../assets/phoenix.webp";
+
+const allImages = [
+  nile, ontoz, vidi, org, cleanwater, doshion, lexcru,
+  pratham, aishfilters, chasten, bio, lfa, euroflow, gayatri,
+  hasbromarketing, healthy, keep, infinity, ipc, jalblue, joystick,
+  osmotech, pournima, aquapex, seapure, shreya, waterkraft, voneera,
+  newtech, orix, flexon, cenox, ptech, pureone, refchill, sheetal,
+  sur, uma, swastik, virat, vraj, zetta, biorich, bhojal, phoenix,
+  enagic, hiten, intrad, cosmos, bluecreek, khushi, krinovate, lucent,
+  meetec, claroa, center, braqqua, accord, cloud, maxpure, blueshell,
+  dax, duken
+];
+
+// ✅ RESPONSIVE VISIBILITY (IMPORTANT FIX)
+const useVisibleItems = () => {
+  const [visible, setVisible] = useState(5);
+
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+
+      if (w < 480) setVisible(2);        // 📱 mobile
+      else if (w < 640) setVisible(3);   // 📱 large mobile
+      else if (w < 1024) setVisible(4);  // 📟 tablet
+      else setVisible(5);                // 💻 desktop
+    };
+
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  return visible;
+};
 
 const Clients = () => {
-  const images = [
-    img54, img55, img56, img57, img58, img59, img60,
-    img61, img62, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
-    img11, img12, img13, img14, img15, img16, img17, img18, img19, img20,
-    img21, img22, img23, img24, img25, img26, img27, img28, img29, img30,
-    img31, img32, img33, img34, img35, img36, img37, img38, img39, img40,
-    img41, img42, img43, img44, img45, img46, img47, img48, img49, img50,
-    img51, img52, img53, img63, img64
-  ];
+  const items = useVisibleItems();
+  const [startIndex, setStartIndex] = useState(0);
+  const intervalRef = useRef(null);
+
+  const total = allImages.length;
+
+  const startAuto = () => {
+    clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setStartIndex((prev) => (prev + 1) % total);
+    }, 3000);
+  };
+
+  useEffect(() => {
+    startAuto();
+    return () => clearInterval(intervalRef.current);
+  }, []);
+
+  const goTo = (dir) => {
+    setStartIndex((prev) => (prev + dir + total) % total);
+    startAuto();
+  };
+
+  const visibleImages = Array.from({ length: items }, (_, i) =>
+    allImages[(startIndex + i) % total]
+  );
 
   return (
-    <section className="flex items-center justify-center px-6 py-20 bg-[#e3f2fd]/50 overflow-hidden">
-      <div className="max-w-7xl w-full">
+    <section className="w-full px-4 sm:px-6 lg:px-10 py-16 sm:py-20 bg-[#e3f2fd]/50 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
 
-        {/* ===== TEXT ===== */}
-        <div className="flex flex-col items-center text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-widest mb-6">
+        {/* TEXT */}
+        <div className="flex flex-col items-center text-center mb-10 sm:mb-14">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-widest mb-4">
             Our Past <span className="text-[#1c87c9]">EXHIBITORS</span>
           </h2>
-
-          <p className="text-gray-700 max-w-2xl mt-6">
+          <p className="text-gray-700 max-w-2xl text-sm sm:text-base mt-4">
             A legacy of trust built with industry-leading exhibitors who chose
             our platform to showcase innovation, excellence, and growth.
           </p>
         </div>
 
-        {/* ===== MARQUEE ===== */}
-        <div className="overflow-hidden relative">
-          <div className="flex animate-marquee gap-6 w-max">
+        {/* SLIDER ROW */}
+        <div className="flex items-center gap-3 sm:gap-5">
 
-            {[...images, ...images].map((image, index) => (
+          {/* LEFT */}
+          <button
+            onClick={() => goTo(-1)}
+            className="group flex-shrink-0 w-9 h-9 sm:w-12 sm:h-12 rounded-full border-2 border-[#1c87c9] bg-white flex items-center justify-center shadow-sm hover:bg-[#1c87c9] transition-all duration-300"
+          >
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#1c87c9] group-hover:text-white"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* IMAGES */}
+          <div className="flex gap-3 sm:gap-4 flex-1 overflow-hidden">
+            {visibleImages.map((image, index) => (
               <div
-                key={index}
-                className="h-28 min-w-[150px] bg-white rounded-xl flex items-center justify-center p-4 shadow-md hover:shadow-xl transition"
+                key={`${startIndex}-${index}`}
+                className="flex-1 h-20 sm:h-24 md:h-28 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center p-3 sm:p-4 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <img
                   src={image}
                   alt={`Exhibitor ${index}`}
-                  className="h-full object-contain"
+                  className="h-full w-full object-contain"
                 />
               </div>
             ))}
-
           </div>
+
+          {/* RIGHT */}
+          <button
+            onClick={() => goTo(1)}
+            className="group flex-shrink-0 w-9 h-9 sm:w-12 sm:h-12 rounded-full border-2 border-[#1c87c9] bg-white flex items-center justify-center shadow-sm hover:bg-[#1c87c9] transition-all duration-300"
+          >
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#1c87c9] group-hover:text-white"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
         </div>
 
       </div>
