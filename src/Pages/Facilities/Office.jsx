@@ -1,31 +1,27 @@
 import React, { useState } from "react";
+import ImageSlider from "../../Component/ImageSlider";
+
 
 // Office images
 const officeImages = [
-  "https://head-apricot-pnzjqvsqg4.edgeone.app/office1.jpg",
-  "https://gigantic-salmon-cyeueb8xlb.edgeone.app/office2.jpg",
-  "https://integral-coral-mdxmgc8tat.edgeone.app/office3.jpg",
-  "https://beautiful-turquoise-w2lwgfyxuf.edgeone.app/office4.jpg",
-  "https://informal-maroon-rjpi16frge.edgeone.app/office5.jpg",
+  "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289288/office1_sylvdq.webp",
+  "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289290/office2_xghyk4.webp",
+  "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289289/office3_eleep1.webp",
+  "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289291/office4_lc0z1p.webp",
+  "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289289/office5_pe9kr3.webp",
  
 ];
 
-
-// Laboratory images
-import laboratory1 from "../../assets/laboratory1.jpg";
-import laboratory2 from "../../assets/laboratory2.jpg";
-import laboratory3 from "../../assets/laboratory3.jpg";
-import laboratory4 from "../../assets/laboratory4.jpg";
-import laboratory5 from "../../assets/laboratory5.jpg";
-import ImageSlider from "../../Component/ImageSlider";
+  const labImages = [
+   "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289255/laboratory4_gru4hp.webp",
+   "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289254/laboratory5_kfenzw.webp",
+   "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289253/laboratory1_z1rttn.webp",
+   "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289253/laboratory3_lbsatg.webp",
+   "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289252/laboratory2_vfvixx.webp",
+  ];
 
 const Office = () => {
 
-
-
-  const labImages = [
-    laboratory1, laboratory2, laboratory3, laboratory4, laboratory5,
-  ];
 
   return (
     <div className="py-16 px-4 bg-gradient-to-b from-gray-50 to-gray-100">

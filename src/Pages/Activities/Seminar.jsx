@@ -1,30 +1,4 @@
 import React, { useState } from "react";
-
-// Dummy images
-import seminargst1 from "../../assets/seminargst1.jpg";
-import seminargst2 from "../../assets/seminargst2.jpg";
-import seminargst3 from "../../assets/seminargst3.jpg";
-import seminargst4 from "../../assets/seminargst4.jpg";
-
-import surat1 from "../../assets/surat1.jpg";
-import surat2 from "../../assets/surat2.jpg";
-import surat3 from "../../assets/surat3.jpg";
-import surat4 from "../../assets/surat4.jpg";
-
-import baroda1 from "../../assets/baroda1.jpg";
-import baroda2 from "../../assets/baroda2.jpg";
-import baroda3 from "../../assets/baroda3.jpg";
-
-import english1 from "../../assets/english1.jpg";
-import english2 from "../../assets/english2.jpg";
-import english3 from "../../assets/english3.jpg";
-import english4 from "../../assets/english4.jpg";
-
-
-import body1 from "../../assets/body1.jpg";
-import body2 from "../../assets/body2.jpg";
-import body3 from "../../assets/body3.jpg";
-import body4 from "../../assets/body4.jpg";
 import ImageSlider from "../../Component/ImageSlider";
 
 
@@ -32,23 +6,47 @@ import ImageSlider from "../../Component/ImageSlider";
 const seminarData = [
   {
     title: "Seminar on GST – Ahmedabad Chapter",
-    images: [seminargst1, seminargst2, seminargst3, seminargst4],
+    images: [
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289679/seminargst1_rdg5jm.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289680/seminargst2_skre0a.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289680/seminargst3_eybpz7.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289680/seminargst4_kdko8i.jpg",
+    ],
   },
   {
     title: "Seminar on Body Language – Surat",
-    images: [surat1, surat2, surat3, surat4],
+    images: [
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289682/surat1_a0ymvq.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289683/surat2_r5byjn.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289683/surat3_oy2hn0.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289682/surat4_kkqzg3.jpg",
+    ],
   },
   {
     title: "Seminar on Body Language – Baroda",
-    images: [baroda1, baroda2, baroda3],
+    images: [
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289198/baroda1_azjtm6.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289198/baroda2_lvw2qb.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289198/baroda3_asrrri.jpg"
+    ],
   },
   {
     title: "English Speaking Learning Programme",
-    images: [english1, english2, english3, english4],
+    images: [
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289226/english1_ixc0ls.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289228/english2_mc4i6u.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289226/english3_kjgoif.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289227/english4_e0ba8v.jpg",
+    ],
   },
   {
     title: "Body Language Seminar – Rajkot",
-    images: [body1, body2, body3, body4,]
+    images: [
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289214/body1_lriz5m.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289216/body2_ymgkmw.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289216/body3_ld0zvi.jpg",
+      "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289218/body4_wzlzea.jpg"
+    ]
   },
 ];
 

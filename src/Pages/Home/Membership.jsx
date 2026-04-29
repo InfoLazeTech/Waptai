@@ -3,7 +3,6 @@ import { FaCheckCircle, FaTimes } from "react-icons/fa";
 import membershipImg from "../../assets/waptaiMembership.jpg";
 
 const Membership = () => {
-  const [openImage, setOpenImage] = useState(false);
 
   return (
     <>
@@ -55,111 +54,106 @@ const Membership = () => {
             </div>
 
             {/* MEMBERSHIP CARDS */}
-            <div className="space-y-10">
+            <div className="space-y-6">
 
               {/* Diamond */}
-              <div className="backdrop-blur-xl bg-white/70 p-10 rounded-3xl border border-sky-100 shadow-xl hover:shadow-2xl transition duration-500 hover:-translate-y-2">
-                <h3 className="text-2xl font-bold text-sky-700">
+              <div className="bg-white/80 p-6 rounded-2xl border border-sky-100 shadow-md">
+                <h3 className="text-xl font-bold text-sky-700">
                   Diamond Membership
                 </h3>
 
-                <p className="text-2xl font-semibold mt-3 text-slate-800">
-                  ₹1,00,000
+                <p className="text-lg font-semibold mt-1 text-slate-800">
+                  Cost: ₹1,00,000
                   <span className="text-sm text-slate-500 ml-2">(15 Years)</span>
                 </p>
 
-                <ul className="mt-6 space-y-4 text-slate-700">
+                <ul className="mt-4 space-y-2 text-sm text-slate-700">
                   {[
-                    "All common membership benefits",
-                    "5% discount on WAPTAI Expo",
-                    "VIP entry & reserved seating",
-                    "Expert panel consultation access",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <FaCheckCircle className="text-emerald-500 mt-1 text-lg" />
+                    "All Common Membership benefits included",
+                    "5% discount or ₹20,000 (whichever lower) on WAPTAI Expo",
+                    "Commercial activity discount",
+                    "Opportunity to participate in committees",
+                    "VIP entry and seating",
+                    "Complimentary/concession passes for expos/seminars/training",
+                    "Access to consultation (technical/commercial/tax) from expert panel",
+                  ].map((item, i) => (
+                    <li key={i} className="flex gap-2">
+                      <FaCheckCircle className="text-emerald-500 mt-1 text-sm" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-4 text-xs bg-sky-50 p-3 rounded-lg text-slate-600">
+                  ₹1 Lakh family support fund in case of accidental death <br />
+                  Two cheques: ₹50,000 (WAPTAI) + ₹50,000 (WAPTAG with 80G benefit)
+                </div>
               </div>
 
               {/* Gold */}
-              <div className="backdrop-blur-xl bg-white/70 p-10 rounded-3xl border border-yellow-200 shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-2">
-                <h3 className="text-2xl font-bold text-yellow-600">
+              <div className="bg-white/80 p-6 rounded-2xl border border-yellow-200 shadow-md">
+                <h3 className="text-xl font-bold text-yellow-600">
                   Gold Membership
                 </h3>
 
-                <p className="text-2xl font-semibold mt-3 text-slate-800">
-                  ₹5,000
+                <p className="text-lg font-semibold mt-1 text-slate-800">
+                  Cost: ₹5,000
                   <span className="text-sm text-slate-500 ml-2">(3 Years)</span>
                 </p>
 
-                <ul className="mt-6 space-y-4 text-slate-700">
+                <ul className="mt-4 space-y-2 text-sm text-slate-700">
                   {[
                     "Participation in General Meetings",
-                    "Expo passes & commercial discounts",
-                    "Consultation from expert panel",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <FaCheckCircle className="text-emerald-500 mt-1 text-lg" />
+                    "Committee involvement by invitation only",
+                    "Complimentary/concession passes for expos/seminars/training",
+                    "Commercial activity discount",
+                    "Access to consultation (technical/commercial/tax) from expert panel",
+                  ].map((item, i) => (
+                    <li key={i} className="flex gap-2">
+                      <FaCheckCircle className="text-emerald-500 mt-1 text-sm" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-4 text-xs bg-yellow-50 p-3 rounded-lg text-slate-600">
+                  ₹50,000 family support fund in case of accidental death
+                </div>
               </div>
 
               {/* Silver */}
-              <div className="backdrop-blur-xl bg-white/70 p-10 rounded-3xl border border-gray-200 shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-2">
-                <h3 className="text-2xl font-bold text-slate-700">
+              <div className="bg-white/80 p-6 rounded-2xl border border-gray-200 shadow-md">
+                <h3 className="text-xl font-bold text-slate-700">
                   Silver Membership
                 </h3>
 
-                <p className="text-2xl font-semibold mt-3 text-slate-800">
-                  ₹1,500
+                <p className="text-lg font-semibold mt-1 text-slate-800">
+                  Cost: ₹1,500
                   <span className="text-sm text-slate-500 ml-2">(3 Years)</span>
                 </p>
 
-                <ul className="mt-6 space-y-4 text-slate-700">
+                <ul className="mt-4 space-y-2 text-sm text-slate-700">
                   {[
-                    "Express entry in WAPTAI Expo",
-                    "Training program concessions",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <FaCheckCircle className="text-emerald-500 mt-1 text-lg" />
+                    "Express entry in any WAPTAI Expo",
+                    "Concession benefits for training programs",
+                    "Access to consultation (technical/commercial/tax) from expert panel",
+                  ].map((item, i) => (
+                    <li key={i} className="flex gap-2">
+                      <FaCheckCircle className="text-emerald-500 mt-1 text-sm" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-4 text-xs bg-gray-50 p-3 rounded-lg text-slate-600">
+                  ₹25,000 family support fund in case of accidental death
+                </div>
               </div>
 
             </div>
           </div>
         </div>
       </section>
-
-      {/* IMAGE MODAL */}
-      {openImage && (
-        <div
-          className="fixed inset-0 bg-slate-900/90 backdrop-blur-md flex items-center justify-center z-50 p-4"
-          onClick={() => setOpenImage(false)}
-        >
-          <button
-            className="absolute top-6 right-6 text-white text-2xl 
-            bg-white/10 p-3 rounded-full 
-            hover:bg-white/20 hover:scale-110 
-            transition duration-300"
-            onClick={() => setOpenImage(false)}
-          >
-            <FaTimes />
-          </button>
-
-          <img
-            src={membershipImg}
-            alt="Full Preview"
-            className="max-h-[90vh] max-w-[95vw] rounded-2xl shadow-2xl"
-          />
-        </div>
-      )}
     </>
   );
 };
