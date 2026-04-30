@@ -1,31 +1,32 @@
 import React, { useState } from "react";
-
-// Dummy images
-import waptag1 from "../../assets/waptag1.jpg";
-import waptag2 from "../../assets/waptag2.jpg";
-import waptag3 from "../../assets/waptag3.jpg";
-import event1 from "../../assets/event1.jpg";
-import event2 from "../../assets/event2.jpg";
-import event3 from "../../assets/event3.jpg";
-import event4 from "../../assets/event4.jpg";
-import tree1 from "../../assets/tree1.jpg";
-import tree2 from "../../assets/tree2.jpg";
-import tree3 from "../../assets/tree3.jpg";
 import ImageSlider from "../../Component/ImageSlider";
 
 
 const celebrationData = [
   {
     title: "9th Founders Day of WAPTAI",
-    images: [waptag1, waptag2, waptag3],
+    images: [
+      "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464704/waptag1_ximoqg.jpg",
+      "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464706/waptag2_jwhnrc.jpg",
+      "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464708/waptag3_frkcf8.jpg",
+    ],
   },
   {
     title: "Charity Event",
-    images: [event1, event2, event3, event4],
+    images: [
+      "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464250/event1_hfrldz.jpg",
+      "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464252/event2_fnfj9i.jpg",
+      "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464254/event3_u3hjhe.jpg",
+      "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464256/event4_isolzc.jpg",
+    ],
   },
   {
     title: "Tree Plantation",
-    images: [tree1, tree2, tree3],
+    images: [
+      "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464689/tree1_supdz4.jpg",
+      "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464691/tree2_ubrxsf.jpg",
+      "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464691/tree2_ubrxsf.jpg",
+    ],
   },
 ];
 

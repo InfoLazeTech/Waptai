@@ -4,20 +4,21 @@ import ImageSlider from "../../Component/ImageSlider";
 
 // Office images
 const officeImages = [
-  "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289288/office1_sylvdq.webp",
-  "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289290/office2_xghyk4.webp",
-  "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289289/office3_eleep1.webp",
-  "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289291/office4_lc0z1p.webp",
-  "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289289/office5_pe9kr3.webp",
+
+    "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464509/office1_jrmss0.webp",
+    "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464511/office2_glzvqb.webp",
+    "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464513/office3_adbr1j.webp",
+    "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464514/office4_dcqbnk.webp",
+    "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464516/office5_fuhegw.webp",
  
 ];
 
   const labImages = [
-   "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289255/laboratory4_gru4hp.webp",
-   "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289254/laboratory5_kfenzw.webp",
-   "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289253/laboratory1_z1rttn.webp",
-   "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289253/laboratory3_lbsatg.webp",
-   "https://res.cloudinary.com/dlnxyge0g/image/upload/v1777289252/laboratory2_vfvixx.webp",
+    "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464431/laboratory1_gu9eqq.webp",
+    "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464433/laboratory2_pgfobp.webp",
+    "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464435/laboratory3_h5dwfe.webp",
+    "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464437/laboratory4_yekjkj.webp",
+    "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464439/laboratory5_rfj7rn.webp",
   ];
 
 const Office = () => {
