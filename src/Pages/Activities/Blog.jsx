@@ -2,10 +2,6 @@ import React, { useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { FaRegFileAlt } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
-import image1 from "../../assets/blog3.png"
-import image2 from "../../assets/blog4.png"
-import image3 from "../../assets/blog5.png"
-import image4 from "../../assets/blog6.png"
   
 const blogs = [
   {
@@ -13,7 +9,7 @@ const blogs = [
     title: "Why 18% GST on Water Purifiers is a Public Health Concern",
     slug: "why-18-percent-gst-on-water-purifiers-is-a-public-health-concern",
     category: "Policy & Health",
-    image: image1,
+    image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777541780/blog3_hqcb77.png",
     excerpt: "Pure water is not a luxury — it is survival. Yet India taxes water purifiers at 18% GST, equal to luxury appliances.",
     sections: [
       { type: "lead", text: "Pure water is not a luxury — it is survival. Yet in India, water purifiers are taxed at 18% GST, the same rate as appliances like air conditioners and washing machines." },
@@ -43,7 +39,7 @@ const blogs = [
     title: "India's Tax Code Treats Clean Water as a Luxury",
     slug: "india-s-tax-code-treats-clean-water-as-a-luxury",
     category: "Economy",
-    image: image2,
+    image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777541777/blog4_fj9cha.png",
     excerpt: "India's tax structure puts purification technology in the luxury tier — a contradiction that costs lives.",
     sections: [
       { type: "lead", text: "India's GST structure places water purifiers — life-saving devices — in the same bracket as luxury consumer electronics." },
@@ -63,7 +59,7 @@ const blogs = [
     title: "6% Penetration: Clean Water Remains Out of Reach",
     slug: "6-percent-penetration-clean-water-remains-out-of-reach",
     category: "Infrastructure",
-    image: image3,
+    image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777541777/blog5_kakeyr.png",
     excerpt: "With 6% household penetration, water purifiers remain a luxury for most Indians despite being a health necessity.",
     sections: [
       { type: "lead", text: "Only 6% of Indian households own a water purifier — a statistic driven not by indifference, but by affordability shaped by an 18% tax." },
@@ -81,7 +77,7 @@ const blogs = [
     title: "Swachh Bharat vs 18% GST: A Policy Contradiction",
     slug: "swachh-bharat-vs-18-percent-gst-a-policy-contradiction",
     category: "Governance",
-    image: image4,
+    image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777541777/blog6_kxaeah.png",
     excerpt: "India promotes Swachh Bharat yet taxes water purifiers at 18%. The contradiction demands urgent policy attention.",
     sections: [
       { type: "lead", text: "India champions cleanliness and public health through landmark schemes — yet its tax code tells a different story." },

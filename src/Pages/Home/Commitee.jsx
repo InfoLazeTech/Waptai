@@ -1,46 +1,4 @@
 import React, { useState } from "react";
-// import { ChevronRight, Globe, ArrowRight } from "lucide-react";
-import sampat from "../../assets/Sampat_Jhabak.jpeg"
-import ashok from "../../assets/Ashok_Patel.jpeg"
-import nishit from "../../assets/Nishit.jpeg"
-import kalpesh from "../../assets/Kalpesh.jpeg"
-import vinod from "../../assets/Vinod.jpeg"
-import kanu from "../../assets/Kanu.jpeg"
-import ritesh from "../../assets/Ritesh.jpeg"
-import Ashit from "../../assets/AshitDoshi.png"
-import Rishabh from "../../assets/Rishabh.jpeg"
-import Bhupesh from "../../assets/Bhupesh.jpeg"
-import Gautam from "../../assets/Gautam.jpeg"
-import Sachin from "../../assets/Sachin.jpeg"
-import Kailash from "../../assets/Kailash.jpeg"
-import Suresh from "../../assets/Suresh.jpeg"
-import Chirag from "../../assets/Chirag.jpeg"
-import Chetan from "../../assets/Chetan.jpeg"
-import Anil from "../../assets/Anil.jpeg"
-import Ashish from "../../assets/Ashish.jpeg"
-import Amrut from "../../assets/Amrut.jpeg"
-import Jain from "../../assets/Jain.jpeg"
-import Bhavesh from "../../assets/Bhavesh.jpeg"
-// import Jayant from "../../assets/Jayant.jpeg"
-import Mehta from "../../assets/ChetanMaheta.jpeg"
-import Savliya from "../../assets/Savliya.jpeg"
-import Rahul from "../../assets/Rahul.jpeg"
-import Vikram from "../../assets/Vikram.jpeg"
-import Vishal from "../../assets/Vishal.jpeg"
-// import Nirav from "../../assets/Nirav.jpeg"
-// import Ramesh from "../../assets/Ramesh.jpeg"
-import Sandip from "../../assets/Sandip.jpeg"
-import Kamlesh from "../../assets/Kamlesh.jpeg"
-// import Nirmal from "../../assets/Nirmal.jpeg"
-// import Manish from "../../assets/Manish.jpeg"
-import Dipak from "../../assets/Dipak.jpeg"
-// import Sanjay from "../../assets/Sanjay.jpeg"
-import Ankit from "../../assets/Ankit.jpeg"
-import sunny from "../../assets/Sunny.jpeg"
-import mayank from "../../assets/Mayank.jpeg"
-import ajay from "../../assets/Ajay.jpeg"
-// import Hiren from "../../assets/Hiren.jpeg"
-// import Kaushal from "../../assets/Kaushal.jpeg"
 
 const TABS = [
   "Governing Body",
@@ -55,55 +13,55 @@ const TABS = [
 
 const DATA = {
  "Governing Body": [
-  { id: 1, name: "Ashit Doshi", role: "President", company: "Doshion Polysciences Pvt. Ltd.", image: Ashit },
-  { id: 2, name: "Rishabh Sanghvi", role: "Vice President", company: "Purosis International LLP", image: Rishabh },
-  { id: 3, name: "Bhupesh Patel", role: "Secretary", company: "ORG EngiTech Ltd.", image: Bhupesh },
-  { id: 4, name: "Gautam Shah", role: "Treasurer", company: "Lexcru Water Tech Pvt. Ltd", image: Gautam },
-  { id: 7, name: "Kailash Shah", role: "Joint Treasurer", company: "MaxPure Water System Pvt. Ltd.", image: Kailash },
-  { id: 5, name: "Sachin Ringwala", role: "Dy. Secretary", company: "Aishwaryam Filters", image: Sachin },
+  { id: 1, name: "Ashit Doshi", role: "President", company: "Doshion Polysciences Pvt. Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464194/AshitDoshi_iaz8my.png" },
+  { id: 2, name: "Rishabh Sanghvi", role: "Vice President", company: "Purosis International LLP", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464608/Rishabh_uij4zv.jpg" },
+  { id: 3, name: "Bhupesh Patel", role: "Secretary", company: "ORG EngiTech Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464210/Bhupesh_kejmhd.jpg" },
+  { id: 4, name: "Gautam Shah", role: "Treasurer", company: "Lexcru Water Tech Pvt. Ltd", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464285/Gautam_z2crwn.jpg" },
+  { id: 7, name: "Kailash Shah", role: "Joint Treasurer", company: "MaxPure Water System Pvt. Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464418/Kailash_svjct2.jpg" },
+  { id: 5, name: "Sachin Ringwala", role: "Dy. Secretary", company: "Aishwaryam Filters", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464612/Sachin_eecthu.jpg" },
   // { id: 6, name: "Sunil Raval", role: "Joint Secretary", company: "Unicare Water Technology Pvt Ltd.", image: Sunil },
 ],
 
   "Steering Committee": [
-    { id: 1, name: "Sampat Jhabak", role: "Committee Member", company: "MaxPure Water System Pvt. Ltd.", image: sampat },
-    { id: 2, name: "Ashok Patel", role: "Committee Member", company: "Shreya Water Tech LLP", image: ashok },
-    { id: 3, name: "Nishit Doshi", role: "Committee Member", company: "Fivebro Water Services Pvt. Ltd.", image: nishit },
-    { id: 4, name: "Kalpesh Shah", role: "Committee Member", company: "Parshwam Filtration LLP", image: kalpesh },
-    { id: 5, name: "Vinod Dudhat", role: "Committee Member", company: "Lexus Water Tech Pvt. Ltd.", image: vinod },
-    { id: 6, name: "Kanu Mehta", role: "Committee Member", company: "Cosmos Water Solution Pvt. Ltd.", image: kanu },
-    { id: 7, name: "Ritesh Desai", role: "Committee Member", company: "Krinovate Systems & Communications", image: ritesh },
+    { id: 1, name: "Sampat Jhabak", role: "Committee Member", company: "MaxPure Water System Pvt. Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464614/Sampat_Jhabak_xwbdvu.jpg" },
+    { id: 2, name: "Ashok Patel", role: "Committee Member", company: "Shreya Water Tech LLP", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464195/Ashok_Patel_uipkrv.jpg" },
+    { id: 3, name: "Nishit Doshi", role: "Committee Member", company: "Fivebro Water Services Pvt. Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464507/Nishit_k8cwhc.jpg" },
+    { id: 4, name: "Kalpesh Shah", role: "Committee Member", company: "Parshwam Filtration LLP", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464420/Kalpesh_ihinob.jpg" },
+    { id: 5, name: "Vinod Dudhat", role: "Committee Member", company: "Lexus Water Tech Pvt. Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464698/Vinod_b0enkh.jpg" },
+    { id: 6, name: "Kanu Mehta", role: "Committee Member", company: "Cosmos Water Solution Pvt. Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464424/Kanu_ydcqxy.jpg" },
+    { id: 7, name: "Ritesh Desai", role: "Committee Member", company: "Krinovate Systems & Communications", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464610/Ritesh_j7x0yj.jpg" },
   ],
   "Ahmedabad & North Gujarat Chapter": [
-    { id: 1, name: "Suresh Patel", role: "Committee Member", company: "Shreya Water Tech LLP.", image: Suresh },
-    { id: 2, name: "Chirag Gajera", role: "Committee Member", company: "Orix Aquatech", image: Chirag },
-    { id: 3, name: "Chetan Tapadiya", role: "Committee Member", company: "Nice Industries", image: Chetan },
-    { id: 4, name: "Anil Jain", role: "Committee Member", company: "Zedtech Water Solution Pvt Ltd.", image: Anil },
-    { id: 5, name: "Ashish Shah", role: "Committee Member", company: "Navakar Water Solution Pvt. Ltd.", image: Ashish },
-    { id: 6, name: "Amrut Patel", role: "Committee Member", company: "Newpex Enterprise", image: Amrut },
-    { id: 7, name: "Bhagvatilal Jain", role: "Committee Member", company: "New Tech Water Purifier Systems Pvtl. Ltd.", image: Jain },
+    { id: 1, name: "Suresh Patel", role: "Committee Member", company: "Shreya Water Tech LLP.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464677/Suresh_awtg73.jpg" },
+    { id: 2, name: "Chirag Gajera", role: "Committee Member", company: "Orix Aquatech", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464235/Chirag_nr9q19.jpg" },
+    { id: 3, name: "Chetan Tapadiya", role: "Committee Member", company: "Nice Industries", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464232/Chetan_uhakhe.jpg" },
+    { id: 4, name: "Anil Jain", role: "Committee Member", company: "Zedtech Water Solution Pvt Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464190/Anil_uj0ntv.jpg" },
+    { id: 5, name: "Ashish Shah", role: "Committee Member", company: "Navakar Water Solution Pvt. Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464193/Ashish_etcsny.png" },
+    { id: 6, name: "Amrut Patel", role: "Committee Member", company: "Newpex Enterprise", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464188/Amrut_j0pynk.jpg" },
+    { id: 7, name: "Bhagvatilal Jain", role: "Committee Member", company: "New Tech Water Purifier Systems Pvtl. Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464414/Jain_dup26w.jpg" },
   ],
   "South Gujarat Chapter": [
-    { id: 1, name: "Bhavesh Patel", role: "Committee Member", company: "Meera Trade-Impex", image: Bhavesh },
-    { id: 3, name: "Chetan Mehta", role: "Committee Member", company: "P Tech Aqua", image: Mehta },
-    { id: 4, name: "Ashok Savaliya", role: "Committee Member", company: "Bhojal Filter House & Gas Gyser", image: Savliya },
-    { id: 5, name: "Rahul Jhabak", role: "Committee Member", company: "Maxpure Water System Pvt. Ltd.", image: Rahul },
-    { id: 6, name: "Vikram Savani", role: "Committee Member", company: "Velient Pec India Pvt. Ltd.", image: Vikram },
+    { id: 1, name: "Bhavesh Patel", role: "Committee Member", company: "Meera Trade-Impex", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464209/Bhavesh_xzck0f.jpg" },
+    { id: 3, name: "Chetan Mehta", role: "Committee Member", company: "P Tech Aqua", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464233/ChetanMaheta_sre6zz.jpg" },
+    { id: 4, name: "Ashok Savaliya", role: "Committee Member", company: "Bhojal Filter House & Gas Gyser", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464620/Savliya_rdbsmb.jpg" },
+    { id: 5, name: "Rahul Jhabak", role: "Committee Member", company: "Maxpure Water System Pvt. Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464587/Rahul_xvcqkj.jpg" },
+    { id: 6, name: "Vikram Savani", role: "Committee Member", company: "Velient Pec India Pvt. Ltd.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464695/Vikram_jr5w6f.jpg" },
   ],
   "Saurashtra & Kutch Chapter": [
-    { id: 1, name: "Vishal Sharma", role: "Committee Member", company: "Flowlance International LLP.", image: Vishal },
-    { id: 4, name: "Sandip Mehta", role: "Committee Member", company: "Cloud International LLP.", image: Sandip },
-    { id: 5, name: "Kamlesh Patel", role: "Committee Member", company: "Shakti Aquatech LLP.", image: Kamlesh },
+    { id: 1, name: "Vishal Sharma", role: "Committee Member", company: "Flowlance International LLP.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464700/Vishal_j6sjsa.jpg" },
+    { id: 4, name: "Sandip Mehta", role: "Committee Member", company: "Cloud International LLP.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464616/Sandip_kut4gp.jpg" },
+    { id: 5, name: "Kamlesh Patel", role: "Committee Member", company: "Shakti Aquatech LLP.", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464423/Kamlesh_mrrdup.jpg" },
   ],
   "Central Gujarat Chapter": [
-    { id: 1, name: "Deepak Chhatriwala", role: "Committee Member", company: "Krishna Marketing", image: Dipak },
-    { id: 3, name: "Ankit Patel", role: "Committee Member", company: "Nexus", image: Ankit },
+    { id: 1, name: "Deepak Chhatriwala", role: "Committee Member", company: "Krishna Marketing", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464241/Dipak_dg9iav.jpg" },
+    { id: 3, name: "Ankit Patel", role: "Committee Member", company: "Nexus", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464191/Ankit_ss1al1.jpg" },
   ], 
   "New Dehli Chapter": [
-    { id: 2, name: "Mayank Aggarwal", role: "Committee Member", company: "AquaX Series", image: mayank },
-    { id: 1, name: "Sunny Gulia", role: "Committee Member", company: "Real Ganga Enterprises", image: sunny },
+    { id: 2, name: "Mayank Aggarwal", role: "Committee Member", company: "AquaX Series", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464450/Mayank_qfdkwk.jpg" },
+    { id: 1, name: "Sunny Gulia", role: "Committee Member", company: "Real Ganga Enterprises", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464644/Sunny_ibxbjj.jpg" },
   ],
   "Maharashtra Chapter": [
-    { id: 3, name: "Ajay Shroff", role: "Committee Member", company: "Pratham Filters", image: ajay },
+    { id: 3, name: "Ajay Shroff", role: "Committee Member", company: "Pratham Filters", image: "https://res.cloudinary.com/danaw1eyu/image/upload/v1777464187/Ajay_bzjrdn.jpg" },
   ]
 
   // "Expo Committee": [
